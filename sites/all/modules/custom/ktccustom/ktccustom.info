@@ -1,0 +1,4 @@
+name = KTC Custom
+description = "General custom functionality for KTC."
+core = 7.x
+package = KTC
