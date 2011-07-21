@@ -1,0 +1,7 @@
+name = KTC
+core = 7.x
+engine = phptemplate
+
+stylesheets[all][] = css/reset.css
+stylesheets[all][] = css/style.css
+

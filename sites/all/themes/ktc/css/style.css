@@ -1,0 +1,15 @@
+body {}
+
+#page-wrapper { /*width: 1014px;  margin: auto;*/ }
+
+#header-top { height: 35px; background: #000000; }
+#header-top-inner { width: 1014px; margin: auto; }
+
+#header { background: #fff url(../images/header.jpg) no-repeat; width: 1014px; height: 206px; margin: auto; }
+
+#navigation { height: 37px; background: #317eb0; }
+#main-wrapper { /*width: 1014px; margin: auto;*/ background: url(../images/main-bg.jpg) no-repeat center 0; }
+#main { width: 954px; margin: auto; padding: 0 30px; }
+
+
+#footer { background: #fff; }
