@@ -5,3 +5,14 @@ engine = phptemplate
 stylesheets[all][] = css/reset.css
 stylesheets[all][] = css/style.css
 
+scripts[] = js/cufon-yui.js
+scripts[] = js/Conduit_500.font.js
+
+regions[header] = Header
+regions[navigation] = Navigation
+regions[highlighted] = Highlighted
+regions[help] = Help
+regions[content] = Content
+regions[sidebar_first] = Left sidebar
+regions[sidebar_second] = Right sidebar
+regions[footer] = Footer
