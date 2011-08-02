@@ -1,5 +1,7 @@
-body { font-size: 16px; }
+body { font-size: 15px; }
 a:link, a:visited, a:hover { color: #e87d39; }
+strong { color: #e87d39; }
+.field-name-body p { padding-bottom: 20px; }
 
 #page-wrapper { /*width: 1014px;  margin: auto;*/ }
 
@@ -13,14 +15,69 @@ a:link, a:visited, a:hover { color: #e87d39; }
 #navigation { height: 37px; background: #317eb0; }
 
 /* main menu */
-#block-superfish-1 { width: 1014px; margin: auto; height: 37px; background: #317eb0; }
-.sf-menu.sf-style-default a { padding: 0; border: none; color: #fff;  }
+#block-superfish-1 { width: 954px; margin: auto; height: 37px; background: #317eb0; padding: 0 30px; }
+.sf-menu.sf-style-default a { padding: 0; border: none; color: #fff; font-weight: bold; text-transform: uppercase; }
 .sf-menu.sf-style-default  { margin: 0; }
-ul#superfish-1, ul#superfish-1 li.sf-depth-1 { height: 37px; background: #317eb0; }
-ul#superfish-1 li.sf-depth-1 a { display: block; padding: 8px 30px 9px; height: 20px; }
+.sf-menu.sf-style-default a, .sf-menu.sf-style-default a:visited { color: #fff; }
+.sf-menu.sf-style-default li li a, .sf-menu.sf-style-default li li a:visited { color: #005394; }
+.sf-menu.sf-style-default a:hover { /*background:  transparent url(../images/menu-highlight.png) no-repeat center 0;*/ color: #e87d39; background: transparent;  }
+ul#superfish-1, ul#superfish-1 li.sf-depth-1 { height: 28px; background: #317eb0;  }
+ul#superfish-1 li.sf-depth-1 { margin: 0 40px; }
+ul#superfish-1 li.sf-depth-1.first { margin-left: 10px; }
+ul#superfish-1 li.sf-depth-1.last { margin-right: 0; }
+ul#superfish-1 li.sf-depth-1 a { display: block; /*padding: 8px 30px 9px;*/  }
+ul#superfish-1 li.sf-depth-1 > a { height: 20px; padding: 8px 3px 0 3px;  }
+ul#superfish-1 li.sf-depth-1 > a:hover { background: transparent url(../images/menu-highlight.png) no-repeat center 0; }
+ul#superfish-1 li.sf-depth-1 a.active, ul#superfish-1 li.active-trail a { color: #e87d39; background: transparent url(../images/menu-highlight.png) no-repeat center 0; }
+.sf-shadow ul { background: transparent; width: 159px; -moz-border-radius-bottomleft: 0px; -moz-border-radius-topright: 0px; -webkit-border-top-right-radius: 0px;
+  -webkit-border-bottom-left-radius: 0px;}
+.sf-menu.sf-style-default li li { background: transparent; font-size: 13px; }
+.sf-menu li:hover ul, .sf-menu li.sfHover ul { top: 28px; left: -40px }
+.sf-menu li.sfHover ul { width: 159px !important;  background: transparent url(../images/menu-dropdown-bg.png) no-repeat top left; }
+.sf-menu.sf-style-default li:hover { background: transparent; }
+.sf-menu.sf-style-default li li { /*background: transparent url(../images/menu-dropdown-mid.png) repeat-y top left;*/ }
+.sf-menu.sf-style-default li li.first { /*background: transparent url(../images/menu-dropdown-top.png) no-repeat top left;*/ margin-top: 10px;  }
+.sf-menu.sf-style-default li li.last { /*background: transparent url(../images/menu-dropdown-bottom.png) no-repeat bottom left; */ border-bottom: 3px solid #000; }
+.sf-menu.sf-style-default li li a { border-top: 1px solid #005394; padding: 4px 3px 4px 9px; border-left: none; background: transparent; }
+.sf-menu.sf-style-default li li.first a { border-top: none; }
 
-#main-wrapper { /*width: 1014px; margin: auto;*/ background: url(../images/main-bg.jpg) no-repeat center 0; }
-#main { width: 954px; margin: auto; padding: 0 30px; font-size: 20px; background: #000; color: white; }
 
+#main-wrapper { /*width: 1014px; margin: auto;*/ background: url(../images/blue-bg.jpg) repeat center 0; }
+#main-burst { background: url(../images/burst.png) no-repeat center -37px; }
+#main { width: 954px; margin: auto; padding: 0; font-size: 18px; background: #fff; color: white; }
+
+
+/* home pages */
+#home-top-left { float: left; width: 530px; }
+#home-top-right { float: left; width: 404px; padding-left: 10px; }
+div.field-name-field-home-header { font-size: 1.3em;  padding: 27px 0 20px 0; }
+div.field-name-body { line-height: 1.2em; }
+/* some home pages have different sized font in order to fit everything in the same space */
+/* there won't be other content added to the home page sections, so we can just identify the nodes by nid */
+body.page-node-13 div.field-name-field-home-header { padding-top: 20px; }
+body.page-node-14 div.field-name-field-home-header { padding-top: 10px; }
+body.page-node-15 div.field-name-field-home-header { padding-top: 10px; font-size: 1.6em; padding-bottom: 10px; }
+
+#home-section-top { height: 377px; background: #000; }
+
+/* home section menu */
+ul.home-section-menu { font-size: 9px; text-transform: uppercase; width: 500px; margin: auto; padding: 15px 0 0 33px; }
+ul.home-section-menu a { display: block; background-color: #e87d39; line-height: 15px; font-weight: bold; width: 90px; height: 17px; margin: auto; margin-top: 5px; }
+ul.home-section-menu a:link, ul.home-section-menu a:visited { color: #fff; text-decoration: none; }
+ul.home-section-menu li { float: left; width: 100px; background-color: #e87d39; height: 27px; margin-right: 10px; text-align: center; }
+ul.home-section-menu li.active { background-color: #fff; }
+
+/* home panels */
+#panels-header { height: 50px; padding-left: 45px; line-height: 45px; font-weight: bold; }
+.panels-title { color: #e87d39; margin-right: 25px; }
+.panels-title-paren { color: #72bad6; }
+#home-panels { width: 891px; margin: auto;  position: relative; }
+.home-section-panel { width: 282px; height: 238px; float: left; margin-right: 22px; margin-bottom: 20px; }
+.panel-last { margin-right: 0; }
+.panel-expanded { display: none; }
+.panel-open-right { position: absolute; top: 0; left: 0;  }
+.panel-open-left { position: absolute; top: 0; right: 0; }
+.panel-close { position: absolute; width: 32px; height: 32px; background: transparent url(../images/close.png) no-repeat; top: 10px; right: 14px; }
+.panel-close:hover { cursor: pointer; }
 
 #footer { background: #fff; }

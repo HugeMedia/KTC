@@ -7,6 +7,7 @@ stylesheets[all][] = css/style.css
 
 scripts[] = js/cufon-yui.js
 scripts[] = js/Conduit_500.font.js
+scripts[] = js/ktc.js
 
 regions[header] = Header
 regions[navigation] = Navigation
