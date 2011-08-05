@@ -21,9 +21,10 @@
 }
 .sf-menu li {
   float: left;
-  position: relative;
+  /*position: relative;*/
   z-index: 498;
 }
+.sf-menu li.sf-depth-1 { position: relative; }
 .sf-menu a {
   display: block;
   position: relative;
@@ -50,7 +51,7 @@
 .sf-menu li li li:hover ul,
 .sf-menu li li li.sfHover ul {
   left: 12em;
-  top: 0;
+  top: 8px;
 }
 .sf-menu a.sf-with-ul {
   min-width: 1px;

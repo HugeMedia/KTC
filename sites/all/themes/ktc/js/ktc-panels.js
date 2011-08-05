@@ -18,7 +18,7 @@
                             //expandIt.winopen = true;
                         //}
                     },
-                timeout: 3000,
+                timeout: 5000,
                 out: function () {
                         //console.log('exit');
                         //expandIt.winopen = false;

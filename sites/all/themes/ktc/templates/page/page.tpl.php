@@ -135,6 +135,8 @@
     Cufon.replace('#site-slogan');
     Cufon.replace('p');
     Cufon.replace('h2');
+    Cufon.replace('h3');
+    Cufon.replace('ul', { hover: true });
     Cufon.replace('#superfish-1 a', { hover: true });
     Cufon.replace('ul.home-section-menu');
     Cufon.replace('#panels-header');
