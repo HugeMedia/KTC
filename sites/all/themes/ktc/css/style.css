@@ -53,6 +53,8 @@ h1 { font-size: 41px; text-transform: uppercase; }
 #main { width: 954px; margin: auto; padding: 0; font-size: 18px; background: #fff; color: white; }
 #content { color: #000; }
 
+
+
 /* home pages */
 #home-top-left { float: left; width: 530px; }
 #home-top-right { float: left; width: 404px; padding-left: 10px; }
