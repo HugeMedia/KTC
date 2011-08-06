@@ -47,10 +47,11 @@ ul#superfish-1 li.sf-depth-1 a.active, ul#superfish-1 li.active-trail a { color:
 .sf-menu.sf-style-default li li li.first { margin: 0; }
 .sf-menu li.sf-depth-2 > ul { width: 159px !important;  background: transparent url(../images/menu-lvl2-bg.png) repeat; border-left: 3px solid black; border-top: 3px solid black; border-right: 3px solid black;}
 
+h1 { font-size: 41px; text-transform: uppercase; }
 #main-wrapper { /*width: 1014px; margin: auto;*/ background: url(../images/blue-bg.jpg) repeat center 0; }
 #main-burst { background: url(../images/burst.png) no-repeat center -37px; }
 #main { width: 954px; margin: auto; padding: 0; font-size: 18px; background: #fff; color: white; }
-
+#content { color: #000; }
 
 /* home pages */
 #home-top-left { float: left; width: 530px; }
@@ -87,7 +88,7 @@ ul.home-section-menu li.active { background-color: #fff; }
 
 
 /* interior pages */
-#interior-header { background: #000; padding: 20px 60px 40px 60px; line-height: 25px;  }
+#interior-header { background: #000; padding: 20px 60px 40px 60px; line-height: 25px; color: #fff; }
 .field-name-field-header-img { float: right; margin: 10px 0 20px 30px; }
 body.node-type-interior-page h2.title { color: #e87d39; font-size: 40px;  text-transform: uppercase; padding: 10px 0; width: 550px; float: left; }
 .field-name-field-interior-header { clear: left; }

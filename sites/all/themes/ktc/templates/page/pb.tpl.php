@@ -110,7 +110,10 @@
         <?php if ($tabs): ?><div class="tabs"><?php print render($tabs); ?></div><?php endif; ?>
         <?php print render($page['help']); ?>
         <?php if ($action_links): ?><ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>
+        before
+        <?php dpm($page); ?>
         <?php print render($page['content']); ?>
+        after
         <?php //print $feed_icons; ?>
       </div></div> <!-- /.section, /#content -->
 
@@ -134,11 +137,8 @@
 <script type="text/javascript">
     Cufon.replace('#site-slogan');
     Cufon.replace('p');
-    Cufon.replace('h1');
     Cufon.replace('h2');
     Cufon.replace('h3');
-    Cufon.replace('table', { hover: true });
-    Cufon.replace('div.title-sub');
     Cufon.replace('ul', { hover: true });
     Cufon.replace('#superfish-1 a', { hover: true });
     Cufon.replace('ul.home-section-menu');

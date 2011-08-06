@@ -460,7 +460,7 @@ function template_preprocess_views_view_table(&$vars) {
 
         $title = t('sort by @s', array('@s' => $label));
         if ($active == $field) {
-          $label .= theme('tablesort_indicator', array('style' => $initial));
+          $label = theme('tablesort_indicator', array('style' => $initial)) . $label;  // BW flip
         }
 
         $query['order'] = $field;

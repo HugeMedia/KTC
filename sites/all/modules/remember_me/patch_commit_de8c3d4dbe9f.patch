@@ -1,0 +1,21 @@
+diff --git web/sites/all/modules/contrib/remember_me/remember_me.module web/sites/all/modules/contrib/remember_me/remember_me.module
+index a1ff8c2..95d2c23 100644
+--- web/sites/all/modules/contrib/remember_me/remember_me.module
++++ web/sites/all/modules/contrib/remember_me/remember_me.module
+@@ -14,13 +14,13 @@ function remember_me_init() {
+ 
+   // If we have a user logged in, then we have a session.
+   if ($user->uid) {
+-    if ($user->data['remember_me'] && variable_get('remember_me_managed', 0) != 0) {
++    if (!empty($user->data['remember_me']) && variable_get('remember_me_managed', 0) != 0) {
+       // Set lifetime as configured via admin settings.
+       if (variable_get('remember_me_lifetime', 604800) != ini_get('session.cookie_lifetime')) {
+         _remember_me_set_lifetime(variable_get('remember_me_lifetime', 604800));
+       }
+     }
+-    elseif (!$user->data['remember_me']) {
++    elseif (empty($user->data['remember_me'])) {
+       // If we have cookie lifetime set already then unset it.
+       if (0 != ini_get('session.cookie_lifetime')) {
+         _remember_me_set_lifetime(0);
+

@@ -2,7 +2,6 @@
 
 
 function ktc_preprocess_page(&$variables) {
-    
     // init custom page vars
     $variables['show_title'] = TRUE;
     
