@@ -14,7 +14,7 @@ function ktccustom_menu() {
     );
 
     $items['document-browse'] = array(
-        'title' => 'Documents',
+        'title' => '',
         'page callback' => 'ktc_document_browse',
         'page arguments' => array(1),
         'access callback' => TRUE,
@@ -22,7 +22,7 @@ function ktccustom_menu() {
     );
     
     $items['document-browse/%'] = array(
-        'title' => 'Documents',
+        'title' => '',
         'page callback' => 'ktc_document_browse_category',
         'page arguments' => array(1),
         'access callback' => TRUE,
@@ -51,69 +51,64 @@ function ktc_get_document($nid) {
 
 
 function ktc_document_browse() {
+    drupal_add_css(drupal_get_path('module', 'ktccustom') . '/css/ktccustom.css');
     $topics = taxonomy_get_tree(2);
     $audience = taxonomy_get_tree(3);
     $resourcetypes = taxonomy_get_tree(4); 
     //dpm($topics);
     $rend = array(
+        'show_results' => FALSE,
         'topics' => $topics,
         'audience' => $audience,
         'resourcetypes' => $resourcetypes,
-        '#theme' => 'document_browse',
+        '#theme' => 'ktc_documents',
     );
     return $rend;
 }
 
 
 function ktc_document_browse_category($tid) {
-    dpm('adding css');
     drupal_add_css(drupal_get_path('module', 'ktccustom') . '/css/ktccustom.css');
     $topics = taxonomy_get_tree(2);
-    $audience = taxonomy_get_tree(3);
+    //$audience = taxonomy_get_tree(3);
     $resourcetypes = taxonomy_get_tree(4); 
     //dpm($topics);
     
+    $term = taxonomy_term_load($tid);
+    $term_name = '';
+    if ($term) {
+        $term_name = $term->name;
+    }
     // get docs that match the criteria
     $docs = views_embed_view('documents_by_category', 'block', $tid);
     
     $rend = array(
+        'show_results' => TRUE,
         'topics' => $topics,
-        'audience' => $audience,
+        //'audience' => $audience,
+        'category_name' => $term_name,
         'resourcetypes' => $resourcetypes,
         'docs' => $docs,
-        '#theme' => 'document_browse',
+        '#theme' => 'ktc_documents',
     );
     return $rend;
 }
 
 
+function theme_bw_wolf($variables) {
+    return 'hello there';
+}
+
+
 function ktccustom_theme() {
   $items = array(
-    'document_browse' => array(
+    'ktc_documents' => array(
       'render element' => 'element',
-      'template' => 'tmpl/document-browse',
+      'path' => drupal_get_path('module', 'ktccustom') . '/tmpl',
+      'template' => 'document-browse',
     ),
   );
 
   return $items;
 }
 
-
-// examples for the confusing new render system
-
-//t('theme for an element') => array(
-//      'child' => array(
-//        t('This is some text that should be put together'),
-//        t('This is some more text that we need'),
-//      ),
-//      '#separator' => ' | ',  // Made up for this theme function.
-//      '#theme' => 'render_example_aggregate',
-//    ),
-
-//function theme_render_example_aggregate($variables) {
-//  $output = '';
-//  foreach (element_children($variables['element']['child']) as $item) {
-//    $output .= $variables['element']['child'][$item] . $variables['element']['#separator'];
-//  }
-//  return $output;
-//}

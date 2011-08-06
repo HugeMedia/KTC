@@ -1,1 +1,27 @@
-.documents-categories { width: 200px; float: left; }
+#main #content { padding: 35px 60px; }
+
+.documents-categories { width: 130px; float: left; margin-right: 40px;  clear: left; }
+.documents-categories li a.active { color: #ec7a34;}
+.documents-list { border: 2px solid #ec7a34; float: left; width: 660px; }
+.documents-list-inner { padding: 20px 30px 30px 30px; }
+
+body.page-document-browse h1 { margin-bottom: 30px;  float: left; width: 390px; }
+div.title-sub { color: #ec7a34; font-size: 15px; line-height: 40px; }
+div.title-sub b { font-weight: bold; }
+body.page-document-browse table { width: 600px; }
+th { border-bottom: 1px solid #ec7a34; margin-bottom: 20px; }
+thead { margin-bottom: 20px; }
+tr.views-row-first td { padding-top: 30px; }
+tr.even, tr.odd, td.active { background-color: #fff; }
+td a:link, td a:visited { color: #000; font-style: italic; border-bottom: 2px solid #999; }
+td a:hover { color: #ec7a34; }
+td { padding: 8px 0; }
+
+th img { position: relative; top: 5px; margin-right: 7px; }
+
+h3.document-taxonomy-title { text-transform: uppercase; font-size: 20px; text-align: right; margin-bottom: 10px; }
+h3.headroom { padding-top: 30px; }
+ul.document-taxonomy { text-transform: uppercase; font-size: 15px; font-weight: bold; text-align: right; }
+ul.document-taxonomy li { padding: 5px 0; }
+
+h3.document-results-header { font-size: 24px; color: #ec7a34; text-transform: uppercase; text-align: center; }
