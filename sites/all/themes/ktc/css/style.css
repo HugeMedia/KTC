@@ -56,8 +56,8 @@ h1 { font-size: 41px; text-transform: uppercase; }
 /* home pages */
 #home-top-left { float: left; width: 530px; }
 #home-top-right { float: left; width: 404px; padding-left: 10px; }
-div.field-name-field-home-header { font-size: 1.3em;  padding: 27px 0 10px 0; }
-div.field-name-body { line-height: 1.2em; }
+div.field-name-field-home-header { font-size: 1.3em;  padding: 27px 0 10px 0; color: #fff; }
+#home-top-right div.field-name-body { line-height: 1.2em; color: #fff; }
 /* some home pages have different sized font in order to fit everything in the same space */
 /* there won't be other content added to the home page sections, so we can just identify the nodes by nid */
 body.page-node-13 div.field-name-field-home-header { padding-top: 20px; }
