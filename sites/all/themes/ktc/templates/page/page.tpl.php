@@ -129,6 +129,7 @@
     </div></div></div> <!-- /#main, /#main-burst, /#main-wrapper -->
 
     <div id="footer"><div class="section">
+      <?php print render($footer_links); ?>
       <?php print render($page['footer']); ?>
     </div></div> <!-- /.section, /#footer -->
 <script type="text/javascript">
@@ -143,6 +144,7 @@
     Cufon.replace('#superfish-1 a', { hover: true });
     Cufon.replace('ul.home-section-menu');
     Cufon.replace('#panels-header');
+    Cufon.replace('#footer', { hover: true });
     Cufon.now();
 </script> 
   </div></div> <!-- /#page, /#page-wrapper -->

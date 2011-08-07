@@ -99,4 +99,8 @@ body.node-type-interior-page h2.title { color: #e87d39; font-size: 40px;  text-t
 #interior-main ul { list-style-type: disc;  padding-left: 60px; }
 #interior-footnotes { color: #000; padding: 0 0px 40px 0px; font-size: 17px; font-weight: normal; border-top: 2px solid #666; width: 834px; margin: auto;  }
 
-#footer { background: #fff; }
+#footer { background: #000; height: 150px;  }
+#footer ul { width: 954px; margin: auto; padding-top: 20px; text-transform: uppercase; }
+#footer ul.menu li { float: left; list-style: none; padding: 0 22px; }
+#footer a:link, #footer a:visited { color: #fff; }
+#footer a:hover { color: #e87d39; }

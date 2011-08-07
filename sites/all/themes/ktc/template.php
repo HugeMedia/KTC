@@ -13,6 +13,10 @@ function ktc_preprocess_page(&$variables) {
         }
     }
     
+    // footer menu
+    $footer_links = menu_build_tree('menu-footer-menu');
+    $variables['footer_links'] = menu_tree_output($footer_links);
+    
 }
 
 
