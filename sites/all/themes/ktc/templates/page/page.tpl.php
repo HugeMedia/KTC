@@ -130,7 +130,8 @@
 
     <div id="footer"><div class="section">
       <?php print render($footer_links); ?>
-      <?php print render($page['footer']); ?>
+      <div id="footer-text"><span>KickTheCan.info</span><span>Consumer and Nutrition Information for Cultivating a Healthier Relationship with Soda Beverages</span></div>
+      <?php //print render($page['footer']); ?>
     </div></div> <!-- /.section, /#footer -->
 <script type="text/javascript">
     Cufon.replace('#site-slogan');
