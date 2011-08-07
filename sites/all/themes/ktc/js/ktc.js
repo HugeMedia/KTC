@@ -96,7 +96,7 @@
                     //console.log(popheight);
                     //console.log(linkoffset);
                     // move the popup to right above the link, accounting for height of the popup
-                    var popoffset = { top: linkoffset.top-popheight-10, left: linkoffset.left };
+                    var popoffset = { top: linkoffset.top-popheight-5, left: linkoffset.left };
                     //var popoffset = { top: linkoffset.top-437.5-popheight, left: 0 };
                     // get the height of the popup box and subtract that as well
                     //console.log(popoffset);
