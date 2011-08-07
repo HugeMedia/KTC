@@ -12,7 +12,7 @@ body.page-document-browse table { width: 600px; }
 th { border-bottom: 1px solid #ec7a34; margin-bottom: 20px; }
 thead { margin-bottom: 20px; }
 tr.views-row-first td { padding-top: 30px; }
-tr.even, tr.odd, td.active { background-color: #fff; }
+tr.even, tr.odd, td.active { background-color: #fff;  position: relative; }
 td a:link, td a:visited { color: #000; font-style: italic; border-bottom: 2px solid #999; }
 td a:hover { color: #ec7a34; }
 td { padding: 8px 0; }
@@ -25,3 +25,9 @@ ul.document-taxonomy { text-transform: uppercase; font-size: 15px; font-weight: 
 ul.document-taxonomy li { padding: 5px 0; }
 
 h3.document-results-header { font-size: 24px; color: #ec7a34; text-transform: uppercase; text-align: center; }
+
+div.view-documents-by-category div.view-content { position: relative; }
+.abstract-pop { display: none; position: absolute; top: 0; left: 0;  border: none; width: 499px;  }
+.abstract-mid { padding: 0 10px; background: transparent url(../images/bubble-mid.png) repeat-y; font-size: 15px; }
+.abstract-top { background: transparent url(../images/bubble-top.png) top left no-repeat; height: 18px; }
+.abstract-bottom { background: transparent url(../images/bubble-bottom.png) bottom left no-repeat; height: 47px; }

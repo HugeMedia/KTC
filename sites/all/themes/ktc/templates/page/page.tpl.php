@@ -137,7 +137,7 @@
     Cufon.replace('h1');
     Cufon.replace('h2');
     Cufon.replace('h3');
-    Cufon.replace('table', { hover: true });
+    Cufon.replace('table a', { hover: true });
     Cufon.replace('div.title-sub');
     Cufon.replace('#main ul', { hover: true });
     Cufon.replace('#superfish-1 a', { hover: true });

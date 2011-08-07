@@ -91,6 +91,7 @@ function ktc_document_browse_category($tid) {
         'docs' => $docs,
         '#theme' => 'ktc_documents',
     );
+    dd('returning...');
     return $rend;
 }
 
