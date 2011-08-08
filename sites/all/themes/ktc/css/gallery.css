@@ -1,0 +1,11 @@
+body.page-image-gallery #main { background: #000; }
+body.page-image-gallery .section .content { position: relative; }
+body.page-image-gallery #main #content { padding: 20px 30px 40px 40px; }
+body.page-image-gallery h1 { color: #e87d39; text-transform: none; font-size: 30px; margin-bottom: 30px; }
+body.page-image-gallery li a.active { color: #ff9049; }
+div.views-field-field-gallery-thumb { margin: 0 10px 10px 0; }
+div.image-gallery-pager { color: #fff; background: #e87d39;  height: 29px; position: absolute; right: 30px; }
+body.page-image-gallery ul.pager li.pager-previous a { display: block; background: transparent url(../images/pager-arrow-previous.png) no-repeat left center; width: 8px; height: 29px; padding: 0; }
+body.page-image-gallery ul.pager li.pager-next a { display: block; background: transparent url(../images/pager-arrow-next.png) no-repeat left center; width: 8px; height: 29px; padding: 0; font-size: 16px; }
+body.page-image-gallery ul.pager li.pager-previous, body.page-image-gallery ul.pager li.pager-next { padding: 0 5px; width: 8px; height: 29px; }
+body.page-image-gallery ul.pager li { padding: 0 5px; float: left; height: 29px; line-height: 24px; }
