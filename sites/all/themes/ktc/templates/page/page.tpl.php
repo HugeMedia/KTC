@@ -146,6 +146,7 @@
     Cufon.replace('ul.home-section-menu');
     Cufon.replace('#panels-header');
     Cufon.replace('#footer', { hover: true });
+    Cufon.replace('#image-gallery-filter-title');
     Cufon.now();
 </script> 
   </div></div> <!-- /#page, /#page-wrapper -->

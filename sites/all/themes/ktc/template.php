@@ -69,6 +69,13 @@ function ktc_preprocess_node(&$variables) {
 
 
 
+function ktc_get_gallery_categories() {
+    $tree = taxonomy_get_tree(6); // hardcoding gallery category vid
+    return $tree;
+}
+
+
+
 // implementation of the pager, mostly for the image gallery
 
 function ktc_pager($variables) {

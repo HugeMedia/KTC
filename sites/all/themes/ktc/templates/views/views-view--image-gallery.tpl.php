@@ -35,7 +35,6 @@
       <?php print $pager; ?>
     </div>
   <?php endif; ?>
-  <?php dd($title); ?>
   <?php print render($title_prefix); ?>
   <?php if ($title): ?>
     <h1><?php print $title; ?></h1>
@@ -48,6 +47,8 @@
   <?php endif; ?>
 
   <?php if ($exposed): ?>
+    
+  
     <div class="view-filters">
       <?php print $exposed; ?>
     </div>
