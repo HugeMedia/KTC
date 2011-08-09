@@ -2,6 +2,8 @@
 
 
 function ktc_preprocess_page(&$variables) {
+    ctools_include('modal');
+    ctools_modal_add_js();
     // init custom page vars
     //dpm($variables);
     $variables['show_title'] = TRUE;
@@ -22,7 +24,7 @@ function ktc_preprocess_page(&$variables) {
     
     // footer menu
     $footer_links = menu_build_tree('menu-footer-menu');
-    $variables['footer_links'] = menu_tree_output($footer_links);
+    $variables['footer_links'] = ktc_menu_tree_output($footer_links);
     
 }
 
@@ -387,4 +389,90 @@ function ktc_pager_link($variables) {
   }
 
   return l($text, $_GET['q'], array('attributes' => $attributes, 'query' => $query));
+}
+
+
+
+function ktc_menu_tree_output($tree, $level = 0) {
+    //dpm($tree);
+    $build = array();
+  $items = array();
+
+  // Pull out just the menu links we are going to render so that we
+  // get an accurate count for the first/last classes.
+  foreach ($tree as $data) {
+    if ($data['link']['access'] && !$data['link']['hidden']) {
+      $items[] = $data;
+    }
+  }
+
+  $router_item = menu_get_item();
+  $num_items = count($items);
+  foreach ($items as $i => $data) {
+    $class = array();
+    if ($i == 0) {
+      $class[] = 'first';
+    }
+    if ($i == $num_items - 1) {
+      $class[] = 'last';
+    }
+    // Set a class for the <li>-tag. Since $data['below'] may contain local
+    // tasks, only set 'expanded' class if the link also has children within
+    // the current menu.
+    if ($data['link']['has_children'] && $data['below']) {
+      $class[] = 'expanded';
+    }
+    elseif ($data['link']['has_children']) {
+      $class[] = 'collapsed';
+    }
+    else {
+      $class[] = 'leaf';
+    }
+    // Set a class if the link is in the active trail.
+    if ($data['link']['in_active_trail']) {
+      $class[] = 'active-trail';
+      $data['link']['localized_options']['attributes']['class'][] = 'active-trail';
+    }
+    
+    $class[] = 'level_' . $level;
+    if ($data['link']['href'] == 'advocacy-login') {
+        //dd('asdfadsf');
+        $data['link']['localized_options']['attributes']['class'][] = 'ctools-use-modal';
+    }
+    // Normally, l() compares the href of every link with $_GET['q'] and sets
+    // the active class accordingly. But local tasks do not appear in menu
+    // trees, so if the current path is a local task, and this link is its
+    // tab root, then we have to set the class manually.
+    //dd($data['link']['href']);
+    if ($data['link']['href'] == $router_item['tab_root_href'] && $data['link']['href'] != $_GET['q']) {
+      $data['link']['localized_options']['attributes']['class'][] = 'active';
+    }
+
+    // Allow menu-specific theme overrides.
+    $element['#theme'] = 'menu_link__' . $data['link']['menu_name'];
+    $element['#attributes']['class'] = $class;
+    $element['#title'] = $data['link']['title'];
+    $element['#href'] = $data['link']['href'];
+    $element['#localized_options'] = !empty($data['link']['localized_options']) ? $data['link']['localized_options'] : array();
+    
+    // bw : my way of removing child elements that are not in the active trail. better way??
+    if ($data['link']['in_active_trail']) {
+        $element['#below'] = $data['below'] ? ktc_menu_tree_output($data['below'], $level+1) : $data['below'];
+    }
+    else {
+        $element['#below'] = NULL;
+    }
+    $element['#original_link'] = $data['link'];
+    // Index using the link's unique mlid.
+    $build[$data['link']['mlid']] = $element;
+  }
+  if ($build) {
+    // Make sure drupal_render() does not re-order the links.
+    $build['#sorted'] = TRUE;
+    // Add the theme wrapper for outer markup.
+    // Allow menu-specific theme overrides.
+    $build['#theme_wrappers'][] = 'menu_tree__' . strtr($data['link']['menu_name'], '-', '_');
+  }
+
+  return $build;
 }

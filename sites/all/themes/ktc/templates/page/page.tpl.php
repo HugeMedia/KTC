@@ -131,22 +131,22 @@
     <div id="footer"><div class="section">
       <?php print render($footer_links); ?>
       <div id="footer-text"><span>KickTheCan.info</span><span>Consumer and Nutrition Information for Cultivating a Healthier Relationship with Soda Beverages</span></div>
-      <?php //print render($page['footer']); ?>
+      <?php print render($page['footer']); ?>
     </div></div> <!-- /.section, /#footer -->
-<script type="text/javascript">
-    Cufon.replace('#site-slogan');
-    Cufon.replace('p');
-    Cufon.replace('h1');
-    Cufon.replace('h2');
-    Cufon.replace('h3');
-    Cufon.replace('table a', { hover: true });
-    Cufon.replace('div.title-sub');
-    Cufon.replace('#main ul', { hover: true });
-    Cufon.replace('#superfish-1 a', { hover: true });
-    Cufon.replace('ul.home-section-menu');
-    Cufon.replace('#panels-header');
-    Cufon.replace('#footer', { hover: true });
-    Cufon.replace('#image-gallery-filter-title');
-    Cufon.now();
+<script type="text/javascript">   
+    
+    //Cufon.replace('table a', { hover: true });
+    
+    //Cufon.replace('#main ul', { hover: true });
+    //Cufon.replace('#superfish-1 a', { hover: true });
+    //Cufon.replace('ul.home-section-menu');
+    //Cufon.replace('#panels-header');
+    //Cufon.replace('#footer', { hover: true });
+    ////Cufon.replace('#footer ul.menu', { hover: true });
+    ////Cufon.replace('#footer #footer-text');
+    //Cufon.replace('#image-gallery-filter-title');
+    ////Cufon.replace('div.ctools-modal-content  .modal-header');
+    ////Cufon.replace('#modal-content');
+    //Cufon.now();
 </script> 
   </div></div> <!-- /#page, /#page-wrapper -->

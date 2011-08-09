@@ -1,4 +1,4 @@
-body { font-size: 15px; }
+body { font-size: 15px; /*font-family: ConduitITCStd, Arial, sans-serif;*/ }
 a:link, a:visited, a:hover { color: #e87d39; }
 strong { color: #e87d39; }
 .field-name-body p { padding: 10px 0; }
@@ -105,5 +105,24 @@ body.node-type-interior-page h2.title { color: #e87d39; font-size: 40px;  text-t
 #footer ul.menu li { float: left; list-style: none; padding: 0 22px; }
 #footer a:link, #footer a:visited { color: #fff; }
 #footer a:hover { color: #e87d39; }
-#footer-text { color: #e87d39; text-align: center; margin-top: 18px; font-weight: bold; }
+#footer-text { color: #e87d39; text-align: center; margin-top: 28px; font-weight: bold; }
 #footer-text span { margin-right: 20px; }
+
+/* login form */
+#block-user-login { background: #000; }
+#block-user-login form#user-login-form { color: #fff; }
+
+div.ctools-modal-content, div.ctools-modal-content  .modal-header, #modal-content { background: #000; }
+#modal-content { color: #fff; }
+#modal-content form#user-login div.description { display: none; }
+.modal-header a.close { display: none; }
+div.ctools-modal-content .modal-content { padding: 0 0 0 32px; }
+form#user-login .form-item { margin: 0; padding: 0; }
+div.ctools-modal-content .modal-header { height: 35px; padding: 26px 0 15px 30px; }
+div.ctools-modal-content .modal-title { color: #e87d39; font-size: 25px; }
+div.ctools-modal-content .modal-content  label { text-transform: uppercase; font-size: 17px; width: 235px; margin-bottom: 5px;  }
+div.ctools-modal-content .modal-content  label.option { color: #75bad7; font-weight: bold; }
+div.ctools-modal-content .modal-content  span.form-required { display: none; }
+div.ctools-modal-content .modal-content form input.form-text { width: 235px; height: 37px; background: url(../images/login-box.jpg) no-repeat; border: none; font-size: 37px; line-height: 37px; color: #333; margin-bottom: 15px; }
+div.ctools-modal-content .modal-content form #edit-actions { margin: 0; }
+div.ctools-modal-content .modal-content form div.form-type-checkbox { width: 180px; float: left; }

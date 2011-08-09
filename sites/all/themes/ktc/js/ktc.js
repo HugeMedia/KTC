@@ -111,7 +111,48 @@
                     $(this).siblings('.abstract-pop').hide();
                 }
             )
+	    
+	    
+	    //$('a[title=Advocacy Tools]').addClass('ctools-use-modal');
+		
+		// CUFON font replacement. using this method is always legal as far as I know,
+		// and seems to render nicer looking fonts than @font-face across all browsers.
+		// I try to only target specific elements, because if used to replace 'body' for example,
+		// Cufon adds a lot of extra space by wrapping blank areas with spans.
+		
+		// general replacement
+		Cufon.replace('#site-slogan');
+		Cufon.replace('ul#superfish-1 li a', { hover: true });
+		Cufon.replace('h1.title');
+		
+		// home pages
+		Cufon.replace('#home-top-right div.field-name-field-home-header div.field-item p');
+		Cufon.replace('#home-top-right div.field-name-body div.field-item p');
+		Cufon.replace('#home-top-left ul.home-section-menu li a');
+		Cufon.replace('#home-section-bottom #panels-header span');
+		
+		// footer
+		Cufon.replace('#footer ul.menu li a');
+		Cufon.replace('#footer #footer-text span');
+		
+		// image gallery
+		Cufon.replace('body.page-image-gallery div.view-image-gallery h1');
+		Cufon.replace('body.page-image-gallery #image-gallery-filter ul');
+		Cufon.replace('body.page-image-gallery div.image-gallery-pager ul');
+		Cufon.replace('body.page-image-gallery #image-gallery-filter #image-gallery-filter-title');
+		//Cufon.replace('body.page-image-gallery #image-gallery-filter ul#image-gallery-category li div.image-gallery-category-inner');
+		
+		// documents page
+		Cufon.replace('div.title-sub');
+		Cufon.replace('h3.document-results-header');
+		Cufon.replace('h3.document-taxonomy-title');
+		Cufon.replace('ul.document-taxonomy li a');
+		Cufon.replace('table.views-table thead tr th a');
+		Cufon.replace('table.views-table tbody tr td a');
+		Cufon.replace('table.views-table tbody tr td div.abstract-pop div.abstract-mid p');
+		Cufon.now();
             
+	    
 	});
 	
 })(jQuery);

@@ -5,6 +5,7 @@ engine = phptemplate
 stylesheets[all][] = css/reset.css
 stylesheets[all][] = css/style.css
 stylesheets[all][] = css/gallery.css
+stylesheets[all][] = css/font-face.css
 
 scripts[] = js/cufon-yui.js
 scripts[] = js/Conduit_500.font.js
