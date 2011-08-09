@@ -29,8 +29,30 @@ function ktccustom_menu() {
         'type' => MENU_CALLBACK,
     );
     
+    $items['advocacy-login'] = array(
+        'title' => 'Advocacy Tools',
+        'page callback' => 'ktc_advocacy_login',
+        'access callback' => TRUE,
+        'type' => MENU_CALLBACK,
+    );
+    
     return $items;
 }
+
+
+// create a login modal. ctools modal is able to handle form validation in a modal,
+// which would otherwise be difficult
+function ktc_advocacy_login() {
+    ctools_include('ajax');
+    ctools_include('modal');
+     $form_state = array(
+      'ajax' => TRUE,
+      'title' => t('Login'),
+    );
+    $output = ctools_modal_form_wrapper('user_login', $form_state);
+    print ajax_render($output);
+}
+
 
 
 // gets the file url for the node and sends the user to it
@@ -91,7 +113,6 @@ function ktc_document_browse_category($tid) {
         'docs' => $docs,
         '#theme' => 'ktc_documents',
     );
-    dd('returning...');
     return $rend;
 }
 
@@ -111,5 +132,21 @@ function ktccustom_theme() {
   );
 
   return $items;
+}
+
+
+function ktccustom_form_alter(&$form, &$form_state, $form_id) {
+    if ($form_id == 'user_login') {
+        $img_path = path_to_theme().'/images/';
+        dd($form);
+        $form['name']['#size'] = 30;
+        $form['name']['#title'] = 'User name:';
+        $form['pass']['#title'] = 'Password:';
+        $form['pass']['#size'] = 30;
+        $form['actions']['submit']['#value'] = 'null';
+        $form['actions']['submit']['#type'] = 'image_button';
+        $form['actions']['submit']['#src'] = $img_path . 'gobutton.png';
+        //$form['name']['#maxlength'] = 30;
+    }
 }
 

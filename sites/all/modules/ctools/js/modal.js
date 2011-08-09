@@ -35,9 +35,9 @@
       animation: 'show',
       animationSpeed: 'fast',
       modalSize: {
-        type: 'scale',
-        width: .8,
-        height: .8,
+        //type: 'scale',
+        width: 318,
+        height: 321,
         addWidth: 0,
         addHeight: 0,
         // How much to remove from the inner content to make space for the
@@ -46,8 +46,8 @@
         contentBottom: 45
       },
       modalOptions: {
-        opacity: .55,
-        background: '#fff'
+        opacity: .90,
+        background: '#458bb8'
       }
     };
 
@@ -82,8 +82,10 @@
         'height': height + Drupal.CTools.Modal.currentSettings.modalSize.addHeight + 'px'
       });
       $('div.ctools-modal-content .modal-content', context).css({
-        'width': (width - Drupal.CTools.Modal.currentSettings.modalSize.contentRight) + 'px',
-        'height': (height - Drupal.CTools.Modal.currentSettings.modalSize.contentBottom) + 'px'
+        //'width': (width - Drupal.CTools.Modal.currentSettings.modalSize.contentRight) + 'px',
+        //'height': (height - Drupal.CTools.Modal.currentSettings.modalSize.contentBottom) + 'px'
+        'width': '270px',
+        'height': '240px'
       });
     }
 
@@ -99,6 +101,7 @@
     $('span.modal-title', Drupal.CTools.Modal.modal).html(Drupal.CTools.Modal.currentSettings.loadingText);
     Drupal.CTools.Modal.modalContent(Drupal.CTools.Modal.modal, settings.modalOptions, settings.animation, settings.animationSpeed);
     $('#modalContent .modal-content').html(Drupal.theme(settings.throbberTheme));
+    
   };
 
   /**
@@ -269,8 +272,11 @@
    * AJAX responder command to place HTML within the modal.
    */
   Drupal.CTools.Modal.modal_display = function(ajax, response, status) {
-    $('#modal-title').html(response.title);
+    //$('#modal-title').html(response.title);
+    $('#modal-title').html('Advocate Log In');
+    Cufon.replace('#modal-title');
     $('#modal-content').html(response.output);
+    Cufon.replace('#modal-content div.form-item');
     Drupal.attachBehaviors();
   }
 
@@ -435,6 +441,10 @@
       $('#modalContent').remove();
       $('#modalBackdrop').remove();
     };
+
+    $(document).keyup(function(e) {
+      if (e.keyCode == 27) { close(); }   // esc
+    });
 
     // Move and resize the modalBackdrop and modalContent on resize of the window
      modalContentResize = function(){
