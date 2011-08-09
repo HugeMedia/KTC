@@ -40,8 +40,14 @@ function ktccustom_menu() {
 }
 
 
+function ktccustom_init() {
+    drupal_add_js(drupal_get_path('module', 'ktccustom') . '/js/ktcadmin.js');
+    drupal_add_css(drupal_get_path('module', 'ktccustom') . '/css/ktcadmin.css');
+}
+
+
 // create a login modal. ctools modal is able to handle form validation in a modal,
-// which would otherwise be difficult
+// which would otherwise be time consuming to do from scratch.
 function ktc_advocacy_login() {
     ctools_include('ajax');
     ctools_include('modal');
@@ -136,9 +142,10 @@ function ktccustom_theme() {
 
 
 function ktccustom_form_alter(&$form, &$form_state, $form_id) {
+    // change the login form for the advocacy login
+    // i know this changes it for the /user page too, but who cares...
     if ($form_id == 'user_login') {
         $img_path = path_to_theme().'/images/';
-        dd($form);
         $form['name']['#size'] = 30;
         $form['name']['#title'] = 'User name:';
         $form['pass']['#title'] = 'Password:';
@@ -146,7 +153,6 @@ function ktccustom_form_alter(&$form, &$form_state, $form_id) {
         $form['actions']['submit']['#value'] = 'null';
         $form['actions']['submit']['#type'] = 'image_button';
         $form['actions']['submit']['#src'] = $img_path . 'gobutton.png';
-        //$form['name']['#maxlength'] = 30;
     }
 }
 
