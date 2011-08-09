@@ -11,6 +11,9 @@ body.page-image-gallery ul.pager li.pager-next a { display: block; background: t
 body.page-image-gallery ul.pager li.pager-previous, body.page-image-gallery ul.pager li.pager-next { padding: 0 5px; width: 8px; height: 29px; }
 body.page-image-gallery ul.pager li { padding: 0 5px; float: left; height: 29px; line-height: 24px; }
 
+div.views-field-field-gallery-large { margin: 0 10px 10px 0; }
+div.views-field-field-gallery-large img { border: 1px solid #55879b; }
+
 #image-gallery-filter { width: 308px; color: #fff; text-transform: uppercase; border: 2px solid #f57d32; background: #000;  }
 ul#image-gallery-categories { color: #fff; background: #000; display: none; }
 ul#image-gallery-categories li { background: #000;  }
