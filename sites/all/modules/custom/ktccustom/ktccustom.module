@@ -41,6 +41,7 @@ function ktccustom_menu() {
 
 
 function ktccustom_init() {
+    // add some css/js to fancy up some of the node edit pages
     drupal_add_js(drupal_get_path('module', 'ktccustom') . '/js/ktcadmin.js');
     drupal_add_css(drupal_get_path('module', 'ktccustom') . '/css/ktcadmin.css');
 }
@@ -70,10 +71,15 @@ function ktc_get_document($nid) {
     if (!isset($node->field_document_file['und'])) {
         return "The file associated with this document appears to be missing.";
     }
-    $file = file_load($node->field_document_file['und'][0]['fid']);
-    //$headers = file_get_content_headers($file);
-    //file_transfer($file->uri, $headers);
-    $url = file_create_url($file->uri);
+    
+    $url = '';
+    if (isset($node->field_doc_type['und']) && $node->field_doc_type['und'][0]['tid'] == 25) {  // external url type
+        $url = $node->field_doc_external['und'][0]['url'];
+    }
+    else {  // locally uploaded file
+        $file = file_load($node->field_document_file['und'][0]['fid']);
+        $url = file_create_url($file->uri);
+    }
     drupal_goto($url);
 }
 
