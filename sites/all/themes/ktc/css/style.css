@@ -144,7 +144,7 @@ body.node-type-soda-story-form-page #edit-field-story-remember label { font-size
 body.node-type-soda-story-form-page form label { font-size: 20px; }
 body.node-type-soda-story-form-page form#soda-story-node-form div.form-item { margin: 10px 0; }
 body.node-type-soda-story-form-page form#soda-story-node-form span.form-required { display: none; }
-body.node-type-soda-story-form-page form#soda-story-node-form #edit-submit, body.node-type-soda-story-form-page form#soda-story-node-form #edit-field-story-doc-und-0-upload-button { background: #000; color: #fff; text-transform: uppercase; border: 1px solid #fff; }
+body.node-type-soda-story-form-page form#soda-story-node-form #edit-submit, body.node-type-soda-story-form-page form#soda-story-node-form #edit-field-story-doc-und-0-upload-button, body.node-type-soda-story-form-page form#soda-story-node-form #edit-field-story-photos-und-0-upload-button { background: #000; color: #fff; text-transform: uppercase; border: 1px solid #fff; }
 
 /* login form */
 #block-user-login { background: #000; }
