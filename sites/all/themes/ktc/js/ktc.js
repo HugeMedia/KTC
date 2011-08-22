@@ -178,6 +178,7 @@
 		Cufon.replace('body.node-type-soda-story-form-page form label');
 		Cufon.replace('body.node-type-soda-story-form-page form #edit-field-story-photos div.image-widget-data span.file a');
 		Cufon.replace('body.node-type-soda-story-form-page form #edit-field-story-photos table td');
+		Cufon.replace('body.node-type-soda-story-form-page form#soda-story-node-form #edit-submit');
 		
 		Cufon.now();
             

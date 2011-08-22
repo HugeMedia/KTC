@@ -127,7 +127,7 @@ body.node-type-soda-story-form-page form#soda-story-node-form div.field-name-fie
 body.node-type-soda-story-form-page div.field-type-text  { float: left; margin-right: 30px; }
 body.node-type-soda-story-form-page div.field-type-file { float: left; }
 body.node-type-soda-story-form-page div.field-type-file div.file-widget { font-size: 13px; }
-div#custom-soda-story-form { width: 520px; /*border: 1px solid white;*/ float: right; }
+div#custom-soda-story-form { width: 440px; /*border: 1px solid white;*/ float: right; }
 body.node-type-soda-story-form-page #edit-field-story-name, body.node-type-soda-story-form-page #edit-field-story-email { width: 180px; }
 body.node-type-soda-story-form-page input#edit-field-story-doc-und-0-upload {  }
 body.node-type-soda-story-form-page #edit-field-story-teen { clear: left;  float: left; }
@@ -144,6 +144,7 @@ body.node-type-soda-story-form-page #edit-field-story-remember label { font-size
 body.node-type-soda-story-form-page form label { font-size: 20px; }
 body.node-type-soda-story-form-page form#soda-story-node-form div.form-item { margin: 10px 0; }
 body.node-type-soda-story-form-page form#soda-story-node-form span.form-required { display: none; }
+body.node-type-soda-story-form-page form#soda-story-node-form #edit-submit, body.node-type-soda-story-form-page form#soda-story-node-form #edit-field-story-doc-und-0-upload-button { background: #000; color: #fff; text-transform: uppercase; border: 1px solid #fff; }
 
 /* login form */
 #block-user-login { background: #000; }
