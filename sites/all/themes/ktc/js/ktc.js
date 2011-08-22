@@ -172,6 +172,13 @@
 		Cufon.replace('table.views-table thead tr th a');
 		Cufon.replace('table.views-table tbody tr td a');
 		Cufon.replace('table.views-table tbody tr td div.abstract-pop div.abstract-mid p');
+		
+		// soda stories page
+		Cufon.replace('body.node-type-soda-story-form-page div.field-name-body p');
+		Cufon.replace('body.node-type-soda-story-form-page form label');
+		Cufon.replace('body.node-type-soda-story-form-page form #edit-field-story-photos div.image-widget-data span.file a');
+		Cufon.replace('body.node-type-soda-story-form-page form #edit-field-story-photos table td');
+		
 		Cufon.now();
             
 	    

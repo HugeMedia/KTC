@@ -67,6 +67,19 @@ function ktc_preprocess_node(&$variables) {
             $variables['panel6'] = $panelview;
         }
     }
+    
+    elseif ($node->type == 'soda_story_form_page') {
+        //require_once(DRUPAL_ROOT . "/modules/node/node.pages.inc")
+        module_load_include('inc', 'node', 'node.pages');
+        //include_once(drupal_get_path('module', 'node') . '/node.pages.inc');
+        //include_once(drupal_get_path('module', 'file') . '/file.module');
+        //$variables['story_form'] = module_invoke('formblock', 'block_view', 'soda_story');
+        //$variables['story_form'] = drupal_get_form('soda_story_node_form');
+        $variables['story_form'] = node_add('soda_story');
+        //dd($variables['story_form']);
+        //dpm($variables['story_form']);
+    }
+    
 }
 
 

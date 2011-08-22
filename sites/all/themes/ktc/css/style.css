@@ -117,6 +117,34 @@ body.node-type-interior-page h2.title { color: #e87d39; font-size: 40px;  text-t
 #footer-text { color: #e87d39; text-align: center; margin-top: 28px; font-weight: bold; }
 #footer-text span { margin-right: 20px; }
 
+
+/* soda stories page  and form */
+body.node-type-soda-story-form-page  #content { background: #000; padding: 30px 40px 20px 50px; color: #fff; }
+body.node-type-soda-story-form-page form#soda-story-node-form div.form-item-title { display: none; }
+body.node-type-soda-story-form-page form#soda-story-node-form div.vertical-tabs { display: none; }
+body.node-type-soda-story-form-page form#soda-story-node-form div#edit-field-story-popup { display: none; }
+body.node-type-soda-story-form-page form#soda-story-node-form div.field-name-field-story-cat { display: none; }
+body.node-type-soda-story-form-page div.field-type-text  { float: left; margin-right: 30px; }
+body.node-type-soda-story-form-page div.field-type-file { float: left; }
+body.node-type-soda-story-form-page div.field-type-file div.file-widget { font-size: 13px; }
+div#custom-soda-story-form { width: 520px; /*border: 1px solid white;*/ float: right; }
+body.node-type-soda-story-form-page #edit-field-story-name, body.node-type-soda-story-form-page #edit-field-story-email { width: 180px; }
+body.node-type-soda-story-form-page input#edit-field-story-doc-und-0-upload {  }
+body.node-type-soda-story-form-page #edit-field-story-teen { clear: left;  float: left; }
+body.node-type-soda-story-form-page #edit-field-story-doc div.description, body.node-type-soda-story-form-page #edit-field-story-photos div.description { display: none; }
+body.node-type-soda-story-form-page #edit-field-story-teen select { width: 180px; margin-right: 30px;  }
+body.node-type-soda-story-form-page #edit-field-story-photos { clear: left; }
+body.node-type-soda-story-form-page #edit-field-story-photos fieldset { border: none; }
+body.node-type-soda-story-form-page #edit-field-story-photos legend, body.node-type-soda-story-form-page #edit-field-story-photos div.tabledrag-toggle-weight-wrapper { display: none; }
+body.node-type-soda-story-form-page #edit-field-story-photos table tr { background-color: #000; }
+body.node-type-soda-story-form-page #edit-field-story-photos table th { border-bottom: 3px solid #000; display: none; }
+body.node-type-soda-story-form-page #edit-field-story-photos table div.image-widget-data { clear: left; }
+body.node-type-soda-story-form-page #edit-field-story-remember { width: 210px; float: left; margin-right: 30px; }
+body.node-type-soda-story-form-page #edit-field-story-remember label { font-size: 18px; }
+body.node-type-soda-story-form-page form label { font-size: 20px; }
+body.node-type-soda-story-form-page form#soda-story-node-form div.form-item { margin: 10px 0; }
+body.node-type-soda-story-form-page form#soda-story-node-form span.form-required { display: none; }
+
 /* login form */
 #block-user-login { background: #000; }
 #block-user-login form#user-login-form { color: #fff; }
