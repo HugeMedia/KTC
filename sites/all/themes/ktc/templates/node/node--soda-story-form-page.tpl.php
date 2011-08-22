@@ -90,11 +90,21 @@
 
 
   <div class="content"<?php print $content_attributes; ?>>
+    
+    <div id="soda-story-top">
+        <div id="soda-story-page-title">
+          <h1>Tell Us Your <span class="text-highlight">Soda Story</span> With Video or Words...</h1>
+        </div>
+        <div id="soda-story-body">
+          <?php print render($content['body']); ?>
+        </div>
+    </div>
+    
     <?php
       // We hide the comments and links now so that we can render them later.
       hide($content['comments']);
       hide($content['links']);
-      print render($content);
+      
       include_once(drupal_get_path('module', 'node') . '/node.pages.inc');
     ?>
     <div id="custom-soda-story-form">
@@ -111,6 +121,13 @@
       <?php //dd(render($story_form)); ?>
       <?php print drupal_render($story_form); ?>
     </div>
+    
+    <?php print render($content['field_story_rules']); ?>
+    
+    <div id="soda-story-page-footer">
+      <?php print render($content['field_story_footer']); ?>
+    </div>
+    
   </div>
 
 

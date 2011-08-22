@@ -11,7 +11,8 @@ function ktc_preprocess_page(&$variables) {
     if (isset($variables['node'])) {
         $node = $variables['node'];
         if ($node->type == 'home_section_page' ||
-            $node->type == 'interior_page') {
+            $node->type == 'interior_page' ||
+            $node->type == 'soda_story_form_page') {
             $variables['show_title'] = FALSE;
         }
     }
