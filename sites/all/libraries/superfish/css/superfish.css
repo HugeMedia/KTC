@@ -51,7 +51,7 @@
 .sf-menu li li li:hover ul,
 .sf-menu li li li.sfHover ul {
   left: 12em;
-  top: 8px;
+  top: 1px;
 }
 .sf-menu a.sf-with-ul {
   min-width: 1px;
