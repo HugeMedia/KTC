@@ -151,8 +151,10 @@ body.node-type-soda-story-form-page form#soda-story-node-form div.form-item { ma
 body.node-type-soda-story-form-page form#soda-story-node-form span.form-required { display: none; }
 body.node-type-soda-story-form-page form#soda-story-node-form #edit-submit, body.node-type-soda-story-form-page form#soda-story-node-form #edit-field-story-doc-und-0-upload-button, body.node-type-soda-story-form-page form#soda-story-node-form #edit-field-story-photos-und-0-upload-button { background: #000; color: #fff; text-transform: uppercase; border: 1px solid #fff; }
 body.node-type-soda-story-form-page form#soda-story-node-form input { color: #e87d39; }
-body.node-type-soda-story-form-page #soda-story-page-footer { clear: right; background: #fff; color: #000; padding: 40px 50px; font-size: 12px; }
+body.node-type-soda-story-form-page #soda-story-page-footer { clear: right; background: #fff; color: #000; padding: 30px 50px 30px; font-size: 12px; }
 body.node-type-soda-story-form-page div.field-name-field-story-rules { padding: 20px 0 0 50px; clear: left; }
+body.node-type-soda-story-form-page div.field-name-field-story-rules h3 { text-transform: uppercase; padding: 20px 0 10px 0; }
+body.node-type-soda-story-form-page div.field-name-field-story-rules ul li { list-style: disc; padding: 5px 0; list-style-position: inside; }
 .text-highlight { color: #e87d39; }
 /* soda story lists */
 body.node-type-soda-story-form-page #soda-story-body ul li { background: transparent url(../images/soda-story-bullet.png) no-repeat left 10px; padding: 10px 0 10px 50px; }
