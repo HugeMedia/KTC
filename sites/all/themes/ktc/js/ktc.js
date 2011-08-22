@@ -113,6 +113,28 @@
             )
 	    
 	    
+	    // menu
+	    $('ul#superfish-1 li li.menuparent > a').hover(function() {
+		//console.log('hov');
+		//$(this).parent('li.sf-depth-1 > ul').css({backgroundPosition: '0 -8px'});
+		$(this).parents('li.sf-depth-1 ul').css({backgroundPosition: '0 -8px'});
+	    },
+	    function() {
+		//console.log('outt');
+		$(this).parents('li.sf-depth-1 ul').css({backgroundPosition: '0 0'});
+	    });
+	    
+	    $('ul#superfish-1 a.sf-depth-3').hover(function() {
+		//console.log('hov');
+		//$(this).parent('li.sf-depth-1 > ul').css({backgroundPosition: '0 -8px'});
+		$(this).parents('li.sf-depth-1 > ul').css({backgroundPosition: '0 -8px'});
+	    },
+	    function() {
+		//console.log('outt');
+		$(this).parents('li.sf-depth-1 > ul').css({backgroundPosition: '0 0'});
+	    });
+	    
+	    
 	    //$('a[title=Advocacy Tools]').addClass('ctools-use-modal');
 		
 		// CUFON font replacement. using this method is always legal as far as I know,
@@ -132,7 +154,7 @@
 		Cufon.replace('#home-section-bottom #panels-header span');
 		
 		// footer
-		Cufon.replace('#footer ul.menu li a');
+		Cufon.replace('#footer ul.menu li a', { hover: true });
 		Cufon.replace('#footer #footer-text span');
 		
 		// image gallery

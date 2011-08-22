@@ -21,7 +21,8 @@ strong { color: #e87d39; }
 .sf-menu.sf-style-default a, .sf-menu.sf-style-default a:visited { color: #fff; }
 .sf-menu.sf-style-default li li a, .sf-menu.sf-style-default li li a:visited { color: #005394; }
 .sf-menu li { }
-.sf-menu.sf-style-default a:hover { /*background:  transparent url(../images/menu-highlight.png) no-repeat center 0;*/ color: #e87d39; background: transparent;  }
+.sf-menu.sf-style-default a:hover { /*background:  transparent url(../images/menu-highlight.png) no-repeat center 0;*/ color: #e87d39; background: /*transparent; */ }
+.sf-menu.sf-style-default li li a:hover { color: #e87d39; }
 ul#superfish-1, ul#superfish-1 li.sf-depth-1 { height: 28px; background: #317eb0;  }
 ul#superfish-1 li.sf-depth-1 { margin: 0 40px; }
 ul#superfish-1 li.sf-depth-1.first { margin-left: 10px; }
@@ -34,18 +35,26 @@ ul#superfish-1 li.sf-depth-1 a.active, ul#superfish-1 li.active-trail a { color:
   -webkit-border-bottom-left-radius: 0px;}
 .sf-menu.sf-style-default li li { background: transparent; font-size: 13px; }
 .sf-menu li:hover ul, .sf-menu li.sfHover ul { top: 28px; left: -45px }
-.sf-menu li.sf-depth-1 > ul { width: 159px !important;  background: transparent url(../images/menu-dropdown-bg.png) no-repeat top left; }
+.sf-menu li.sf-depth-1 > ul { width: 159px !important;  background: transparent url(../images/menu-bg-top.png) no-repeat top left; }
+/*.sf-menu li.sfHover > ul { background-position: 0 -8px; }*/
+.sf-menu li.sf-depth-1 > ul > li { width: 153px !important; }
 .sf-menu.sf-style-default li:hover { background: transparent; }
 .sf-menu.sf-style-default li li { /*background: transparent url(../images/menu-dropdown-mid.png) repeat-y top left;*/ }
-.sf-menu.sf-style-default li li.first { /*background: transparent url(../images/menu-dropdown-top.png) no-repeat top left;*/ margin-top: 10px;  }
+.sf-menu.sf-style-default li li.sf-parent-children-0 > a { background: transparent url(../images/menu-arrow.png) no-repeat 140px 8px; }
+.sf-menu.sf-style-default li li.sf-parent-children-0 > a:hover { background: #458bb8 url(../images/menu-arrow-white.png) no-repeat 140px 8px; }
+.sf-menu.sf-style-default li li.first { /*background: transparent url(../images/menu-dropdown-top.png) no-repeat top left;*/ margin-top: 8px;  }
 .sf-menu.sf-style-default li li.last { /*background: transparent url(../images/menu-dropdown-bottom.png) no-repeat bottom left; */ border-bottom: 3px solid #000; }
-.sf-menu.sf-style-default li li a { border-top: 1px solid #005394; padding: 4px 3px 4px 9px; border-left: none; background: transparent; }
+.sf-menu.sf-style-default li li a { border-top: 1px solid #005394; padding: 4px 3px 5px 9px; border-left: none; background: transparent; }
+.sf-menu.sf-style-default li li a:hover { background-color: #458bb8; color: #fff; }
 .sf-menu.sf-style-default li li.first a { border-top: none; }
+.sf-menu.sf-style-default li li.sf-depth-2 { border-left: 3px solid #000; border-right: 3px solid #000; /*background: #fff;*/ background: transparent url(../images/menu-bg.png); }
+.sf-menu.sf-style-default li.sf-depth-1  > ul > li.first { border-top: 3px solid #000; }
 
 .sf-menu.sf-style-default li li li { background: transparent; }
-.sf-menu.sf-style-default li:hover, .sf-menu.sf-style-default li.sfHover, .sf-menu.sf-style-default a:focus, .sf-menu.sf-style-default a:hover, .sf-menu.sf-style-default a:active { background: transparent; }
-.sf-menu.sf-style-default li li li.first { margin: 0; }
-.sf-menu li.sf-depth-2 > ul { width: 159px !important;  background: transparent url(../images/menu-lvl2-bg.png) repeat; border-left: 3px solid black; border-top: 3px solid black; border-right: 3px solid black;}
+.sf-menu.sf-style-default li:hover, .sf-menu.sf-style-default li.sfHover, .sf-menu.sf-style-default a:focus, .sf-menu.sf-style-default a:hover, .sf-menu.sf-style-default a:active { /*background: transparent; */}
+.sf-menu.sf-style-default li li li.first { margin: 7px 0 0 0; border-top: 3px solid black;}
+.sf-menu li.sf-depth-2 > ul { width: 159px !important;  /*background: transparent url(../images/menu-lvl2-bg.png) repeat;*/  background: transparent url(../images/menu-bg-top-large-right.png) no-repeat top left; }
+.sf-menu li.sf-depth-2 > ul > li { border-left: 3px solid black; border-right: 3px solid black; background: transparent url(../images/menu-bg.png); }
 
 h1 { font-size: 41px; text-transform: uppercase; }
 #main-wrapper { /*width: 1014px; margin: auto;*/ background: url(../images/blue-bg.jpg) repeat center 0; }
