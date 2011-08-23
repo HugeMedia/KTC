@@ -23,6 +23,9 @@ function ktc_preprocess_page(&$variables) {
         $variables['show_title'] = FALSE;
     }
     
+    // search
+    $variables['search_form'] = drupal_get_form('search_form');
+    
     // footer menu
     $footer_links = menu_build_tree('menu-footer-menu');
     $variables['footer_links'] = ktc_menu_tree_output($footer_links);

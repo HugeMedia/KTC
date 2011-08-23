@@ -160,5 +160,23 @@ function ktccustom_form_alter(&$form, &$form_state, $form_id) {
         $form['actions']['submit']['#type'] = 'image_button';
         $form['actions']['submit']['#src'] = $img_path . 'gobutton.png';
     }
+    elseif ($form_id == 'soda_story_node_form') {
+        // talk about obscure - need to use this function to include some functionality
+        // related to processing file uploads when using a node add/edit form on
+        // a different page than the usual one.
+        form_load_include($form_state, 'inc', 'node', 'node.pages');
+        //dpm($form);
+        $now = time();
+        $form['title']['#default_value'] = 'Soda story-' . $now;
+        $form['actions']['submit']['#value'] = 'Submit';
+    }
+    elseif ($form_id == 'search_form') {
+        $img_path = path_to_theme().'/images/';
+        $form['basic']['keys']['#title'] = "Search";
+        $form['basic']['submit']['#value'] = 'null';
+        $form['basic']['submit']['#type'] = 'image_button';
+        $form['basic']['submit']['#src'] = $img_path . 'gobutton-small.png';
+    }
 }
+
 

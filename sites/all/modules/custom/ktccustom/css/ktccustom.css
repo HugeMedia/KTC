@@ -27,7 +27,7 @@ ul.document-taxonomy li { padding: 5px 0; }
 h3.document-results-header { font-size: 24px; color: #ec7a34; text-transform: uppercase; text-align: center; }
 
 div.view-documents-by-category div.view-content { position: relative; }
-.abstract-pop { display: none; position: absolute; top: 0; left: 0;  border: none; width: 499px;  }
+.abstract-pop { display: none; position: absolute; top: 0; left: 0;  border: none; width: 499px; z-index: 500; }
 .abstract-mid { padding: 0 10px; background: transparent url(../images/bubble-mid.png) repeat-y; font-size: 15px; }
 .abstract-top { background: transparent url(../images/bubble-top.png) top left no-repeat; height: 18px; }
 .abstract-bottom { background: transparent url(../images/bubble-bottom.png) bottom left no-repeat; height: 47px; }
