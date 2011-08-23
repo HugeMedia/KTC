@@ -17,9 +17,9 @@ strong { color: #e87d39; }
 #fb-like { /*width: 100px; float: left;*/ height: 40px; }
 
 /* search form */
-#header-share form#search-form { position: absolute; }
-#header-share form#search-form #edit-keys { width: 165px; height: 19px; border: 2px solid #71b9d6; }
-#header-share form#search-form label { display: block; margin-bottom: 8px; color: #e87d39; text-transform: uppercase; }
+#header-share form.search-form { position: absolute; }
+#header-share form.search-form #edit-keys { width: 165px; height: 19px; border: 2px solid #71b9d6; }
+#header-share form.search-form label { display: block; margin-bottom: 8px; color: #e87d39; text-transform: uppercase; }
 
 #navigation { height: 37px; background: #317eb0; }
 
