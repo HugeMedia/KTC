@@ -84,7 +84,7 @@
             //console.log(viewoffset);
             $('.view-documents-by-category td.views-field-title a').hover(
                 function() {
-                    
+
                     var linkoffset = ($(this).offset());
                     var linkpos = $(this).position();
                     var popoffset1 = $(this).siblings('.abstract-pop').offset();

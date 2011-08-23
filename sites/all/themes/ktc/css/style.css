@@ -145,6 +145,7 @@ body.node-type-soda-story-form-page #edit-field-story-photos table tr { backgrou
 body.node-type-soda-story-form-page #edit-field-story-photos table th { border-bottom: 3px solid #000; display: none; }
 body.node-type-soda-story-form-page #edit-field-story-photos table div.image-widget-data { clear: left; }
 body.node-type-soda-story-form-page #edit-field-story-remember { width: 210px; float: left; margin-right: 30px; }
+body.node-type-soda-story-form-page #edit-field-story-remember input#edit-field-story-remember-und { background: #000; border: 1px solid #fff; }
 body.node-type-soda-story-form-page #edit-field-story-remember label { font-size: 18px; }
 body.node-type-soda-story-form-page form label { font-size: 20px; }
 body.node-type-soda-story-form-page form#soda-story-node-form div.form-item { margin: 10px 0; }
