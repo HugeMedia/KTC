@@ -146,7 +146,7 @@
 		Cufon.replace('#site-slogan');
 		Cufon.replace('ul#superfish-1 li a', { hover: true });
 		Cufon.replace('h1.title');
-		Cufon.replace('form#search-form label');
+		Cufon.replace('form.search-form label');
 		
 		// home pages
 		Cufon.replace('#home-top-right div.field-name-field-home-header div.field-item p');
