@@ -52,6 +52,7 @@
   <meta property="og:site_name" content="KickTheCan"/>
   <meta property="og:type" content="article"/>
   <meta property="fb:admins" content="788964277"/>
+  <meta property="og:image" content="http://dev.kickthecan.info/KTC_site_lockup.jpg" />
   <?php print $styles; ?>
   <?php print $scripts; ?>
 </head>
