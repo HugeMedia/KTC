@@ -172,7 +172,7 @@ body.node-type-soda-story-form-page div.field-name-field-story-rules { padding: 
 body.node-type-soda-story-form-page div.field-name-field-story-rules h3 { text-transform: uppercase; padding: 20px 0 10px 0; }
 body.node-type-soda-story-form-page div.field-name-field-story-rules ul li { list-style: disc; padding: 5px 0; list-style-position: inside; }
 .text-highlight { color: #e87d39; }
-body.node-type-soda-story-form-page #edit-field-num-views { display: none; }
+body.node-type-soda-story-form-page #edit-field-num-views, body.node-type-soda-story-form-page #edit-field-story-desc { display: none; }
 /* soda story lists */
 body.node-type-soda-story-form-page #soda-story-body ul li { background: transparent url(../images/soda-story-bullet.png) no-repeat left 10px; padding: 10px 0 10px 50px; }
 body.node-type-soda-story-form-page #edit-field-story-thumb { display: none; }
