@@ -23,3 +23,5 @@ div.views-slideshow-cycle-main-frame-row-item { width: 229px; height: 126px; bor
 div.views-slideshow-cycle-main-frame-row-item a:link { color: #fff; }
 div.views-slideshow-controls-top { /*display: none;*/ }
 div.views-slideshow-controls-top #views_slideshow_slide_counter_video_categories-block { display: none; }
+
+div.view-video-categories div.views-field-field-desc-left, div.view-video-categories div.views-field-field-desc-right { display: none; }
