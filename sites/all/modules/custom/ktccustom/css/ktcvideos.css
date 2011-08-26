@@ -19,5 +19,7 @@ h1#page-title { color: #e87d39; text-transform: none; padding: 20px 0 0 40px; fo
 
 /* slideshow */
 span#views_slideshow_controls_text_pause_video_categories-block { display: none; }
-div.views-slideshow-cycle-main-frame-row-item { width: 229px; height: 126px; border: 2px solid #71b9d6; float: left; margin-right: 5px; }
-div.views-slideshow-controls-top { display: none; }
+div.views-slideshow-cycle-main-frame-row-item { width: 229px; height: 126px; border: 2px solid #71b9d6; float: left; margin-right: 5px; text-align: center; line-height: 126px; color: #fff;  }
+div.views-slideshow-cycle-main-frame-row-item a:link { color: #fff; }
+div.views-slideshow-controls-top { /*display: none;*/ }
+div.views-slideshow-controls-top #views_slideshow_slide_counter_video_categories-block { display: none; }
