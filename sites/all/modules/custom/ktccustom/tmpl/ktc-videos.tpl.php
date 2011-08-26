@@ -1,7 +1,11 @@
 
 <div id="videos-top">
     
-
+    <div id="vids-by-cat">
+        <?php foreach ($element['vids_by_cat'] as $cattid => $cat_view): ?>
+            <div class="vids-by-cat-view cat-<?php print $cattid; ?>"><div class="vids-controls vids-controls-<?php print $cattid; ?>"><a class="vid-next"></a><a class="vid-prev"></a></div><?php print $cat_view; ?></div>
+        <?php endforeach; ?>
+    </div>
     
     <div id="video-cats">
         <?php print $element['video_cats']; ?>

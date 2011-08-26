@@ -64,6 +64,16 @@ function ktc_soda_stories() {
     $video_cats = views_embed_view('video_categories', 'block');
     
     $cat_tree = taxonomy_get_tree(7);
+    $vids_by_cat = array();
+    foreach ($cat_tree as $cat) {
+        $rendered_view = views_embed_view('videos_by_category', 'block', $cat->tid);
+        if (strpos($rendered_view, 'BLANK') === FALSE) {
+            $vids_by_cat[$cat->tid] = $rendered_view;
+        }
+    }
+    
+    
+    $cat_tree = taxonomy_get_tree(7);
     //dpm($cat_tree);
     $cats = array();
     foreach ($cat_tree as $cat) {
@@ -75,6 +85,7 @@ function ktc_soda_stories() {
      $rend = array(
         'cats' => $cats,
         'video_cats' => $video_cats,
+        'vids_by_cat' => $vids_by_cat,
         'most_watched' => $most_watched,
         '#theme' => 'ktc_videos',
     );
