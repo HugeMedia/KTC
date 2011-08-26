@@ -36,6 +36,13 @@ function ktccustom_menu() {
         'type' => MENU_CALLBACK,
     );
     
+    $items['soda-stories-videos'] = array(
+        'title' => 'Soda Stories',
+        'page callback' => 'ktc_soda_stories',
+        'access callback' => TRUE,
+        'type' => MENU_CALLBACK,
+    );
+    
     return $items;
 }
 
@@ -44,6 +51,60 @@ function ktccustom_init() {
     // add some css/js to fancy up some of the node edit pages
     drupal_add_js(drupal_get_path('module', 'ktccustom') . '/js/ktcadmin.js');
     drupal_add_css(drupal_get_path('module', 'ktccustom') . '/css/ktcadmin.css');
+}
+
+
+
+function ktc_soda_stories() {
+    drupal_add_js(drupal_get_path('theme', 'ktc') .'/js/ktc_youtube.js');
+    drupal_add_js(drupal_get_path('module', 'ktccustom') . '/js/ktcvideos.js');
+    drupal_add_css(drupal_get_path('module', 'ktccustom') . '/css/ktcvideos.css');
+    
+    $most_watched = views_embed_view('most_viewed_videos', 'block');
+    $video_cats = views_embed_view('video_categories', 'block');
+    
+    $cat_tree = taxonomy_get_tree(7);
+    //dpm($cat_tree);
+    $cats = array();
+    foreach ($cat_tree as $cat) {
+        $cat_obj = array();
+        $cat_obj['name'] = $cat->name;
+        $cats[] = $cat_obj;
+    }
+    
+     $rend = array(
+        'cats' => $cats,
+        'video_cats' => $video_cats,
+        'most_watched' => $most_watched,
+        '#theme' => 'ktc_videos',
+    );
+    return $rend;
+}
+
+
+function ktccustom_node_presave($node) {
+  if ($node->type == 'soda_story') {
+    
+    if (!isset($node->field_story_thumb['und'][0]['fid'])) {
+        // grab the youtube thumbnail for the video,
+        // unless one was supplied already
+        $url = $node->field_story_video['und'][0]['value'];
+        $urlparts = explode('v=', $url);
+        $vid = $urlparts[1];
+        $extra = explode('&', $vid);
+        $vid = $extra[0];
+    
+        // 0.jpg is the bigger thumbnail, 2.jpg is the smaller one
+        $request = drupal_http_request('http://img.youtube.com/vi/' . $vid . '/0.jpg');
+        $data = $request->data;
+    
+        $new_file_name = str_replace(' ', '-', $node->title) . '-thumb.jpg';
+        $file = file_save_data($request->data, 'public://story_thumbs/' . $new_file_name, FILE_EXISTS_RENAME);
+        $node->field_story_thumb['und'][0]['fid'] = $file->fid;
+        $node->field_doc_file['und'][0]['display'] = 1; 
+    }
+  }
+  
 }
 
 
@@ -141,6 +202,19 @@ function ktccustom_theme() {
       'path' => drupal_get_path('module', 'ktccustom') . '/tmpl',
       'template' => 'document-browse',
     ),
+    
+    'ktc_fast_facts' => array(
+      'render element' => 'element',
+      'path' => drupal_get_path('module', 'ktccustom') . '/tmpl',
+      'template' => 'ktc-facts',
+    ),
+    
+    'ktc_videos' => array(
+      'render element' => 'element',
+      'path' => drupal_get_path('module', 'ktccustom') . '/tmpl',
+      'template' => 'ktc-videos',
+    ),
+    
   );
 
   return $items;
@@ -166,6 +240,8 @@ function ktccustom_form_alter(&$form, &$form_state, $form_id) {
         // a different page than the usual one.
         form_load_include($form_state, 'inc', 'node', 'node.pages');
         //dpm($form);
+        // prevent anyone from changing the number of views - this is done with drupal hooks
+        $form['field_num_views']['und']['#disabled'] = TRUE;
         $now = time();
         $form['title']['#default_value'] = 'Soda story-' . $now;
         $form['actions']['submit']['#value'] = 'Submit';
@@ -180,3 +256,29 @@ function ktccustom_form_alter(&$form, &$form_state, $form_id) {
 }
 
 
+function ktccustom_get_fast_facts_news_flash() {
+     $facts[] = array();
+    
+    $query = "SELECT node.nid AS nid, node.created AS node_created,
+        field_display_text_value AS text,
+        field_fact_learn_more_value AS url
+        FROM {node} node
+        LEFT JOIN field_data_field_display_text on node.nid = field_data_field_display_text.entity_id
+        LEFT JOIN field_data_field_fact_learn_more on node.nid = field_data_field_fact_learn_more.entity_id
+        WHERE (( (node.status = '1') AND (node.type IN  ('fast_fact')) ))
+        ORDER BY node_created DESC";
+    
+    $result = db_query($query);
+    $i = 0;
+    foreach ($result as $fact) {
+        $fact->index = $i;
+        $facts[] = $fact;
+        $i++;
+    }
+    
+    $rend = array(
+        'facts' => $facts,
+        '#theme' => 'ktc_fast_facts',
+    );
+    return $rend;
+}

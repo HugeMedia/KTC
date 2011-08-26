@@ -1,0 +1,23 @@
+#content { background: #000; }
+h1#page-title { color: #e87d39; text-transform: none; padding: 20px 0 0 40px; font-size: 24px; margin-bottom: 20px; }
+#videos-top { background: #000; color: #e87d39;  font-size: 18px; line-height: 24px; }
+#body-left { width: 440px; float: left; margin-right: 15px; padding-left: 40px; }
+#body-right { width: 400px; float: left; }
+
+#videos-top .cat-box { width: 229px; height: 126px; border: 2px solid #71b9d6; float: left; margin-right: 5px; }
+#videos-top #video-cats { height: 130px; margin-left: 2px; margin-bottom: 60px; }
+
+
+#videos-bottom { padding: 20px 40px; position: relative; background: #fff; }
+#most-watched-videos { width: 430px; height: 229px; position: absolute; bottom: 40px; }
+#tell-story { float:  right;  }
+#videos-bottom table td div.views-field-field-story-thumb { margin: 40px 5px 0 0; }
+#videos-bottom table td div.views-field-field-story-thumb img { border: 1px solid #71b9d6; }
+#videos-bottom table tr.row-1 td div.views-field-field-story-thumb { margin: 10px 5px 0 0; }
+
+.clearfix { clear: both; }
+
+/* slideshow */
+span#views_slideshow_controls_text_pause_video_categories-block { display: none; }
+div.views-slideshow-cycle-main-frame-row-item { width: 229px; height: 126px; border: 2px solid #71b9d6; float: left; margin-right: 5px; }
+div.views-slideshow-controls-top { display: none; }
