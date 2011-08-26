@@ -23,7 +23,6 @@
  * @ingroup views_templates
  */
 ?>
-<?php dpm($row); ?>
 <?php foreach ($fields as $id => $field): ?>
   <?php if (!empty($field->separator)): ?>
     <?php print $field->separator; ?>
