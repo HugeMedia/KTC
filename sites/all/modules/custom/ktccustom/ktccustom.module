@@ -243,7 +243,9 @@ function ktccustom_form_alter(&$form, &$form_state, $form_id) {
         // prevent anyone from changing the number of views - this is done with drupal hooks
         $form['field_num_views']['und']['#disabled'] = TRUE;
         $now = time();
-        $form['title']['#default_value'] = 'Soda story-' . $now;
+        if ($form['title']['#default_value'] == '') {
+            $form['title']['#default_value'] = 'Soda story-' . $now;
+        }
         $form['actions']['submit']['#value'] = 'Submit';
     }
     elseif ($form_id == 'search_form') {
@@ -281,4 +283,44 @@ function ktccustom_get_fast_facts_news_flash() {
         '#theme' => 'ktc_fast_facts',
     );
     return $rend;
+}
+
+
+function ktccustom_cron() {
+     $query = db_select('node', 'n');
+    $query
+        ->fields('n', array('nid'))
+        ->condition('type', 'soda_story')
+        ->orderBy('nid');
+    
+    $results = $query->execute();
+    $count = 0;
+    foreach($results as $result) {
+        $node = node_load($result->nid);
+        //dd($node);
+        //dd($node->nid);
+        if (!isset($node->field_story_thumb['und'][0]['fid'])) {
+            // grab the youtube thumbnail for the video,
+            // unless one was supplied already
+            $url = $node->field_story_video['und'][0]['value'];
+            $urlparts = explode('v=', $url);
+            if (isset($urlparts[1])) {
+                $vid = $urlparts[1];
+                $extra = explode('&', $vid);
+                $vid = $extra[0];
+               // dd('nid: ' . $node->nid . '; vid: ' . $vid);
+            
+                // 0.jpg is the bigger thumbnail, 2.jpg is the smaller one
+                $request = drupal_http_request('http://img.youtube.com/vi/' . $vid . '/0.jpg');
+                $data = $request->data;
+                
+                $new_file_name = str_replace(' ', '-', $node->title) . '-thumb.jpg';
+                $file = file_save_data($request->data, 'public://story_thumbs/' . $new_file_name, FILE_EXISTS_RENAME);
+                $node->field_story_thumb['und'][0]['fid'] = $file->fid;
+                $node->field_doc_file['und'][0]['display'] = 1;
+                node_save($node);
+                //dd('node saved');
+            }
+        }
+    }
 }
