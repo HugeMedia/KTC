@@ -25,6 +25,7 @@ function ktc_preprocess_page(&$variables) {
     
     // search
     $variables['search_form'] = drupal_get_form('search_form');
+    $variables['facts'] = ktccustom_get_fast_facts_news_flash();
     
     // footer menu
     $footer_links = menu_build_tree('menu-footer-menu');
@@ -82,6 +83,35 @@ function ktc_preprocess_node(&$variables) {
         $variables['story_form'] = node_add('soda_story');
         //dd($variables['story_form']);
         //dpm($variables['story_form']);
+    }
+    
+    elseif ($node->type == 'soda_story') {
+        drupal_add_js(drupal_get_path('theme', 'ktc') .'/js/ktc_youtube.js');
+        // grab the youtube video id from the url field
+        //dpm($node);
+        $url = $node->field_story_video['und'][0]['value'];
+        $urlparts = explode('v=', $url);
+        $vid = $urlparts[1];
+        $extra = explode('&', $vid);
+        $variables['vid'] = $extra[0];
+    }
+    
+    elseif ($node->type == 'videos_page') {
+        drupal_add_js(drupal_get_path('theme', 'ktc') .'/js/ktc_youtube.js');
+        drupal_add_js(drupal_get_path('module', 'ktccustom') . '/js/ktcvideos.js');
+        drupal_add_css(drupal_get_path('module', 'ktccustom') . '/css/ktcvideos.css');
+        $variables['most_watched'] = views_embed_view('most_viewed_videos', 'block');
+        
+        $cat_tree = taxonomy_get_tree(7);
+        //dpm($cat_tree);
+        $cats = array();
+        foreach ($cat_tree as $cat) {
+            $cat_obj = array();
+            $cat_obj['name'] = $cat->name;
+            $cats[] = $cat_obj;
+        }
+        $variables['cats'] = $cats;
+        //dpm($variables);
     }
     
 }

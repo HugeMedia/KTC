@@ -135,6 +135,18 @@
 	    });
 	    
 	    
+	    //$('#header-top .ktc-fact').each(function() {
+	    //
+	    //});
+	    
+		$('#ktc-facts').cycle({ 
+			fx:    'fade',
+			fit: 1,
+			speed:  2500,
+			height: 35,
+			width: 780
+		});
+	    
 	    //$('a[title=Advocacy Tools]').addClass('ctools-use-modal');
 		
 		// CUFON font replacement. using this method is always legal as far as I know,
@@ -147,6 +159,8 @@
 		Cufon.replace('ul#superfish-1 li a', { hover: true });
 		Cufon.replace('h1.title');
 		Cufon.replace('form.search-form label');
+		Cufon.replace('#header-top .facts-label');
+		//Cufon.replace('#header-top .ktc-fact');
 		
 		// home pages
 		Cufon.replace('#home-top-right div.field-name-field-home-header div.field-item p');

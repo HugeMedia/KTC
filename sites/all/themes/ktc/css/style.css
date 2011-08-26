@@ -5,8 +5,14 @@ strong { color: #e87d39; }
 
 #page-wrapper { /*width: 1014px;  margin: auto;*/ }
 
-#header-top { height: 35px; background: #000000; }
-#header-top-inner { width: 1014px; margin: auto; }
+#header-top { height: 35px; background: #000000; line-height: 35px; font-size: 18px; }
+#header-top-inner { width: 954px;  margin: auto; }
+#header-top div.ktc-fact { display: none; }
+#header-top div.fact-0 { display: block; }
+#header-top div.ktc-fact { color: #fff; }
+#header-top .facts-label { color: #e87d39; float: left; width: 80px; text-transform: uppercase; font-weight: bold; }
+#ktc-facts { float: left;  width: 780px; overflow: hidden; }
+#header-top .fact-text { float: left; width: 700px; }
 
 #header { background: #fff url(../images/header.jpg) no-repeat; width: 1014px; height: 206px; margin: auto; }
 #header .section { height: 206px; position: relative; }
@@ -159,15 +165,17 @@ body.node-type-soda-story-form-page #edit-field-story-remember label { font-size
 body.node-type-soda-story-form-page form label { font-size: 20px; }
 body.node-type-soda-story-form-page form#soda-story-node-form div.form-item { margin: 10px 0; }
 body.node-type-soda-story-form-page form#soda-story-node-form span.form-required { display: none; }
-body.node-type-soda-story-form-page form#soda-story-node-form #edit-submit, body.node-type-soda-story-form-page form#soda-story-node-form #edit-field-story-doc-und-0-upload-button, body.node-type-soda-story-form-page form#soda-story-node-form #edit-field-story-photos-und-0-upload-button { background: #000; color: #fff; text-transform: uppercase; border: 1px solid #fff; }
+body.node-type-soda-story-form-page form#soda-story-node-form .form-submit, body.node-type-soda-story-form-page form#soda-story-node-form #edit-field-story-doc-und-0-upload-button, body.node-type-soda-story-form-page form#soda-story-node-form #edit-field-story-photos-und-0-upload-button { background: #000; color: #fff; text-transform: uppercase; border: 1px solid #fff; }
 body.node-type-soda-story-form-page form#soda-story-node-form input { color: #e87d39; }
 body.node-type-soda-story-form-page #soda-story-page-footer { clear: right; background: #fff; color: #000; padding: 30px 50px 30px; font-size: 12px; }
 body.node-type-soda-story-form-page div.field-name-field-story-rules { padding: 20px 0 0 50px; clear: left; }
 body.node-type-soda-story-form-page div.field-name-field-story-rules h3 { text-transform: uppercase; padding: 20px 0 10px 0; }
 body.node-type-soda-story-form-page div.field-name-field-story-rules ul li { list-style: disc; padding: 5px 0; list-style-position: inside; }
 .text-highlight { color: #e87d39; }
+body.node-type-soda-story-form-page #edit-field-num-views { display: none; }
 /* soda story lists */
 body.node-type-soda-story-form-page #soda-story-body ul li { background: transparent url(../images/soda-story-bullet.png) no-repeat left 10px; padding: 10px 0 10px 50px; }
+body.node-type-soda-story-form-page #edit-field-story-thumb { display: none; }
 
 /* login form */
 #block-user-login { background: #000; }

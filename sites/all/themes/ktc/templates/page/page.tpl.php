@@ -68,7 +68,7 @@
 ?>
 
   <div id="page-wrapper"><div id="page">
-    <div id="header-top"><div id="header-top-inner"></div></div>
+    <div id="header-top"><div id="header-top-inner"><?php print render($facts); ?></div></div>
     <div id="header"><div class="section clearfix">
 
       <?php if ($logo): ?>
