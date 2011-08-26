@@ -246,6 +246,7 @@ function ktccustom_form_alter(&$form, &$form_state, $form_id) {
         if ($form['title']['#default_value'] == '') {
             $form['title']['#default_value'] = 'Soda story-' . $now;
         }
+        $form['field_story_photos']['und']['#file_upload_title'] = 'Upload Photo';
         $form['actions']['submit']['#value'] = 'Submit';
     }
     elseif ($form_id == 'search_form') {
