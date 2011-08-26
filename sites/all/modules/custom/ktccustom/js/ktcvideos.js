@@ -18,6 +18,7 @@
 //			});
         
         $('#views_slideshow_cycle_main_video_categories-block div.views-field-name').click(function() {
+            $('#video-player-wrapper').html('').hide();
             var l = $(this).siblings('.views-field-field-desc-left');
             var r = $(this).siblings('.views-field-field-desc-right');
             var tid = $(this).siblings('.views-field-tid').text();
@@ -51,7 +52,7 @@
             var mainoffset = $('#main').offset();
             var newoffset = catoffset;
             newoffset.top -= 60;
-            newoffset.left -= 100;
+            newoffset.left -= 90;
             if (catoffset.left - mainoffset.left <  10) {
                 //console.log('close to edge');
                 newoffset.left = mainoffset.left - 50;
@@ -70,16 +71,23 @@
             }
         });
         
+        $('a#youtube-close').click(function() {
+            $('#video-player-wrapper').html('').hide();
+        });
+        
         $('div.views-field-field-story-thumb .field-content').click(function() {
-            $('#video-player-wrapper').html('').append('<div id="video-player"></div>');
+            $('#video-player-wrapper').html('').append('<div id="video-close"><a id="youtube-close" href="#">X</a></div><div id="video-player"></div>');
+            $('a#youtube-close').click(function() {
+                $('#video-player-wrapper').html('').hide();
+            });
             var yt = $(this).next('.youtube-helper').attr('yt');
-            var params = { allowScriptAccess: "always" };
+            var params = { allowScriptAccess: "always", config: { 'autoPlay':true } };
 	    var atts = { id: "myytplayer" };
-            var embedStr = "http://www.youtube.com/e/" + yt + "?enablejsapi=1&playerapiid=ytplayer"
-            swfobject.embedSWF(embedStr, "video-player", "425", "356", "8", null, null, params, atts);
+            var embedStr = "http://www.youtube.com/e/" + yt + "?enablejsapi=1&playerapiid=ytplayer&autoplay=1"
+            swfobject.embedSWF(embedStr, "video-player", "382", "211", "8", null, null, params, atts);
             var origoffset = $(this).offset();
-            origoffset.top -= 20;
-            origoffset.left -= 5;
+            origoffset.top -= 2;
+            origoffset.left -= 2;
             $('#video-player-wrapper').show().offset(origoffset);
         });
     
