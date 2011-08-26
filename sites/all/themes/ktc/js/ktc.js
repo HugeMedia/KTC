@@ -139,13 +139,13 @@
 	    //
 	    //});
 	    
-		$('#ktc-facts').cycle({ 
-			fx:    'fade',
-			fit: 1,
-			speed:  2500,
-			height: 35,
-			width: 780
-		});
+		//$('#ktc-facts').cycle({ 
+		//	fx:    'fade',
+		//	fit: 1,
+		//	speed:  2500,
+		//	height: 35,
+		//	width: 780
+		//});
 	    
 
 
@@ -210,16 +210,16 @@
             
 	    
 	    	    
-		$('div.view-videos-by-category div.view-content') 
-.before('<div id="nav">') 
-.cycle({ 
-    fx:     'shuffle', 
-    speed:  'slow', 
-    timeout: 0, 
-    pager:  '#nav' ,
-    next:   '#next2', 
-    prev:   '#prev2' 
-});
+//		$('div.view-videos-by-category div.view-content') 
+//.before('<div id="nav">') 
+//.cycle({ 
+//    fx:     'shuffle', 
+//    speed:  'slow', 
+//    timeout: 0, 
+//    pager:  '#nav' ,
+//    next:   '#next2', 
+//    prev:   '#prev2' 
+//});
 	    
 	});
 	
