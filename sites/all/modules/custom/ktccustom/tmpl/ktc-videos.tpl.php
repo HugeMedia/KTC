@@ -1,3 +1,8 @@
+<div id="video-player-wrapper">
+    <div id="video-player">
+        You need Flash player 8+ and JavaScript enabled to view this video.
+    </div>
+</div>
 
 <div id="videos-top">
     
@@ -12,8 +17,8 @@
     </div>
      
      
-    <div id="body-left">left</div>
-    <div id="body-right">right</div>
+    <div id="body-left"></div>
+    <div id="body-right"></div>
     <div class="clearfix">&nbsp;</div>
 </div>
 

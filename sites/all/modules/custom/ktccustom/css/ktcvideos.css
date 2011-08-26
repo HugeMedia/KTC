@@ -38,3 +38,5 @@ div.vids-by-cat-view { border: 2px solid #71b9d6; width: 382px; position: relati
 a.vid-prev { display: block; background: transparent url(../images/vid-prev.png) no-repeat left center; width: 15px; height: 30px; z-index: 151; float: right; }
 a.vid-next { display: block; background: transparent url(../images/vid-next.png) no-repeat left center; width: 15px; height: 30px; z-index: 151;  float: right; }
 a.vid-prev:hover, a.vid-next:hover { cursor: pointer; }
+
+#video-player-wrapper { color: #fff; display: none; width: 425px; height: 356px; border: 1px solid #71b9d6; position: absolute; z-index: 200; }
