@@ -60,8 +60,14 @@
         });
         
         $(document).keyup(function(e) {
-            if (e.keyCode == 27) { $('div.vids-by-cat-view').hide(); }   // esc
-            $('#video-player-wrapper').html('').hide();
+            if (e.keyCode == 27) {
+                if ($('#video-player-wrapper').is(':visible')) {
+                    $('#video-player-wrapper').html('').hide();
+                }
+                else {
+                    $('div.vids-by-cat-view').hide(); 
+                }
+            }
         });
         
         $('div.views-field-field-story-thumb .field-content').click(function() {
