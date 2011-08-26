@@ -2,11 +2,13 @@ name = KTC
 core = 7.x
 engine = phptemplate
 
+stylesheets[all][] = js/jquery-superbox-0.9.1/jquery.superbox.css
 stylesheets[all][] = css/reset.css
 stylesheets[all][] = css/style.css
 stylesheets[all][] = css/gallery.css
 stylesheets[all][] = css/font-face.css
 
+scripts[] = js/jquery-superbox-0.9.1/jquery.superbox.js
 scripts[] = js/cufon-yui.js
 scripts[] = js/swfobject/swfobject.js
 scripts[] = js/Conduit_500.font.js
