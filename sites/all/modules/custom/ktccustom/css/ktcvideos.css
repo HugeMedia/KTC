@@ -9,7 +9,7 @@ h1#page-title { color: #e87d39; text-transform: none; padding: 20px 0 0 40px; fo
 
 
 #videos-bottom { padding: 20px 40px; position: relative; background: #fff; }
-#most-watched-videos { width: 430px; height: 229px; position: absolute; bottom: 40px; }
+#most-watched-videos { width: 430px; height: 229px; position: absolute; bottom: 32px; }
 #tell-story { float:  right;  }
 #videos-bottom table td div.views-field-field-story-thumb { margin: 40px 5px 0 0; }
 #videos-bottom table td div.views-field-field-story-thumb img { border: 1px solid #71b9d6; }
