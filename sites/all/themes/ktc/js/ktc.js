@@ -147,6 +147,9 @@
 			width: 780
 		});
 	    
+
+
+
 	    //$('a[title=Advocacy Tools]').addClass('ctools-use-modal');
 		
 		// CUFON font replacement. using this method is always legal as far as I know,
@@ -205,6 +208,18 @@
 		
 		Cufon.now();
             
+	    
+	    	    
+		$('div.view-videos-by-category div.view-content') 
+.before('<div id="nav">') 
+.cycle({ 
+    fx:     'shuffle', 
+    speed:  'slow', 
+    timeout: 0, 
+    pager:  '#nav' ,
+    next:   '#next2', 
+    prev:   '#prev2' 
+});
 	    
 	});
 	

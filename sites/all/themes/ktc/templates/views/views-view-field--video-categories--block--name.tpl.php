@@ -20,4 +20,3 @@
   */
 ?>
 <?php print $output; ?>
-extra

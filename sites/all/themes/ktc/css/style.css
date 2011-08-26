@@ -177,6 +177,8 @@ body.node-type-soda-story-form-page #edit-field-num-views { display: none; }
 body.node-type-soda-story-form-page #soda-story-body ul li { background: transparent url(../images/soda-story-bullet.png) no-repeat left 10px; padding: 10px 0 10px 50px; }
 body.node-type-soda-story-form-page #edit-field-story-thumb { display: none; }
 
+div.view-videos-by-category div.view-content div.views-row { width: 300px; height: 300px; border: 2px solid #71b9d6;}
+
 /* login form */
 #block-user-login { background: #000; }
 #block-user-login form#user-login-form { color: #fff; }
