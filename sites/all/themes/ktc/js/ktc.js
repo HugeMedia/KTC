@@ -210,17 +210,8 @@
             
 	    
 	    	    
-//		$('div.view-videos-by-category div.view-content') 
-//.before('<div id="nav">') 
-//.cycle({ 
-//    fx:     'shuffle', 
-//    speed:  'slow', 
-//    timeout: 0, 
-//    pager:  '#nav' ,
-//    next:   '#next2', 
-//    prev:   '#prev2' 
-//});
-	    
+		
+		//   
 	});
 	
 })(jQuery);

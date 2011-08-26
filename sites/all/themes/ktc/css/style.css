@@ -75,7 +75,7 @@ h1 { font-size: 41px; text-transform: uppercase; }
 #main-wrapper { /*width: 1014px; margin: auto;*/ background: url(../images/blue-bg.jpg) repeat center 0; }
 #main-burst { background: url(../images/burst.png) no-repeat center -37px; }
 #main { width: 954px; margin: auto; padding: 0; font-size: 18px; background: #fff; color: white; }
-#content { color: #000; }
+#content { color: #000; position: relative; }
 
 
 
@@ -177,7 +177,8 @@ body.node-type-soda-story-form-page #edit-field-num-views, body.node-type-soda-s
 body.node-type-soda-story-form-page #soda-story-body ul li { background: transparent url(../images/soda-story-bullet.png) no-repeat left 10px; padding: 10px 0 10px 50px; }
 body.node-type-soda-story-form-page #edit-field-story-thumb { display: none; }
 
-div.view-videos-by-category div.view-content div.views-row { width: 300px; height: 300px; border: 2px solid #71b9d6;}
+
+.clearfix { clear: both; }
 
 /* login form */
 #block-user-login { background: #000; }
