@@ -8,7 +8,7 @@ h1#page-title { color: #e87d39; text-transform: none; padding: 30px 0 0 40px; fo
 #videos-top #video-cats { height: 130px; margin-left: 2px; margin-bottom: 60px; }
 
 
-#videos-bottom { padding: 20px 40px; position: relative; background: #fff; }
+#videos-bottom { padding: 20px 40px; position: relative; background: #fff; z-index: 0; }
 #most-watched-videos { width: 430px; height: 229px; position: absolute; bottom: 32px; }
 #tell-story { float:  right;  }
 #videos-bottom table td div.views-field-field-story-thumb { margin: 40px 5px 0 0; }
@@ -32,7 +32,7 @@ div.view-videos-by-category div.view-content div.views-row { position: absolute;
 #vids-by-cat { /*display: none; */ position: absolute; top: 20px; left: 30px;  }
 div.view-videos-by-category div.view-content div.views-row { width: 382px; /*height: 211px;*/ }
 #nav { margin-bottom: 30px; }
-div.vids-by-cat-view { border: 2px solid #71b9d6; width: 382px; position: relative; display: none; /*z-index: 150;*/ }
+div.vids-by-cat-view { border: 2px solid #71b9d6; width: 382px; position: relative; display: none; z-index: 2; }
 
 .vids-controls { height: 30px; background: transparent url(../images/vid-info-bg.png); position: absolute; width: 382px; z-index: 150; }
 a.vid-prev { display: block; background: transparent url(../images/vid-prev.png) no-repeat left center; width: 12px; height: 30px;/* z-index: 151;*/ float: right; }
@@ -44,7 +44,7 @@ div.views-field-field-story-thumb .field-content:hover { cursor: pointer; }
 div.vids-by-cat-view div.views-field-field-story-desc { /*position: absolute; bottom:0;*/ color: #fff; font-size: 13px; background: #000; line-height: 15px; }
 div.vids-by-cat-view div.vid-desc-label { position: absolute; top: 181px; width: 372px; background: transparent url(../images/vid-info-bg.png); padding-left: 10px; text-transform: uppercase; height: 30px; line-height: 30px; }
 div.vids-by-cat-view div.vid-desc-label:hover { cursor: pointer; }
-div.vids-by-cat-view div.vid-desc { /*padding-top: 30px;*/ padding: 0 10px 15px 10px;  display: none; }
+div.vids-by-cat-view div.vid-desc { /*padding-top: 30px;*/ padding: 0 10px 11px 10px;  display: none; }
 
 #video-player-wrapper { color: #fff; display: none; width: 382px; height: 231px; border: 2px solid #71b9d6; position: absolute; /*z-index: 200;*/ }
 #video-player { width: 382px; height: 211px; }
