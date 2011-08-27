@@ -32,11 +32,11 @@ div.view-videos-by-category div.view-content div.views-row { position: absolute;
 #vids-by-cat { /*display: none; */ position: absolute; top: 20px; left: 30px;  }
 div.view-videos-by-category div.view-content div.views-row { width: 382px; /*height: 211px;*/ }
 #nav { margin-bottom: 30px; }
-div.vids-by-cat-view { border: 2px solid #71b9d6; width: 382px; position: relative; display: none; z-index: 150; }
+div.vids-by-cat-view { border: 2px solid #71b9d6; width: 382px; position: relative; display: none; /*z-index: 150;*/ }
 
 .vids-controls { height: 30px; background: transparent url(../images/vid-info-bg.png); position: absolute; width: 382px; z-index: 150; }
-a.vid-prev { display: block; background: transparent url(../images/vid-prev.png) no-repeat left center; width: 12px; height: 30px; z-index: 151; float: right; }
-a.vid-next { display: block; background: transparent url(../images/vid-next.png) no-repeat left center; width: 15px; height: 30px; z-index: 151;  float: right; }
+a.vid-prev { display: block; background: transparent url(../images/vid-prev.png) no-repeat left center; width: 12px; height: 30px;/* z-index: 151;*/ float: right; }
+a.vid-next { display: block; background: transparent url(../images/vid-next.png) no-repeat left center; width: 15px; height: 30px;/* z-index: 151;*/  float: right; }
 div.vid-counter { width: 42px; float: right; color: #fff; text-align: center; }
 a.vid-prev:hover, a.vid-next:hover { cursor: pointer; }
 #views_slideshow_cycle_main_video_categories-block div.views-field-name:hover { cursor: pointer; }
@@ -46,6 +46,6 @@ div.vids-by-cat-view div.vid-desc-label { position: absolute; top: 181px; width:
 div.vids-by-cat-view div.vid-desc-label:hover { cursor: pointer; }
 div.vids-by-cat-view div.vid-desc { /*padding-top: 30px;*/ padding: 0 10px 15px 10px;  display: none; }
 
-#video-player-wrapper { color: #fff; display: none; width: 382px; height: 231px; border: 2px solid #71b9d6; position: absolute; z-index: 200; }
+#video-player-wrapper { color: #fff; display: none; width: 382px; height: 231px; border: 2px solid #71b9d6; position: absolute; /*z-index: 200;*/ }
 #video-player { width: 382px; height: 211px; }
 #video-close { height: 20px; color: #fff; background: #000; text-align: right; }

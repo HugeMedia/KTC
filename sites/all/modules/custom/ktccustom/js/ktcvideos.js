@@ -47,7 +47,7 @@
             $(vidsdiv).show();
             $(vidsdiv + ' div.view-content')
                 .cycle({ 
-				fx:     'scrollHorz', 
+				fx:     'shuffle', 
 				speed:  'fast', 
 				timeout: 0,
 				//pager:  '#nav' ,
