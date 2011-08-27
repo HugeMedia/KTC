@@ -5,7 +5,7 @@
 #ktc-facts { float: left;  width: 780px; overflow: hidden; }
 #header-top .fact-text { float: left; width: 700px; }
 #ktc-facts { width: 934px; height: 35px; padding-left: 20px; }
-#facts-listing { float: left; width: 700px; }
+#facts-listing { float: left; width: 700px; font-style: italic; }
 #label-news { display: none; color: #317EB0; }
 /*#facts-label { float: left; width: 80px; }*/
 
