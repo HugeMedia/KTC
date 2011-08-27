@@ -50,6 +50,14 @@ function ktccustom_menu() {
         'type' => MENU_CALLBACK,
     );
     
+    $items['admin/config/content/menu-icons'] = array(
+        'title' => 'Menu icons for second level dropdown',
+        'description' => 'Assign menu icons',
+	'page callback' => 'ktccustom_get_menu_icon_form',
+	'access arguments' => array('administer nodes'),
+	'type' => MENU_NORMAL_ITEM,
+    );
+    
     return $items;
 }
 
@@ -60,6 +68,65 @@ function ktccustom_init() {
     drupal_add_css(drupal_get_path('module', 'ktccustom') . '/css/ktcadmin.css');
 }
 
+
+function ktccustom_get_menu_icon_form() {
+   return drupal_get_form('ktccustom_menu_icon_form');
+}
+
+
+function ktccustom_menu_icon_form() {
+    drupal_set_title('Menu Icons');
+   $result = db_query("SELECT link_path, link_title FROM {menu_links}
+    WHERE link_path NOT LIKE '<front>' AND
+    link_path NOT LIKE '%admin%' AND
+    link_path NOT LIKE '%user/%' AND
+    link_path NOT LIKE '%menu-position/%' AND
+    depth=3 AND
+    menu_name LIKE 'main-menu'
+    ORDER BY link_title asc");
+   
+   //$form['bg-menu-entries'] = array(
+   //  '#type' => 'markup',
+   //  '#markup' => '<h2>Pages with main menu entries:</h2>',
+   //);
+   
+   foreach ($result as $row) {
+      $pathalias = drupal_lookup_path('alias', $row->link_path);
+      $pathalias = ($pathalias == '') ? $row->link_path : $pathalias;
+      $form['icon-' . $row->link_path] = array(
+         '#type' => 'select',
+         '#title' => $row->link_title . ' : ' . $pathalias,
+         '#description' => t(''),
+         '#options' => ktc_load_icon_options(),
+         '#default_value' => variable_get('icon-' . $row->link_path, 'none'),
+         '#required' => FALSE,
+      );
+   }
+   
+   return system_settings_form($form);
+}
+
+
+function ktc_load_icon_options() {
+    $options = array();
+    $options['none'] = 'None';
+    $query = db_select('node', 'n');
+    $query
+      ->condition('type', 'menu_icon')
+      ->fields('n', array('title', 'nid'));
+    $result = $query->execute();
+    
+    foreach ($result as $row) {
+        $iconnode = node_load($row->nid);
+        //dpm($iconnode);
+        $image_uri = file_build_uri($iconnode->field_icon_image['und'][0]['filename']); // somewhat new annoying way to get a uri/path in Drupal 7
+        $image_url = file_create_url($image_uri);
+        //dd($image_url);
+        $options[$row->nid] = $row->title;
+        //$options[$row->nid] = '<img src="' . $image_url . '"/>';
+    }
+    return $options;
+}
 
 
 function ktc_soda_stories() {

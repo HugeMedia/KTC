@@ -55,16 +55,21 @@ ul#superfish-1 li.sf-depth-1 a.active, ul#superfish-1 li.active-trail a { color:
 .sf-menu.sf-style-default li li.first { /*background: transparent url(../images/menu-dropdown-top.png) no-repeat top left;*/ margin-top: 8px;  }
 .sf-menu.sf-style-default li li.last { /*background: transparent url(../images/menu-dropdown-bottom.png) no-repeat bottom left; */ border-bottom: 3px solid #000; }
 .sf-menu.sf-style-default li li a { border-top: 1px solid #005394; padding: 4px 3px 5px 9px; border-left: none; background: transparent; }
+.sf-menu.sf-style-default li li li a { border-top: none; }
 .sf-menu.sf-style-default li li a:hover { background-color: #458bb8; color: #fff; }
 .sf-menu.sf-style-default li li.first a { border-top: none; }
 .sf-menu.sf-style-default li li.sf-depth-2 { border-left: 3px solid #000; border-right: 3px solid #000; /*background: #fff;*/ background: transparent url(../images/menu-bg.png); }
 .sf-menu.sf-style-default li.sf-depth-1  > ul > li.first { border-top: 3px solid #000; }
 
-.sf-menu.sf-style-default li li li { background: transparent; }
+.sf-menu.sf-style-default li li li { background: transparent; height: 50px; line-height: 35px; }
+.sf-menu.sf-style-default li li li.first { padding-top: 10px; }
+.sf-menu.sf-style-default li li li.last { padding-bottom: 10px; }
 .sf-menu.sf-style-default li:hover, .sf-menu.sf-style-default li.sfHover, .sf-menu.sf-style-default a:focus, .sf-menu.sf-style-default a:hover, .sf-menu.sf-style-default a:active { /*background: transparent; */}
 .sf-menu.sf-style-default li li li.first { margin: 7px 0 0 0; border-top: 3px solid black;}
-.sf-menu li.sf-depth-2 > ul { width: 159px !important;  /*background: transparent url(../images/menu-lvl2-bg.png) repeat;*/  background: transparent url(../images/menu-bg-top-large-right.png) no-repeat top left; }
+.sf-menu li.sf-depth-2 > ul { width: 231px !important;  /*background: transparent url(../images/menu-lvl2-bg.png) repeat;*/  background: transparent url(../images/menu-bg-top-large-right.png) no-repeat top left; }
 .sf-menu li.sf-depth-2 > ul > li { border-left: 3px solid black; border-right: 3px solid black; background: transparent url(../images/menu-bg.png); }
+
+.menu-icon { float: left; width: 31px; padding: 9px; }
 
 h1 { font-size: 41px; text-transform: uppercase; }
 #main-wrapper { /*width: 1014px; margin: auto;*/ background: url(../images/blue-bg.jpg) repeat center 0; }
