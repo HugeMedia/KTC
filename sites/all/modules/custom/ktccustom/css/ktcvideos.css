@@ -30,7 +30,7 @@ div.view-video-categories div.views-field-field-desc-left, div.view-video-catego
 div.view-videos-by-category div.view-content div.views-row { position: absolute;  top: -211px; left: 0; }
 
 #vids-by-cat { /*display: none; */ position: absolute; top: 20px; left: 30px;  }
-div.view-videos-by-category div.view-content div.views-row { width: 382px; height: 211px; }
+div.view-videos-by-category div.view-content div.views-row { width: 382px; /*height: 211px;*/ }
 #nav { margin-bottom: 30px; }
 div.vids-by-cat-view { border: 2px solid #71b9d6; width: 382px; position: relative; display: none; z-index: 150; }
 
@@ -40,6 +40,10 @@ a.vid-next { display: block; background: transparent url(../images/vid-next.png)
 a.vid-prev:hover, a.vid-next:hover { cursor: pointer; }
 #views_slideshow_cycle_main_video_categories-block div.views-field-name:hover { cursor: pointer; }
 div.views-field-field-story-thumb .field-content:hover { cursor: pointer; }
+div.vids-by-cat-view div.views-field-field-story-desc { /*position: absolute; bottom:0;*/ color: #fff; font-size: 13px; background: #000; line-height: 15px; }
+div.vids-by-cat-view div.vid-desc-label { position: absolute; top: 181px; width: 372px; background: transparent url(../images/vid-info-bg.png); padding-left: 10px; text-transform: uppercase; height: 30px; line-height: 30px; }
+div.vids-by-cat-view div.vid-desc-label:hover { cursor: pointer; }
+div.vids-by-cat-view div.vid-desc { /*padding-top: 30px;*/ padding: 0 10px 15px 10px;  display: none; }
 
 #video-player-wrapper { color: #fff; display: none; width: 382px; height: 231px; border: 2px solid #71b9d6; position: absolute; z-index: 200; }
 #video-player { width: 382px; height: 211px; }

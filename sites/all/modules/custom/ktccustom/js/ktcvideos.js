@@ -36,7 +36,7 @@
             $(vidsdiv).show();
             $(vidsdiv + ' div.view-content')
                 .cycle({ 
-				fx:     'shuffle', 
+				fx:     'scrollHorz', 
 				speed:  'fast', 
 				timeout: 0,
 				//pager:  '#nav' ,
@@ -58,6 +58,7 @@
                 newoffset.left = mainoffset.left - 50;
             }
             $('#vids-by-cat').offset( newoffset );
+            Cufon.replace('div.vids-by-cat-view div.vid-desc-label');
         });
         
         $(document).keyup(function(e) {
@@ -89,6 +90,26 @@
             origoffset.top -= 2;
             origoffset.left -= 2;
             $('#video-player-wrapper').show().offset(origoffset);
+        });
+        
+        $('div.views-field-field-story-desc div.vid-desc-label').click(function() {
+            $(this).next('.vid-desc').toggle();
+            //alert($(this).parents('div.view-content').height() + ' , ' + $(this).next('.vid-desc').height());
+            if ($(this).next('.vid-desc').is(':visible')) {
+                $(this).parents('div.view-content').height(  $(this).parents('div.view-content').height() +  $(this).next('.vid-desc').height()  + 10 );  //10 for padding
+            }
+            else {
+                $(this).parents('div.view-content').height(  211  );
+            }
+        });
+        
+        $('a.vid-next').click(function() {
+            $('div.vid-desc:visible').hide();
+            $('div.vids-by-cat-view div.view-videos-by-category > div.view-content').height( 211 );
+        });
+        $('a.vid-prev').click(function() {
+            $('div.vid-desc:visible').hide();
+            $('div.vids-by-cat-view div.view-videos-by-category > div.view-content').height( 211 );
         });
     
     });

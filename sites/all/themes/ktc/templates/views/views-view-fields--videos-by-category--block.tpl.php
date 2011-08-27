@@ -23,6 +23,7 @@
  * @ingroup views_templates
  */
 ?>
+<?php //dpm($row->field_field_story_desc); ?>
 <?php foreach ($fields as $id => $field): ?>
   <?php if (!empty($field->separator)): ?>
     <?php print $field->separator; ?>
