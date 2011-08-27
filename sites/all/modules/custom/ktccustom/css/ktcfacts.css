@@ -1,0 +1,15 @@
+/*#header-top div.ktc-fact { display: none; }
+#header-top div.fact-0 { display: block; }*/
+#header-top div.ktc-fact { color: #fff; }
+#header-top #facts-label { color: #e87d39; float: left; /*width: 100px;*/ text-transform: uppercase; font-weight: bold; margin-right: 10px; }
+#ktc-facts { float: left;  width: 780px; overflow: hidden; }
+#header-top .fact-text { float: left; width: 700px; }
+#ktc-facts { width: 934px; height: 35px; padding-left: 20px; }
+#facts-listing { float: left; width: 700px; }
+#label-news { display: none; color: #317EB0; }
+/*#facts-label { float: left; width: 80px; }*/
+
+/*#facts-label { float: left; width: 80px; }
+body.page-testpage #main{ margin-bottom: 20px; }
+#ktc-facts { width: 954px; height: 30px; }
+#facts-listing { float: left; width: 700px; }*/

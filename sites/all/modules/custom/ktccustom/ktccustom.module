@@ -305,11 +305,12 @@ function ktccustom_form_alter(&$form, &$form_state, $form_id) {
 
 
 function ktccustom_get_fast_facts_news_flash() {
-    drupal_add_css(drupal_get_path('module', 'ktccustom') . '/css/ktctestpage.css');
-    drupal_add_js(drupal_get_path('module', 'ktccustom') . '/js/ktctestpage.js');
-    $facts[] = array();
+    drupal_add_css(drupal_get_path('module', 'ktccustom') . '/css/ktcfacts.css');
+    drupal_add_js(drupal_get_path('module', 'ktccustom') . '/js/ktcfacts.js');
     
-    $query = "SELECT node.nid AS nid, node.created AS node_created,
+    $facts = array();
+    
+    $query = "SELECT node.nid AS nid, node.created AS node_created, node.type AS type,
         field_display_text_value AS text,
         field_fact_learn_more_value AS url
         FROM {node} node
@@ -319,15 +320,63 @@ function ktccustom_get_fast_facts_news_flash() {
         ORDER BY node_created DESC";
     
     $result = db_query($query);
-    $i = 0;
     foreach ($result as $fact) {
-        $fact->index = $i;
+        if (strlen($fact->text )> 80) {
+            $fact->text = substr($fact->text, 0, 80) . '...';
+        }
+        //print_r($fact);
         $facts[] = $fact;
+    }
+    
+    $query = "SELECT node.nid AS nid, node.created AS node_created, node.type AS type,
+        field_fact_display_text_value AS text,
+        field_fact_learn_more_value AS url
+        FROM {node} node
+        LEFT JOIN field_data_field_fact_display_text on node.nid = field_data_field_fact_display_text.entity_id
+        LEFT JOIN field_data_field_fact_learn_more on node.nid = field_data_field_fact_learn_more.entity_id
+        WHERE (( (node.status = '1') AND (node.type IN  ('news_flash')) ))
+        ORDER BY node_created DESC";
+    
+    $news = array();
+    $result = db_query($query);
+    foreach ($result as $newsitem) {
+        if (strlen($newsitem->text )> 80) {
+            $newsitem->text = substr($newsitem->text, 0, 80) . '...';
+        }
+        //print_r($fact);
+        $news[] = $newsitem;
+    }
+    
+    $facts_and_news = array();
+    $i = 0;
+    foreach ($facts as $fact) {
+        
+        if ( $i == 1 && isset($news[0])) {
+            $news[0]->index = $i;
+            $facts_and_news[] = $news[0];
+            $i++;
+            $fact->index = $i;
+            $facts_and_news[] = $fact;
+        }
+        elseif ( $i == 8 && isset($news[1])) {
+            $news[1]->index = $i;
+            $facts_and_news[] = $news[1];
+            $i++;
+            $fact->index = $i;
+            $facts_and_news[] = $fact;
+            $i++; // extra item added
+        }
+        else {
+            $fact->index = $i;
+            $facts_and_news[] = $fact;
+        }
         $i++;
     }
     
+    // add news flashes
+    
     $rend = array(
-        'facts' => $facts,
+        'facts' => $facts_and_news,
         '#theme' => 'ktc_fast_facts',
     );
     return $rend;

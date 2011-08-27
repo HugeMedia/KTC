@@ -25,7 +25,7 @@ function ktc_preprocess_page(&$variables) {
     
     // search
     $variables['search_form'] = drupal_get_form('search_form');
-    //$variables['facts'] = ktccustom_get_fast_facts_news_flash();
+    $variables['facts'] = ktccustom_get_fast_facts_news_flash();
     
     // footer menu
     $footer_links = menu_build_tree('menu-footer-menu');
