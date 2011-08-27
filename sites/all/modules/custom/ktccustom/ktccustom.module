@@ -43,6 +43,13 @@ function ktccustom_menu() {
         'type' => MENU_CALLBACK,
     );
     
+    $items['testpage'] = array(
+        'title' => 'TestPage',
+        'page callback' => 'ktccustom_get_fast_facts_news_flash',
+        'access callback' => TRUE,
+        'type' => MENU_CALLBACK,
+    );
+    
     return $items;
 }
 
@@ -93,18 +100,28 @@ function ktc_soda_stories() {
 }
 
 
+
 function ktccustom_node_presave($node) {
   if ($node->type == 'soda_story') {
     
-    if (!isset($node->field_story_thumb['und'][0]['fid'])) {
+    // how to get # views
+    // maybe call this every time video is opened somehow
+    // or just update it on cron
+    // maybe update num views on all video nodes in the ktccustom page callback that displays the page
+//    $video_ID = 'your-video-ID';
+//$JSON = file_get_contents("http://gdata.youtube.com/feeds/api/videos?q={$video_ID}&alt=json");
+//$JSON_Data = json_decode($JSON);
+//$views = $JSON_Data->{'feed'}->{'entry'}[0]->{'yt$statistics'}->{'viewCount'};
+
+    $url = $node->field_story_video['und'][0]['value'];
+    $urlparts = explode('v=', $url);
+    $vid = $urlparts[1];
+    $extra = explode('&', $vid);
+    $vid = $extra[0];
+        
+    if (!isset($node->field_story_thumb['und'][0]['fid']) && $vid != null) {
         // grab the youtube thumbnail for the video,
         // unless one was supplied already
-        $url = $node->field_story_video['und'][0]['value'];
-        $urlparts = explode('v=', $url);
-        $vid = $urlparts[1];
-        $extra = explode('&', $vid);
-        $vid = $extra[0];
-    
         // 0.jpg is the bigger thumbnail, 2.jpg is the smaller one
         $request = drupal_http_request('http://img.youtube.com/vi/' . $vid . '/0.jpg');
         $data = $request->data;
@@ -112,12 +129,23 @@ function ktccustom_node_presave($node) {
         $new_file_name = str_replace(' ', '-', $node->title) . '-thumb.jpg';
         $file = file_save_data($request->data, 'public://story_thumbs/' . $new_file_name, FILE_EXISTS_RENAME);
         $node->field_story_thumb['und'][0]['fid'] = $file->fid;
-        $node->field_doc_file['und'][0]['display'] = 1; 
+        $node->field_doc_file['und'][0]['display'] = 1;    
     }
+    
+    // update number of views from youtube
+    $numviews = _get_num_youtube_views($vid);
+    $node->field_number_views['und'][0]['value'] = $numviews;
   }
   
 }
 
+
+function _get_num_youtube_views($video_ID) {
+    $JSON = file_get_contents("http://gdata.youtube.com/feeds/api/videos?q={$video_ID}&alt=json");  
+    $JSON_Data = json_decode($JSON);
+    $views = $JSON_Data->{'feed'}->{'entry'}[0]->{'yt$statistics'}->{'viewCount'};
+    return $views;
+}
 
 // create a login modal. ctools modal is able to handle form validation in a modal,
 // which would otherwise be time consuming to do from scratch.
@@ -226,6 +254,12 @@ function ktccustom_theme() {
       'template' => 'ktc-videos',
     ),
     
+    'ktc_test_page' => array(
+      'render element' => 'element',
+      'path' => drupal_get_path('module', 'ktccustom') . '/tmpl',
+      'template' => 'ktc-test-page',
+    ),
+    
   );
 
   return $items;
@@ -252,7 +286,7 @@ function ktccustom_form_alter(&$form, &$form_state, $form_id) {
         form_load_include($form_state, 'inc', 'node', 'node.pages');
         //dpm($form);
         // prevent anyone from changing the number of views - this is done with drupal hooks
-        $form['field_num_views']['und']['#disabled'] = TRUE;
+        $form['field_number_views']['und']['#disabled'] = TRUE;
         $now = time();
         if ($form['title']['#default_value'] == '') {
             $form['title']['#default_value'] = 'Soda story-' . $now;
@@ -271,7 +305,9 @@ function ktccustom_form_alter(&$form, &$form_state, $form_id) {
 
 
 function ktccustom_get_fast_facts_news_flash() {
-     $facts[] = array();
+    drupal_add_css(drupal_get_path('module', 'ktccustom') . '/css/ktctestpage.css');
+    drupal_add_js(drupal_get_path('module', 'ktccustom') . '/js/ktctestpage.js');
+    $facts[] = array();
     
     $query = "SELECT node.nid AS nid, node.created AS node_created,
         field_display_text_value AS text,
@@ -298,6 +334,18 @@ function ktccustom_get_fast_facts_news_flash() {
 }
 
 
+function ktccustom_test_page() {
+    
+    $myvar = 'yeeeahh kid';
+    
+    //$rend = array(
+    //    'myvar' => $myvar,
+    //    '#theme' => 'ktc_test_page',
+    //)
+    //return $rend;
+}
+
+
 function ktccustom_cron() {
      $query = db_select('node', 'n');
     $query
@@ -310,7 +358,21 @@ function ktccustom_cron() {
     foreach($results as $result) {
         $node = node_load($result->nid);
         //dd($node);
-        //dd($node->nid);
+        dd($node->nid);
+        
+        if ($node->field_story_video['und'][0]['value'] != '' && $node->field_story_video['und'][0]['value'] != 'http://') {
+            $url = $node->field_story_video['und'][0]['value'];
+            $urlparts = explode('v=', $url);
+            $vid = $urlparts[1];
+            $extra = explode('&', $vid);
+            $vid = $extra[0];
+            dd('updating num views for ' . $vid);
+            $numviews = _get_num_youtube_views($vid);
+            $node->field_number_views['und'][0]['value'] = $numviews;
+            dd('updated to ' . $numviews);
+        }
+    
+    
         if (!isset($node->field_story_thumb['und'][0]['fid'])) {
             // grab the youtube thumbnail for the video,
             // unless one was supplied already
@@ -330,9 +392,11 @@ function ktccustom_cron() {
                 $file = file_save_data($request->data, 'public://story_thumbs/' . $new_file_name, FILE_EXISTS_RENAME);
                 $node->field_story_thumb['und'][0]['fid'] = $file->fid;
                 $node->field_doc_file['und'][0]['display'] = 1;
-                node_save($node);
-                //dd('node saved');
+                
             }
         }
+        
+        node_save($node);
+        dd('node saved');
     }
 }

@@ -1,5 +1,5 @@
 <div id="video-player-wrapper">
-    <div id="video-close"><a id="youtube-close" href="#">X</a></div>
+    <div id="video-close"><a id="youtube-close">X</a></div>
     <div id="video-player">
         You need Flash player 8+ and JavaScript enabled to view this video.
     </div>

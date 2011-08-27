@@ -74,12 +74,14 @@
         
         $('a#youtube-close').click(function() {
             $('#video-player-wrapper').html('').hide();
+            return false;
         });
         
-        $('div.views-field-field-story-thumb .field-content').click(function() {
+        $('div.view-videos-by-category div.views-field-field-story-thumb .field-content').click(function() {
             $('#video-player-wrapper').html('').append('<div id="video-close"><a id="youtube-close" href="#">X</a></div><div id="video-player"></div>');
             $('a#youtube-close').click(function() {
                 $('#video-player-wrapper').html('').hide();
+                return false;
             });
             var yt = $(this).next('.youtube-helper').attr('yt');
             var params = { allowScriptAccess: "always", config: { 'autoPlay':true } };
@@ -87,6 +89,23 @@
             var embedStr = "http://www.youtube.com/e/" + yt + "?enablejsapi=1&playerapiid=ytplayer&autoplay=1"
             swfobject.embedSWF(embedStr, "video-player", "382", "211", "8", null, null, params, atts);
             var origoffset = $(this).offset();
+            origoffset.top -= 2;
+            origoffset.left -= 2;
+            $('#video-player-wrapper').show().offset(origoffset);
+        });
+        
+        $('div.view-most-viewed-videos div.views-field-field-story-thumb .field-content').click(function() {
+            $('#video-player-wrapper').html('').append('<div id="video-close"><a id="youtube-close" href="#">X</a></div><div id="video-player"></div>');
+            $('a#youtube-close').click(function() {
+                $('#video-player-wrapper').html('').hide();
+                return false;
+            });
+            var yt = $(this).next('.youtube-helper').attr('yt');
+            var params = { allowScriptAccess: "always", config: { 'autoPlay':true } };
+	    var atts = { id: "myytplayer" };
+            var embedStr = "http://www.youtube.com/e/" + yt + "?enablejsapi=1&playerapiid=ytplayer&autoplay=1"
+            swfobject.embedSWF(embedStr, "video-player", "382", "211", "8", null, null, params, atts);
+            var origoffset = $('div.view-most-viewed-videos').offset();
             origoffset.top -= 2;
             origoffset.left -= 2;
             $('#video-player-wrapper').show().offset(origoffset);
@@ -103,6 +122,7 @@
             }
         });
         
+        // close description boxes when advancing to the next or previous video
         $('a.vid-next').click(function() {
             $('div.vid-desc:visible').hide();
             $('div.vids-by-cat-view div.view-videos-by-category > div.view-content').height( 211 );
