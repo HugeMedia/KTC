@@ -37,7 +37,7 @@ div.vids-by-cat-view { border: 2px solid #71b9d6; width: 382px; position: relati
 .vids-controls { height: 30px; background: transparent url(../images/vid-info-bg.png); position: absolute; width: 382px; z-index: 150; }
 a.vid-prev { display: block; background: transparent url(../images/vid-prev.png) no-repeat left center; width: 15px; height: 30px; z-index: 151; float: right; }
 a.vid-next { display: block; background: transparent url(../images/vid-next.png) no-repeat left center; width: 15px; height: 30px; z-index: 151;  float: right; }
-div.vid-counter { width: 30px; float: right; color: #fff; }
+div.vid-counter { width: 35px; float: right; color: #fff; }
 a.vid-prev:hover, a.vid-next:hover { cursor: pointer; }
 #views_slideshow_cycle_main_video_categories-block div.views-field-name:hover { cursor: pointer; }
 div.views-field-field-story-thumb .field-content:hover { cursor: pointer; }
