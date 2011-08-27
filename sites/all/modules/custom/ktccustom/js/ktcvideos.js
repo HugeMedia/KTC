@@ -67,7 +67,8 @@
                     $('#video-player-wrapper').html('').hide();
                 }
                 else {
-                    $('div.vids-by-cat-view').hide(); 
+                    $('div.vids-by-cat-view').hide();
+                    $('div.vids-by-cat-view div.view-videos-by-category > div.view-content').height( 211 );
                 }
             }
         });
