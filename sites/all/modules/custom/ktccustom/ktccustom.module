@@ -50,6 +50,13 @@ function ktccustom_menu() {
         'type' => MENU_CALLBACK,
     );
     
+    $items['gallery'] = array(
+        'title' => 'Image Gallery',
+        'page callback' => 'ktccustom_get_gallery',
+        'access callback' => TRUE,
+        'type' => MENU_CALLBACK,
+    );
+    
     $items['admin/config/content/menu-icons'] = array(
         'title' => 'Menu icons for second level dropdown',
         'description' => 'Assign menu icons',
@@ -66,6 +73,21 @@ function ktccustom_init() {
     // add some css/js to fancy up some of the node edit pages
     drupal_add_js(drupal_get_path('module', 'ktccustom') . '/js/ktcadmin.js');
     drupal_add_css(drupal_get_path('module', 'ktccustom') . '/css/ktcadmin.css');
+}
+
+
+function ktccustom_get_gallery() {
+    drupal_add_js(drupal_get_path('module', 'ktccustom') . '/js/ktcgallery.js');
+    drupal_add_css(drupal_get_path('module', 'ktccustom') . '/css/ktcgallery.css');
+    $expform = module_invoke('views', 'block_view', '-exp-image_gallery-page');
+    $gallery_view = views_embed_view('image_gallery', 'block_1');
+    
+    $rend = array(
+        'gallery_view' => $gallery_view,
+        'expform' => $expform,
+        '#theme' => 'ktc_gallery',
+    );
+    return $rend;
 }
 
 
@@ -325,6 +347,12 @@ function ktccustom_theme() {
       'render element' => 'element',
       'path' => drupal_get_path('module', 'ktccustom') . '/tmpl',
       'template' => 'ktc-test-page',
+    ),
+    
+    'ktc_gallery' => array(
+      'render element' => 'element',
+      'path' => drupal_get_path('module', 'ktccustom') . '/tmpl',
+      'template' => 'ktc-gallery',
     ),
     
   );

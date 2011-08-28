@@ -20,6 +20,12 @@ function ktc_preprocess_page(&$variables) {
     $uri = $_GET['q'];
     //dd($uri);
     if ($uri == 'image-gallery') {
+        //drupal_add_library('system', 'ui.draggable');
+        drupal_add_js(drupal_get_path('theme', 'ktc') . '/js/colorbox/colorbox/jquery.colorbox.js');
+        drupal_add_css(drupal_get_path('theme', 'ktc') . '/js/colorbox/ktc/colorbox.css');
+        //drupal_add_js(drupal_get_path('theme', 'ktc') . '/js/pirobox/js/pirobox_extended.js');
+        //drupal_add_css(drupal_get_path('theme', 'ktc') . '/js/pirobox/css_pirobox/style_1/style.css');
+        //drupal_add_css(drupal_get_path('theme', 'ktc') . '/js/pirobox/css_pirobox/style_2/style.css');
         $variables['show_title'] = FALSE;
     }
     

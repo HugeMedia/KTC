@@ -45,6 +45,9 @@
       ?>
       <div id="image-gallery-filter-title"><?php print $sortname; ?></div>
       <ul id="image-gallery-categories">
+            <li class="image-gallery-category" tid="All">
+              <div class="image-gallery-category-inner">All</div>
+            </li>
           <?php foreach ($cats as $cat): ?>
             <li class="image-gallery-category" tid="<?php print $cat->tid; ?>">
               <div class="image-gallery-category-inner"><?php print $cat->name; ?></div>
