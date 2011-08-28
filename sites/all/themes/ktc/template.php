@@ -28,6 +28,13 @@ function ktc_preprocess_page(&$variables) {
         //drupal_add_css(drupal_get_path('theme', 'ktc') . '/js/pirobox/css_pirobox/style_2/style.css');
         $variables['show_title'] = FALSE;
     }
+    elseif ($uri == 'blog') {
+        drupal_add_js(drupal_get_path('theme', 'ktc') . '/js/ktc-blog.js');
+    }
+    elseif ($uri == 'soda-stories-page') {
+        drupal_add_js(drupal_get_path('theme', 'ktc') . '/js/ktc-soda-stories.js');
+    }
+    
     
     // search
     $variables['search_form'] = drupal_get_form('search_form');

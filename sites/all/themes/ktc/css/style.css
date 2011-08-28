@@ -198,3 +198,22 @@ div.ctools-modal-content .modal-content  span.form-required { display: none; }
 div.ctools-modal-content .modal-content form input.form-text { width: 235px; height: 37px; background: url(../images/login-box.jpg) no-repeat; border: none; font-size: 37px; line-height: 37px; color: #333; margin-bottom: 15px; }
 div.ctools-modal-content .modal-content form #edit-actions { margin: 0; }
 div.ctools-modal-content .modal-content form div.form-type-checkbox { width: 180px; float: left; }
+
+
+/* blog */
+body.page-blog #content { padding: 40px 60px; }
+div.view-blog div.view-header { background: #fff url(../images/blog-images.png) 620px 5px no-repeat; height: 125px; border-bottom: 3px solid #000; margin-bottom: 33px; }
+div.view-blog div.view-header h1 { font-size: 62px; }
+div.view-blog div.view-header h3 { color: #e77d33; text-transform: uppercase; font-size: 25px; }
+div.view-blog div.views-field-created { float: left; width: 46px; height: 65px; }
+div.view-blog div.blog-date { width: 46px; height: 65px; background: transparent url(../images/blog-date.png) no-repeat; color: #fff; text-align: center;}
+div.view-blog div.blog-date-month { text-transform: uppercase; font-size: 1.1em; }
+div.view-blog div.blog-date-day { font-size: 1.3em; font-weight: bold; }
+div.view-blog div.blog-date-year { font-size: 15px; font-weight: bold; }
+div.view-blog div.views-field-title, div.view-blog div.views-field-name, div.view-blog div.views-field-body, div.view-blog div.views-field-view-node {  width: 500px; padding-left: 75px; padding-right: 259px;  }
+div.view-blog div.views-field-title { font-size: 24px; font-weight: bold; }
+div.view-blog div.views-field-name { font-weight: bold; text-transform: uppercase; margin-bottom: 20px;  }
+div.view-blog div.views-field-view-node { float: left; font-size: 14px; color: #e77d33; text-transform: uppercase; font-weight: bold; }
+div.view-blog div.views-field-comment-count { float: left; width: 300px; }
+div.view-blog li.views-row { clear: both; margin-bottom: 70px; line-height: 28px; }
+div.view-blog div.views-field-body { margin-bottom: 6px; }
