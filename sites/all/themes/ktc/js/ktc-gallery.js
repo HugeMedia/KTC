@@ -22,7 +22,7 @@
 		//	piro_scroll : true //pirobox always positioned at the center of the page
 		//});
 		
-		$('a.pirobox_gall').colorbox( { current: '', opacity: 0, top: "100px", onComplete: setFont } );
+		//$('a.pirobox_gall').colorbox( { current: '', opacity: 0, top: "100px", onComplete: setFont } );
 		
 	});
 	
