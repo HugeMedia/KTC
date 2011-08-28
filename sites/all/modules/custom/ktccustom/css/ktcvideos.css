@@ -46,6 +46,6 @@ div.vids-by-cat-view div.vid-desc-label { position: absolute; top: 181px; width:
 div.vids-by-cat-view div.vid-desc-label:hover { cursor: pointer; }
 div.vids-by-cat-view div.vid-desc { /*padding-top: 30px;*/ padding: 0 10px 11px 10px;  display: none; }
 
-#video-player-wrapper { color: #fff; display: none; width: 382px; height: 231px; border: 2px solid #71b9d6; position: absolute; /*z-index: 200;*/ }
+#video-player-wrapper { color: #fff; display: none; width: 382px; height: 231px; border: 2px solid #71b9d6; position: absolute; z-index: 160; }
 #video-player { width: 382px; height: 211px; }
 #video-close { height: 20px; color: #fff; background: #000; text-align: right; }
