@@ -14,7 +14,6 @@ scripts[] = js/swfobject/swfobject.js
 scripts[] = js/Conduit_500.font.js
 scripts[] = js/jquery.cycle.all.js
 scripts[] = js/ktc.js
-scripts[] = js/ktc-gallery.js
 
 
 regions[header] = Header

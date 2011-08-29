@@ -12,7 +12,8 @@ function ktc_preprocess_page(&$variables) {
         $node = $variables['node'];
         if ($node->type == 'home_section_page' ||
             $node->type == 'interior_page' ||
-            $node->type == 'soda_story_form_page') {
+            $node->type == 'soda_story_form_page' ||
+            $node->type == 'blog_post' ) {
             $variables['show_title'] = FALSE;
         }
     }
@@ -20,15 +21,12 @@ function ktc_preprocess_page(&$variables) {
     $uri = $_GET['q'];
     //dd($uri);
     if ($uri == 'image-gallery') {
-        //drupal_add_library('system', 'ui.draggable');
         drupal_add_js(drupal_get_path('theme', 'ktc') . '/js/colorbox/colorbox/jquery.colorbox.js');
+        drupal_add_js(drupal_get_path('theme', 'ktc') . '/js/ktc-gallery.js');
         drupal_add_css(drupal_get_path('theme', 'ktc') . '/js/colorbox/ktc/colorbox.css');
-        //drupal_add_js(drupal_get_path('theme', 'ktc') . '/js/pirobox/js/pirobox_extended.js');
-        //drupal_add_css(drupal_get_path('theme', 'ktc') . '/js/pirobox/css_pirobox/style_1/style.css');
-        //drupal_add_css(drupal_get_path('theme', 'ktc') . '/js/pirobox/css_pirobox/style_2/style.css');
         $variables['show_title'] = FALSE;
     }
-    elseif ($uri == 'blog') {
+    elseif ($uri == 'blog' || strpos($uri, 'blog') == 0 ) {
         drupal_add_js(drupal_get_path('theme', 'ktc') . '/js/ktc-blog.js');
     }
     elseif ($uri == 'soda-stories-page') {
@@ -87,6 +85,7 @@ function ktc_preprocess_node(&$variables) {
     }
     
     elseif ($node->type == 'soda_story_form_page') {
+        drupal_add_js(drupal_get_path('theme', 'ktc') .'/js/ktc-soda-stories.js');
         //require_once(DRUPAL_ROOT . "/modules/node/node.pages.inc")
         module_load_include('inc', 'node', 'node.pages');
         //include_once(drupal_get_path('module', 'node') . '/node.pages.inc');

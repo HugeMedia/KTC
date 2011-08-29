@@ -12,6 +12,10 @@
 		Cufon.replace('div.view-blog div.views-field-body .field-content p');
 		Cufon.replace('div.view-blog div.views-field-view-node .field-content');
 		
+		Cufon.replace('div.node h1');
+		Cufon.replace('div.node div.blog-date div.blog-date-field');
+		Cufon.replace('div.node-blog-post div.field-name-body p');
+		
 		Cufon.now();
 	});
 	

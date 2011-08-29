@@ -19,4 +19,8 @@
   * the view is modified.
   */
 ?>
+<?php dpm($row); ?>
 <?php print $output; ?>
+<div class="soda-story-popup" popup="<?php print $row->field_field_story_popup[0]['raw']['value']; ?>" ></div>
+<div class="soda-story-link" url="<?php print $row->field_field_story_video[0]['raw']['value']; ?>" ></div>
+<div class="soda-story-title" title="<?php print $row->node_title; ?>" ></div>

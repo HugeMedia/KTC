@@ -152,11 +152,13 @@ function ktc_load_icon_options() {
 
 
 function ktc_soda_stories() {
+    //drupal_add_js(drupal_get_path('module', 'ktccustom') . '/js/jcarousel/lib/jquery.jcarousel.min.js');
+    drupal_add_js(drupal_get_path('module', 'ktccustom') . '/js/jcarousellite_1.0.1.min.js');
     drupal_add_js(drupal_get_path('theme', 'ktc') .'/js/ktc_youtube.js');
     drupal_add_js(drupal_get_path('module', 'ktccustom') . '/js/ktcvideos.js');
     drupal_add_css(drupal_get_path('module', 'ktccustom') . '/css/ktcvideos.css');
     
-    $most_watched = views_embed_view('most_viewed_videos', 'block');
+    $featured = views_embed_view('featured_videos', 'block');
     $video_cats = views_embed_view('video_categories', 'block');
     
     $cat_tree = taxonomy_get_tree(7);
@@ -179,10 +181,11 @@ function ktc_soda_stories() {
     }
     
      $rend = array(
+        'numcats' => count($cat_tree),
         'cats' => $cats,
         'video_cats' => $video_cats,
         'vids_by_cat' => $vids_by_cat,
-        'most_watched' => $most_watched,
+        'featured' => $featured,
         '#theme' => 'ktc_videos',
     );
     return $rend;
@@ -192,15 +195,6 @@ function ktc_soda_stories() {
 
 function ktccustom_node_presave($node) {
   if ($node->type == 'soda_story') {
-    
-    // how to get # views
-    // maybe call this every time video is opened somehow
-    // or just update it on cron
-    // maybe update num views on all video nodes in the ktccustom page callback that displays the page
-//    $video_ID = 'your-video-ID';
-//$JSON = file_get_contents("http://gdata.youtube.com/feeds/api/videos?q={$video_ID}&alt=json");
-//$JSON_Data = json_decode($JSON);
-//$views = $JSON_Data->{'feed'}->{'entry'}[0]->{'yt$statistics'}->{'viewCount'};
 
     $url = $node->field_story_video['und'][0]['value'];
     $urlparts = explode('v=', $url);
@@ -222,8 +216,8 @@ function ktccustom_node_presave($node) {
     }
     
     // update number of views from youtube
-    $numviews = _get_num_youtube_views($vid);
-    $node->field_number_views['und'][0]['value'] = $numviews;
+    //$numviews = _get_num_youtube_views($vid);
+    //$node->field_number_views['und'][0]['value'] = $numviews;
   }
   
 }
@@ -275,6 +269,7 @@ function ktc_get_document($nid) {
 
 function ktc_document_browse() {
     drupal_add_css(drupal_get_path('module', 'ktccustom') . '/css/ktccustom.css');
+    drupal_add_js(drupal_get_path('module', 'ktccustom') . '/js/ktcdocs.js');
     $topics = taxonomy_get_tree(2);
     $audience = taxonomy_get_tree(3);
     $resourcetypes = taxonomy_get_tree(4); 
@@ -292,6 +287,7 @@ function ktc_document_browse() {
 
 function ktc_document_browse_category($tid) {
     drupal_add_css(drupal_get_path('module', 'ktccustom') . '/css/ktccustom.css');
+    drupal_add_js(drupal_get_path('module', 'ktccustom') . '/js/ktcdocs.js');
     $topics = taxonomy_get_tree(2);
     //$audience = taxonomy_get_tree(3);
     $resourcetypes = taxonomy_get_tree(4); 
@@ -502,19 +498,19 @@ function ktccustom_cron() {
     foreach($results as $result) {
         $node = node_load($result->nid);
         //dd($node);
-        dd($node->nid);
-        
-        if ($node->field_story_video['und'][0]['value'] != '' && $node->field_story_video['und'][0]['value'] != 'http://') {
-            $url = $node->field_story_video['und'][0]['value'];
-            $urlparts = explode('v=', $url);
-            $vid = $urlparts[1];
-            $extra = explode('&', $vid);
-            $vid = $extra[0];
-            dd('updating num views for ' . $vid);
-            $numviews = _get_num_youtube_views($vid);
-            $node->field_number_views['und'][0]['value'] = $numviews;
-            dd('updated to ' . $numviews);
-        }
+        //dd($node->nid);
+        //
+        //if ($node->field_story_video['und'][0]['value'] != '' && $node->field_story_video['und'][0]['value'] != 'http://') {
+        //    $url = $node->field_story_video['und'][0]['value'];
+        //    $urlparts = explode('v=', $url);
+        //    $vid = $urlparts[1];
+        //    $extra = explode('&', $vid);
+        //    $vid = $extra[0];
+        //    dd('updating num views for ' . $vid);
+        //    $numviews = _get_num_youtube_views($vid);
+        //    $node->field_number_views['und'][0]['value'] = $numviews;
+        //    dd('updated to ' . $numviews);
+        //}
     
     
         if (!isset($node->field_story_thumb['und'][0]['fid'])) {

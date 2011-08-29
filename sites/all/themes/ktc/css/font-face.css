@@ -1,0 +1,13 @@
+@font-face {
+	font-family: 'Conv_ConduitITCStd';
+	src: url('../fonts/ConduitITCStd-Medium.ttf') format('truetype'), url('../fonts/ConduitITCStd-Medium.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Conv_ConduitITCStd';
+	src: url('../fonts/ConduitITCStd-Bold.ttf') format('truetype'), url('../fonts/ConduitITCStd-Bold.svg') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}

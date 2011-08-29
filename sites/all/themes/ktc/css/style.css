@@ -175,7 +175,7 @@ body.node-type-soda-story-form-page div.field-name-field-story-rules ul li { lis
 body.node-type-soda-story-form-page #edit-field-number-views, body.node-type-soda-story-form-page #edit-field-story-desc { display: none; }
 /* soda story lists */
 body.node-type-soda-story-form-page #soda-story-body ul li { background: transparent url(../images/soda-story-bullet.png) no-repeat left 10px; padding: 10px 0 10px 50px; }
-body.node-type-soda-story-form-page #edit-field-story-thumb { display: none; }
+body.node-type-soda-story-form-page #edit-field-story-thumb, body.node-type-soda-story-form-page #edit-field-featured { display: none; }
 
 
 .clearfix { clear: both; }
@@ -217,3 +217,13 @@ div.view-blog div.views-field-view-node { float: left; font-size: 14px; color: #
 div.view-blog div.views-field-comment-count { float: left; width: 300px; }
 div.view-blog li.views-row { clear: both; margin-bottom: 70px; line-height: 28px; }
 div.view-blog div.views-field-body { margin-bottom: 6px; }
+
+/* blog detail */
+body.node-type-blog-post .node { padding: 40px 60px; }
+body.node-type-blog-post h1#page-title { /*padding: 40px 60px 0;*/ }
+div.blog-date .blog-date-field { height: 21px; line-height: 21px; }
+div.node-blog-post div.views-field-created { float: left; width: 46px; height: 65px; }
+div.node-blog-post div.blog-date { width: 46px; height: 65px; background: transparent url(../images/blog-date.png) no-repeat; color: #fff; text-align: center; float: left; margin: 0 20px 20px 0; }
+div.node-blog-post div.blog-date-month { text-transform: uppercase; font-size: 1.1em; }
+div.node-blog-post div.blog-date-day { font-size: 1.3em; font-weight: bold; }
+div.view-blog div.blog-date-year { font-size: 15px; font-weight: bold; }

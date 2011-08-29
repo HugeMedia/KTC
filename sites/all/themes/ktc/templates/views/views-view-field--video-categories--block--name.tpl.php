@@ -19,6 +19,7 @@
   * the view is modified.
   */
 ?>
+<?php //dpm($row); ?>
 <?php print $output; ?>
 <?php
 //$vidlist = views_embed_view('videos_by_category', 'block');
