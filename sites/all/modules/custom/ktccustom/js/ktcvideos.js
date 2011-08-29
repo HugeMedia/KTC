@@ -10,6 +10,7 @@
 	var totalCats = $('span.category-index').size();
         
 	function showVideos(stack) {
+	    //console.log(stack);
 	    var tid = $(stack).find('.views-field-tid').text();
 	    var l = $(stack).find('.views-field-field-desc-left');
             var r = $(stack).find('.views-field-field-desc-right');
@@ -231,7 +232,8 @@
 	});
 	
 	
-	showVideos($('div.view-video-categories ul.video-cat-carousel li.views-row-1:first').next('li.views-row-2'));
+	//showVideos($('div.view-video-categories ul.video-cat-carousel li.views-row-1:first').next('li.views-row-2'));
+	//showVideos($('div.view-video-categories ul.video-cat-carousel li.views-row-2')[1]);
     
     });
 	
