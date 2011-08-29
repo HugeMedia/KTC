@@ -192,15 +192,31 @@ function ktc_soda_stories() {
 }
 
 
+function ktccustom_get_youtube_id($link) {
+    $vid = '';
+    if (strpos($link, 'www.youtube.com') !== FALSE && strpos($link, 'watch?') !== FALSE) {
+        $url = $link;
+        $urlparts = explode('v=', $url);
+        $vid = $urlparts[1];
+        $extra = explode('&', $vid);
+        $vid = $extra[0];
+    }
+    elseif (strpos($link, 'youtu.be') !== FALSE) {
+        $url = $link;
+        $urlparts = explode('.be/', $url);
+        $vid = $urlparts[1];
+        $extra = explode('&', $vid);
+        $vid = $extra[0];
+    }
+    return $vid;
+}
+
+
 
 function ktccustom_node_presave($node) {
   if ($node->type == 'soda_story') {
 
-    $url = $node->field_story_video['und'][0]['value'];
-    $urlparts = explode('v=', $url);
-    $vid = $urlparts[1];
-    $extra = explode('&', $vid);
-    $vid = $extra[0];
+    $vid = ktccustom_get_youtube_id($node->field_story_video['und'][0]['value']);
         
     if (!isset($node->field_story_thumb['und'][0]['fid']) && $vid != null) {
         // grab the youtube thumbnail for the video,
