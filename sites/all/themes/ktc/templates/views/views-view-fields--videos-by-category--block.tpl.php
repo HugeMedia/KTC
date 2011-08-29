@@ -24,6 +24,7 @@
  */
 ?>
 <?php //dpm($row->field_field_story_desc); ?>
+<?php //dpm($row); ?>
 <?php foreach ($fields as $id => $field): ?>
   <?php if (!empty($field->separator)): ?>
     <?php print $field->separator; ?>
@@ -33,11 +34,11 @@
     <?php print $field->label_html; ?>
     <?php print $field->content; ?>
     <?php
-        $url = $row->field_field_story_video[0]['raw']['value'];
-        $urlparts = explode('v=', $url);
-        $vid = $urlparts[1];
-        $extra = explode('&', $vid);
-        $vid = $extra[0];
+        //$url = $row->field_field_story_video[0]['raw']['value'];
+        //$urlparts = explode('v=', $url);
+        //$vid = $urlparts[1];
+        //$extra = explode('&', $vid);
+        $vid = ktccustom_get_youtube_id($row->field_field_story_video[0]['raw']['value']);
     ?>
     <div class="youtube-helper" yt="<?php print $vid; ?>"></div>
   <?php print $field->wrapper_suffix; ?>

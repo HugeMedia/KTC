@@ -101,11 +101,11 @@ function ktc_preprocess_node(&$variables) {
         drupal_add_js(drupal_get_path('theme', 'ktc') .'/js/ktc_youtube.js');
         // grab the youtube video id from the url field
         //dpm($node);
-        $url = $node->field_story_video['und'][0]['value'];
-        $urlparts = explode('v=', $url);
-        $vid = $urlparts[1];
-        $extra = explode('&', $vid);
-        $variables['vid'] = $extra[0];
+        //$url = $node->field_story_video['und'][0]['value'];
+        //$urlparts = explode('v=', $url);
+        //$vid = $urlparts[1];
+        //$extra = explode('&', $vid);
+        $variables['vid'] = ktccustom_get_youtube_id($node->field_story_video['und'][0]['value']);
     }
     
     elseif ($node->type == 'videos_page') {
