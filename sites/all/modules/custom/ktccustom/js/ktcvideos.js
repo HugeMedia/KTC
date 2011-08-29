@@ -233,7 +233,7 @@
 	
 	
 	//showVideos($('div.view-video-categories ul.video-cat-carousel li.views-row-1:first').next('li.views-row-2'));
-	//showVideos($('div.view-video-categories ul.video-cat-carousel li.views-row-2')[1]);
+	showVideos($('div.view-video-categories ul li.views-row-2')[1]);
     
     });
 	
