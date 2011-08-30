@@ -12,7 +12,7 @@ strong { color: #e87d39; }
 #header { background: #fff url(../images/header.jpg) no-repeat; width: 1014px; height: 206px; margin: auto; }
 #header .section { height: 206px; position: relative; }
 #site-slogan { position: absolute; color: #e87d39; text-transform: uppercase; left: 528px; top: 73px; width: 200px; line-height: 22px; font-size: 19px; font-weight: bold; }
-#header-share { width: 204px; padding-right: 30px; float: right; padding-top: 33px; }
+#header-share { width: 210px; padding-right: 30px; float: right; padding-top: 33px; }
 #header-share .connect_widget .connect_widget_text { position: relative; left: -50px; top: 50px; }
 #fb-icon { width: 31px; float: left; margin-bottom: 8px; }
 #fb-like { /*width: 100px; float: left;*/ height: 50px; clear: both; overflow: hidden; }
