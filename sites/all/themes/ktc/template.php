@@ -26,13 +26,15 @@ function ktc_preprocess_page(&$variables) {
         drupal_add_css(drupal_get_path('theme', 'ktc') . '/js/colorbox/ktc/colorbox.css');
         $variables['show_title'] = FALSE;
     }
-    elseif ($uri == 'blog' || strpos($uri, 'blog') == 0 ) {
+    elseif ($uri == 'blog' || strpos($uri, 'blog') === 0 ) {
         drupal_add_js(drupal_get_path('theme', 'ktc') . '/js/ktc-blog.js');
     }
     elseif ($uri == 'soda-stories-page') {
         drupal_add_js(drupal_get_path('theme', 'ktc') . '/js/ktc-soda-stories.js');
     }
-    
+    elseif (strpos($uri, 'search') === 0) {
+        drupal_add_js(drupal_get_path('theme', 'ktc') . '/js/ktc-search.js');
+    }
     
     // search
     $variables['search_form'] = drupal_get_form('search_form');
@@ -136,6 +138,26 @@ function ktc_preprocess_node(&$variables) {
     
 }
 
+
+function ktc_preprocess_search_results(&$variables) {
+  //$variables['search_results'] = '';
+  //if (!empty($variables['module'])) {
+  //  $variables['module'] = check_plain($variables['module']);
+  //}
+  //$new_results = '';
+  //$valid_types = array('Interior Page');
+  //foreach ($variables['results'] as $result) {
+  ////  $variables['search_results'] .= theme('search_result', array('result' => $result, 'module' => $variables['module']));
+  //  //dd($result->type);
+  //  dd($result['type']);
+  //  if (in_array($result['type'],  $valid_types)) {
+  //      $new_results .= theme('search_result', array('result' => $result, 'module' => $variables['module']));
+  //  }
+  //}
+  //$variables['search_results'] = $new_results;
+  //$variables['pager'] = theme('pager', array('tags' => NULL));
+  //$variables['theme_hook_suggestions'][] = 'search_results__' . $variables['module'];
+}
 
 
 function ktc_get_gallery_categories() {

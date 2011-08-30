@@ -84,12 +84,13 @@ h1 { font-size: 41px; text-transform: uppercase; }
 /* home pages */
 #home-top-left { float: left; width: 530px; }
 #home-top-right { float: left; width: 404px; padding-left: 10px; }
-div.field-name-field-home-header { font-size: 1.3em;  padding: 27px 0 10px 0; color: #fff; }
+div.field-name-field-home-header { font-size: 1.3em;  padding: 15px 0 10px 0; color: #fff; }
 #home-top-right div.field-name-body { line-height: 1.2em; color: #fff; }
 /* some home pages have different sized font in order to fit everything in the same space */
 /* there won't be other content added to the home page sections, so we can just identify the nodes by nid */
 body.page-node-13 div.field-name-field-home-header { padding-top: 20px; }
-body.page-node-14 div.field-name-field-home-header { padding-top: 10px; }
+body.page-node-14 div.field-name-field-home-header { padding: 5px 0 0 0; }
+body.page-node-14 .field-name-body p { padding: 3px 0; }
 body.page-node-15 div.field-name-field-home-header { padding-top: 10px; font-size: 1.6em; padding-bottom: 10px; }
 
 #home-section-top { height: 377px; background: #000; }
