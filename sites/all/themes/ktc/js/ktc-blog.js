@@ -16,7 +16,21 @@
 		Cufon.replace('div.node div.blog-date div.blog-date-field');
 		Cufon.replace('div.node-blog-post div.field-name-body p');
 		
-		Cufon.now();
+		Cufon.replace('#blog-archive div.view-content div.item-list h3');
+		Cufon.replace('#blog-archive div.view-content div.item-list ul li .field-content a');
+		Cufon.replace('#blog-archive .view-header p');
+		
+		//Cufon.now();
+		
+		$('#blog-archive div.view-content div.item-list h3').click(function() {
+			//$(this).siblings('ul').children('li').slideToggle();
+			var icon = $(this).children(".collapse-icon");
+			$(this).siblings("ul").children('li').slideToggle(function()
+			{
+				(icon.text()=="▼") ? icon.text("►") : icon.text("▼");
+			});
+		})
+		
 	});
 	
 })(jQuery);
