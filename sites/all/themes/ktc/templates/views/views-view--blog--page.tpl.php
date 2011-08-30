@@ -50,12 +50,9 @@
     </div>
   <?php endif; ?>
 
-  <div id="blog-archive">
-    <?php
-        $archive_view = views_embed_view('recent_blog_posts', 'block');
-        print $archive_view;
-    ?>
-  </div>
+  
+
+  
 
   <?php if ($rows): ?>
     <div class="view-content">

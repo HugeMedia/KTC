@@ -158,7 +158,7 @@
 		// Cufon adds a lot of extra space by wrapping blank areas with spans.
 		
 		// general replacement
-		Cufon.replace('#site-slogan, h1.title, form.search-form label, #header-top .facts-label, #footer #footer-text span, div.node h2, div.node h3, div.node p, div.node #interior-footnotes ol li');
+		Cufon.replace('#site-slogan, h1.title, form.search-form label, #header-top .facts-label, #footer #footer-text span, div.node h2, div.node h1, div.node h3, div.node p, div.node #interior-footnotes ol li');
 		Cufon.replace('ul#superfish-1 li a', { hover: true });
 		//Cufon.replace('h1.title');
 		//Cufon.replace('form.search-form label');
@@ -192,7 +192,7 @@
 		
 		
 		
-		Cufon.now();
+		//Cufon.now();
             
 	});
 	
