@@ -221,7 +221,7 @@ div.view-blog li.views-row { clear: both; margin-bottom: 70px; line-height: 28px
 div.view-blog div.views-field-body { margin-bottom: 6px; }
 
 #blog-archive { width: 229px; padding: 5px 0 0 25px; float: right; font-size: 14px; }
-body.page-blog #blog-archive li.views-row { margin: 0;  text-indent: 30px; }
+body.page-blog #blog-archive li.views-row { margin: 0;  text-indent: 30px; font-style: italic; }
 #blog-archive div.views-field-title a:link, #blog-archive div.views-field-title a:visited { color: #000; }
 #blog-archive div.views-field-title { font-size: 14px; width: 100%; padding: 0; }
 #blog-archive div.view-content ul li { display: none; }
