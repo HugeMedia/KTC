@@ -15,7 +15,7 @@ strong { color: #e87d39; }
 #header-share { width: 204px; padding-right: 30px; float: right; padding-top: 33px; }
 #header-share .connect_widget .connect_widget_text { position: relative; left: -50px; top: 50px; }
 #fb-icon { width: 31px; float: left; margin-bottom: 8px; }
-#fb-like { /*width: 100px; float: left;*/ height: 40px; }
+#fb-like { /*width: 100px; float: left;*/ height: 40px; clear: both; }
 
 /* search form */
 #header-share form.search-form { position: absolute; bottom: 10px; width: 204px; }
@@ -135,6 +135,10 @@ body.node-type-interior-page h2.title { color: #e87d39; font-size: 40px;  text-t
 #footer a:hover { color: #e87d39; }
 #footer-text { color: #e87d39; text-align: center; margin-top: 28px; font-weight: bold; }
 #footer-text span { margin-right: 20px; }
+
+/* search results */
+body.page-search #main #content { padding: 40px 60px; }
+fieldset.search-advanced { display: none; }
 
 
 /* soda stories page  and form */
