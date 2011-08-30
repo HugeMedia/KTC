@@ -1,15 +1,21 @@
 /*#header-top div.ktc-fact { display: none; }
 #header-top div.fact-0 { display: block; }*/
 #header-top div.ktc-fact { color: #fff; }
-#header-top #facts-label { color: #e87d39; float: left; /*width: 100px;*/ text-transform: uppercase; font-weight: bold; margin-right: 10px; }
+#header-top #facts-label { color: #e87d39; float: left; width: 95px; text-transform: uppercase; font-weight: bold; margin-right: 5px; text-align: right;  }
 #ktc-facts { float: left;  width: 780px; overflow: hidden; }
-#header-top .fact-text { float: left; width: 700px; }
-#ktc-facts { width: 934px; height: 35px; padding-left: 20px; }
-#facts-listing { float: left; width: 700px; font-style: italic; }
+#header-top .fact-text { float: left; width: 600px; font-style: italic; overflow: hidden; }
+#ktc-facts { width: 954px; height: 35px; /*padding-left: 20px; */ line-height: 28px; }
+#facts-listing { float: left; width: 854px;  }
 #label-news { display: none; color: #317EB0; }
+#label-fact { /*display: none; */}
 /*#facts-label { float: left; width: 80px; }*/
 
 /*#facts-label { float: left; width: 80px; }
 body.page-testpage #main{ margin-bottom: 20px; }
 #ktc-facts { width: 954px; height: 30px; }
 #facts-listing { float: left; width: 700px; }*/
+
+.ktc-learn-more { width: 100px; float: left; }
+.ktc-fact-tweet { width: 129px; float: left; background: url(../images/twitter-logo.jpg) no-repeat left 4px; padding-left: 25px;  color: #a6d1da;  }
+.ktc-fact-tweet a:link, .ktc-fact-tweet a:visited { color: #a6d1da; border-bottom: 2px solid #a6d1da;}
+.ktc-learn-more a:link, .ktc-learn-more a:visited { color: #fff; border-bottom: 2px solid #7e7e7e; }
