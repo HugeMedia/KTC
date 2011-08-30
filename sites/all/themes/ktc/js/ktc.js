@@ -175,11 +175,16 @@
 		Cufon.replace('#footer ul.menu li a', { hover: true });
 		Cufon.replace('#footer #footer-text span');
 		
+		Cufon.replace('div.node h2');
+		Cufon.replace('div.node h3');
+		Cufon.replace('div.node p');
+		Cufon.replace('div.node #interior-footnotes li');
+		
 		// image gallery
-		Cufon.replace('body.page-image-gallery div.view-image-gallery h1');
-		Cufon.replace('body.page-image-gallery #image-gallery-filter ul');
-		Cufon.replace('body.page-image-gallery div.image-gallery-pager ul');
-		Cufon.replace('body.page-image-gallery #image-gallery-filter #image-gallery-filter-title');
+		//Cufon.replace('body.page-image-gallery div.view-image-gallery h1');
+		//Cufon.replace('body.page-image-gallery #image-gallery-filter ul');
+		//Cufon.replace('body.page-image-gallery div.image-gallery-pager ul');
+		//Cufon.replace('body.page-image-gallery #image-gallery-filter #image-gallery-filter-title');
 		//Cufon.replace('body.page-image-gallery #image-gallery-filter ul#image-gallery-category li div.image-gallery-category-inner');
 		
 		// documents page

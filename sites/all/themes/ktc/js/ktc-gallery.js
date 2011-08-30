@@ -24,6 +24,11 @@
 		
 		$('a.pirobox_gall').colorbox( { current: '', opacity: 0, top: "100px", onComplete: setFont } );
 		
+		Cufon.replace('body.page-image-gallery div.view-image-gallery h1');
+		Cufon.replace('body.page-image-gallery #image-gallery-filter ul');
+		Cufon.replace('body.page-image-gallery div.image-gallery-pager ul');
+		Cufon.replace('body.page-image-gallery #image-gallery-filter #image-gallery-filter-title');
+		
 	});
 	
 })(jQuery);
