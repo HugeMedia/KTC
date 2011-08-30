@@ -12,15 +12,17 @@ strong { color: #e87d39; }
 #header { background: #fff url(../images/header.jpg) no-repeat; width: 1014px; height: 206px; margin: auto; }
 #header .section { height: 206px; position: relative; }
 #site-slogan { position: absolute; color: #e87d39; text-transform: uppercase; left: 528px; top: 73px; width: 200px; line-height: 22px; font-size: 19px; font-weight: bold; }
-#header-share { width: 234px; float: right; padding-top: 33px; }
+#header-share { width: 204px; padding-right: 30px; float: right; padding-top: 33px; }
 #header-share .connect_widget .connect_widget_text { position: relative; left: -50px; top: 50px; }
-#fb-icon { width: 31px; /*float: left;*/ margin-bottom: 8px; }
+#fb-icon { width: 31px; float: left; margin-bottom: 8px; }
 #fb-like { /*width: 100px; float: left;*/ height: 40px; }
 
 /* search form */
-#header-share form.search-form { position: absolute; }
+#header-share form.search-form { position: absolute; bottom: 10px; width: 204px; }
+#header-share form.search-form input.form-submit { position: absolute; bottom: 0; right: 0; }
 #header-share form.search-form .form-text { width: 165px; height: 19px; border: 2px solid #71b9d6; }
 #header-share form.search-form label { display: block; margin-bottom: 8px; color: #e87d39; text-transform: uppercase; }
+div.addthis_toolbox { width: 33px; height: 33px; float: right; }
 
 #navigation { height: 37px; background: #317eb0; }
 
@@ -225,6 +227,7 @@ div.view-blog div.views-field-body { margin-bottom: 6px; }
 body.page-blog #sidebar-second { float: right; width: 229px; padding-left: 25px; padding-top: 200px; }
 body.page-blog .block-tagadelic h2 { color: #e77d33; margin-bottom: 10px;  text-transform: uppercase; }
 body.page-blog .block-tagadelic a { color: #000; }
+body.page-blog .block-tagadelic { padding-right: 10px; }
 
 span.blog-comment-count { background: url(../images/comment-icon.jpg) no-repeat left center; padding-left: 20px; margin-left: 15px; }
 #blog-archive { width: 229px; padding: 0 0 0 25px; float: right; font-size: 14px; clear: right; color: #000; }

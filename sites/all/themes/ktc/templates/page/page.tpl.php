@@ -83,6 +83,7 @@
       <div id="header-share">
         <?php global $base_url; ?>
         <div id="fb-icon"><a href="http://www.facebook.com"><img src="<?php print $base_url . '/' . drupal_get_path('theme', 'ktc') . '/images/fb.png'; ?>" /></a></div>
+        <?php print $addthis; ?>
         <div id="fb-like"><fb:like show-faces="true" width="100"></fb:like></div>
         <?php print render($search_form); ?>
       </div>
