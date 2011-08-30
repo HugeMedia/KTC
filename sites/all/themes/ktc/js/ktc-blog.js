@@ -20,8 +20,9 @@
 		Cufon.replace('#blog-archive div.view-content div.item-list ul li .field-content a');
 		Cufon.replace('#blog-archive .view-header p');
 		
-		//Cufon.now();
+		Cufon.now();
 		
+		$('span.collapse-icon').text("►");
 		$('#blog-archive div.view-content div.item-list h3').click(function() {
 			//$(this).siblings('ul').children('li').slideToggle();
 			var icon = $(this).children(".collapse-icon");
