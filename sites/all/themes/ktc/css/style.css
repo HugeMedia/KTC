@@ -15,7 +15,7 @@ strong { color: #e87d39; }
 #header-share { width: 204px; padding-right: 30px; float: right; padding-top: 33px; }
 #header-share .connect_widget .connect_widget_text { position: relative; left: -50px; top: 50px; }
 #fb-icon { width: 31px; float: left; margin-bottom: 8px; }
-#fb-like { /*width: 100px; float: left;*/ height: 40px; clear: both; }
+#fb-like { /*width: 100px; float: left;*/ height: 45px; clear: both; overflow: hidden; }
 
 /* search form */
 #header-share form.search-form { position: absolute; bottom: 10px; width: 204px; }

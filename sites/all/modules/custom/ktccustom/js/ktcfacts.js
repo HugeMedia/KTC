@@ -13,7 +13,6 @@
 	    $('#label-fact').show();
 	}
 	
-	console.log($(this));
 	var fact_text = $(this).find('.fact-text');
 	var learn_more = $(this).find('.ktc-learn-more a');
 	var fact_tweet = $(this).find('.ktc-fact-tweet');
