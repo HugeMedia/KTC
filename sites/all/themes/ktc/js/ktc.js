@@ -158,11 +158,11 @@
 		// Cufon adds a lot of extra space by wrapping blank areas with spans.
 		
 		// general replacement
-		Cufon.replace('#site-slogan');
+		Cufon.replace('#site-slogan, h1.title, form.search-form label, #header-top .facts-label, #footer #footer-text span, div.node h2, div.node h3, div.node p, div.node #interior-footnotes ol li');
 		Cufon.replace('ul#superfish-1 li a', { hover: true });
-		Cufon.replace('h1.title');
-		Cufon.replace('form.search-form label');
-		Cufon.replace('#header-top .facts-label');
+		//Cufon.replace('h1.title');
+		//Cufon.replace('form.search-form label');
+		//Cufon.replace('#header-top .facts-label');
 		//Cufon.replace('#header-top .ktc-fact');
 		
 		// home pages
@@ -173,12 +173,12 @@
 		
 		// footer
 		Cufon.replace('#footer ul.menu li a', { hover: true });
-		Cufon.replace('#footer #footer-text span');
+		//Cufon.replace('#footer #footer-text span');
 		
-		Cufon.replace('div.node h2');
-		Cufon.replace('div.node h3');
-		Cufon.replace('div.node p');
-		Cufon.replace('div.node #interior-footnotes ol li');
+		//Cufon.replace('div.node h2');
+		//Cufon.replace('div.node h3');
+		//Cufon.replace('div.node p');
+		//Cufon.replace('div.node #interior-footnotes ol li');
 		
 		// image gallery
 		//Cufon.replace('body.page-image-gallery div.view-image-gallery h1');
