@@ -178,7 +178,7 @@
 		Cufon.replace('div.node h2');
 		Cufon.replace('div.node h3');
 		Cufon.replace('div.node p');
-		Cufon.replace('div.node #interior-footnotes li');
+		Cufon.replace('div.node #interior-footnotes ol li');
 		
 		// image gallery
 		//Cufon.replace('body.page-image-gallery div.view-image-gallery h1');
