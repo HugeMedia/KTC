@@ -108,9 +108,15 @@
       <div id="panels-header"><span class="panels-title">RESOURCES</span><span class="panels-title-paren">(rollover to expand)</span></div>
       <div id="home-panels">
         <?php if (!empty($panel1)): ?>
+        <?php dpm($panel1); ?>
         <div class="panel-wrapper">
-          <div class="home-section-panel" id="panel-1"><?php print render($panel1['field_panel_small']); ?></div>
-          <div class="panel-expanded panel-open-right" id="panel-1-expanded"><div class="panel-close"></div><?php print render($panel1['field_panel_large']); ?></div>
+          <?php if ($panel1['field_panel_expanded']['#items'][0]['value'] == 1): ?>
+            <div class="home-section-panel" id="panel-1"><?php print render($panel1['field_panel_small']); ?></div>
+            <div class="panel-shown panel-open-right" id="panel-1-expanded"><div class="panel-close"></div><?php print render($panel1['field_panel_large']); ?></div>
+          <?php else: ?>
+              <div class="home-section-panel" id="panel-1"><?php print render($panel1['field_panel_small']); ?></div>
+              <div class="panel-expanded panel-open-right" id="panel-1-expanded"><div class="panel-close"></div><?php print render($panel1['field_panel_large']); ?></div>
+          <?php endif; ?>
         </div>
         <?php endif; ?>
       
@@ -124,7 +130,9 @@
         <?php if (!empty($panel3)): ?>
         <div class="panel-wrapper">
           <div class="home-section-panel panel-last" id="panel-3"><?php print render($panel3['field_panel_small']); ?></div>
-          <div class="panel-expanded panel-open-left" id="panel-3-expanded"><div class="panel-close"></div><?php print render($panel3['field_panel_large']); ?></div>
+          <?php if (isset($panel3['field_panel_large'])): ?>
+            <div class="panel-expanded panel-open-left" id="panel-3-expanded"><div class="panel-close"></div><?php print render($panel3['field_panel_large']); ?></div>
+          <?php endif; ?>
         </div>
         <?php endif; ?>
       
