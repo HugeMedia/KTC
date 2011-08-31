@@ -108,7 +108,7 @@
       <div id="panels-header"><span class="panels-title">RESOURCES</span><span class="panels-title-paren">(rollover to expand)</span></div>
       <div id="home-panels">
         <?php if (!empty($panel1)): ?>
-        <?php dpm($panel1); ?>
+        <?php// dpm($panel1); ?>
         <div class="panel-wrapper">
           <?php if ($panel1['field_panel_expanded']['#items'][0]['value'] == 1): ?>
             <div class="home-section-panel" id="panel-1"><?php print render($panel1['field_panel_small']); ?></div>
