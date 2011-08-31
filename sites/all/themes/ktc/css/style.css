@@ -109,7 +109,7 @@ ul.home-section-menu li.active { background-color: #fff; }
 #home-panels { width: 891px; margin: auto;  position: relative; }
 .home-section-panel { width: 282px; height: 238px; float: left; margin-right: 22px; margin-bottom: 20px; }
 .panel-last { margin-right: 0; }
-.panel-expanded { display: none; }
+.panel-expanded { display: none; width: 570px; height: 480px; background: #bad6e6; padding: 10px;  }
 .panel-open-right { position: absolute; top: 0; left: 0;  }
 .panel-open-left { position: absolute; top: 0; right: 0; }
 .panel-close { position: absolute; width: 32px; height: 32px; background: transparent url(../images/close.png) no-repeat; top: 10px; right: 14px; }
