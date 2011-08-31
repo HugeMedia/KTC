@@ -138,14 +138,19 @@
         <?php if (!empty($panel5)): ?>
         <div class="panel-wrapper">
           <div class="home-section-panel" id="panel-5"><?php print render($panel5['field_panel_small']); ?></div>
-          <div class="panel-expanded panel-open-right" id="panel-5-expanded"><div class="panel-close"></div><?php print render($panel5['field_panel_large']); ?></div>
+          <?php if (isset($panel6['field_panel_large'])): ?>
+            <div class="panel-expanded panel-open-right" id="panel-5-expanded"><div class="panel-close"></div><?php print render($panel5['field_panel_large']); ?></div>
+          <?php endif; ?>
         </div>
         <?php endif; ?>
       
         <?php if (!empty($panel6)): ?>
+        <?php //dpm($panel6); ?>
         <div class="panel-wrapper">
           <div class="home-section-panel panel-last" id="panel-6"><?php print render($panel6['field_panel_small']); ?></div>
-          <div class="panel-expanded panel-open-left" id="panel-6-expanded"><div class="panel-close"></div><?php print render($panel6['field_panel_large']); ?></div>
+          <?php if (isset($panel6['field_panel_large'])): ?>
+              <div class="panel-expanded panel-open-left" id="panel-6-expanded"><div class="panel-close"></div><?php print render($panel6['field_panel_large']); ?></div>
+          <?php endif; ?>
         </div>
         <?php endif; ?>
       </div>
