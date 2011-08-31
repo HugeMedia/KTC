@@ -115,6 +115,30 @@ ul.home-section-menu li.active { background-color: #fff; }
 .panel-close { position: absolute; width: 32px; height: 32px; background: transparent url(../images/close.png) no-repeat; top: 10px; right: 14px; }
 .panel-close:hover { cursor: pointer; }
 
+#marketing-brands { padding: 60px 0 0 20px; }
+#availability-graphics { padding: 20px 23px 0 0; }
+#availability-who-owns { position: absolute; bottom: 15px; left: 15px; }
+#portion-text { padding: 20px 0 140px 20px; }
+#portion-ada { padding-left: 10px; }
+#price-graph { padding: 30px 0 0 15px; }
+#price-ounce { padding: 30px 0 0 40px; }
+#consumption-learn-more { padding: 10px 0 0 10px; } 
+#consumption-bubbling {padding: 20px 0 0 10px; } 
+#consumption-health {padding: 30px 0 0 10px;}
+#sugar-learn-more { padding: 20px 0 0 10px; } 
+#sugar-science{ padding: 20px 0 0 10px; } 
+#sugar-health { padding: 25px 0 0 10px; } 
+#sugar-bitter { padding: 25px 0 0 10px; }
+#obesity-text { padding: 60px 0 0 20px; }
+#obesity-learn-more { padding: 20px 0 0 20px; }
+#obesity-dietary { padding: 30px 0 0 20px; }
+#obesity-health { padding: 30px 0 0 20px; }
+#diabetes-top {}
+#diabetes-learn-more { padding: 25px 0 0 10px; }
+#diabetes-dietary { padding: 25px 0 0 10px;  }
+#diabetes-health { padding: 25px 0 0 10px; }
+
+
 ol, ol ul { list-style: inside; list-style-type: decimal; }
 
 /* interior pages */
