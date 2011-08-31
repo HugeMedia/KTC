@@ -115,6 +115,7 @@ ul.home-section-menu li.active { background-color: #fff; }
 .panel-close { position: absolute; width: 32px; height: 32px; background: transparent url(../images/close.png) no-repeat; top: 10px; right: 14px; }
 .panel-close:hover { cursor: pointer; }
 
+/* panels content */
 #marketing-brands { padding: 60px 0 0 20px; }
 #availability-graphics { padding: 20px 23px 0 0; }
 #availability-who-owns { position: absolute; bottom: 15px; left: 15px; }
@@ -137,7 +138,26 @@ ul.home-section-menu li.active { background-color: #fff; }
 #diabetes-learn-more { padding: 25px 0 0 10px; }
 #diabetes-dietary { padding: 25px 0 0 10px;  }
 #diabetes-health { padding: 25px 0 0 10px; }
-
+#children-learn-more { padding: 20px 0 0 10px; } 
+#children-negative { padding: 20px 0 0 10px; }
+#children-sugar { padding: 20px 0 0 10px; }
+#prevalene-learn-more { padding: 25px 0 0 10px; } 
+#prevalance-adult-map {padding: 20px 0 0 10px; }
+#prevalence-overweight {padding: 35px 0 0 10px; }
+#adult-graph { padding: 50px 0 0 40px; } 
+#adult-learn-more { padding: 25px 0 0 40px; }
+#adult-what-is { padding: 15px 0 0 40px; }
+#childhood-text {  padding: 53px 0 0 20px; }
+#childhood-learn-more { padding: 40px 0 0 20px; }
+#childhood-dietary { padding: 25px 0 0 20px; }
+#childhood-health { padding: 25px 0 0 20px; }
+#cost-learn-more { padding: 20px 0 0 5px; }
+#cost-medical { padding: 20px 0 0 5px; }
+#cost-overweight { padding: 20px 0 0 5px}
+#cost-economics { padding: 20px 0 0 5px}
+#disparities-learn-more { padding: 50px 0 0 15px; }
+#disparities-questions { padding: 20px 0 0 15px; }
+#disparities-race { padding: 20px 0 0 15px; }
 
 ol, ol ul { list-style: inside; list-style-type: decimal; }
 
