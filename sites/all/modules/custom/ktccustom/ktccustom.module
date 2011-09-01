@@ -432,9 +432,9 @@ function ktccustom_form_alter(&$form, &$form_state, $form_id) {
 
 function ktccustom_soda_stories_validate(&$form, &$form_state) {
     //dpm($form_state['values']);
-    if ($form_state['values']['field_terms_conditions']['und'][0]['value'] != 1) {
-        form_set_error('field_terms_conditions', 'You must agree to the terms and conditions.');
-    }
+    //if ($form_state['values']['field_terms_conditions']['und'][0]['value'] != 1) {
+    //    form_set_error('field_terms_conditions', 'You must agree to the terms and conditions.');
+    //}
 }
 
 
