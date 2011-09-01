@@ -19,6 +19,17 @@
 		Cufon.replace('body.node-type-soda-story-form-page #soda-story-page-footer p');
 		
 		Cufon.now();
+                
+                //$('form#soda-story-node-form').submit(function() {
+                //   if ($('#edit-field-terms-conditions-und').attr('checked')) {
+                //        return true;
+                //   }
+                //   else {
+                //    alert("Please agree to the terms and conditions");
+                //    return false;
+                //   }
+                //});
+                
 	});
 	
 })(jQuery);
