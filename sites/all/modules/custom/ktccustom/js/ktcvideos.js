@@ -158,7 +158,7 @@
 	    var popup =  $(this).find('.soda-story-popup').attr('popup');
 	    if (popup == 1) {
 		var vidurl =  $(this).find('.soda-story-link').attr('url');
-		window.open(vidurl, '_blank', 'width=660,height=600');
+		window.open(vidurl, '_blank', 'width=990,height=880');
 	    }
 	    else {
 		var params = { allowScriptAccess: "always", config: { 'autoPlay':true } };

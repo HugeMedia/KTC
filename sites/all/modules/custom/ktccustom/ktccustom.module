@@ -387,6 +387,16 @@ function ktccustom_form_alter(&$form, &$form_state, $form_id) {
         $form['actions']['submit']['#src'] = $img_path . 'gobutton.png';
     }
     elseif ($form_id == 'soda_story_node_form') {
+        global $base_url;
+        global $user;
+        //dpm($form);
+        if ($base_url == 'http://ktc.local') {
+            // prepopulate with test data
+            $form['field_story_name']['und'][0]['value']['#default_value'] = 'Joe Smith';
+            $form['field_story_video']['und'][0]['value']['#default_value'] = 'http://www.youtube.com/watch?v=5NzXJr_mFy8';
+            $form['field_story_email']['und'][0]['value']['#default_value'] = 'twoface@gmail.com';
+            $form['field_story_zip']['und'][0]['value']['#default_value'] = '11379';
+        }
         // talk about obscure - need to use this function to include some functionality
         // related to processing file uploads when using a node add/edit form on
         // a different page than the usual one.
@@ -400,13 +410,58 @@ function ktccustom_form_alter(&$form, &$form_state, $form_id) {
         }
         $form['field_story_photos']['und']['#file_upload_title'] = 'Upload Photo';
         $form['actions']['submit']['#value'] = 'Submit';
+        // hide some fields for anonymous users
+        if ($user->uid == 0) {
+             $form['field_status']['#type'] = 'hidden';
+        }
+        
+        // add validation and submit functions
+        $form['#validate'][]='ktccustom_soda_stories_validate';
+        $form['#submit'][]='ktccustom_soda_stories_submit';
     }
     elseif ($form_id == 'search_form') {
+        //dpm($form);
         $img_path = path_to_theme().'/images/';
         $form['basic']['keys']['#title'] = "Search";
         $form['basic']['submit']['#value'] = 'null';
         $form['basic']['submit']['#type'] = 'image_button';
         $form['basic']['submit']['#src'] = $img_path . 'gobutton-small.png';
+    }
+}
+
+
+function ktccustom_soda_stories_validate(&$form, &$form_state) {
+    //dpm($form_state['values']);
+    if ($form_state['values']['field_terms_conditions']['und'][0]['value'] != 1) {
+        form_set_error('field_terms_conditions', 'You must agree to the terms and conditions.');
+    }
+}
+
+
+function ktccustom_soda_stories_submit(&$form, &$form_state) {
+    $description = '';
+    //dpm($form_state['values']);
+    //dpm($form_state);
+    
+    drupal_goto('thank-you-your-submission');
+}
+
+
+function ktccustom_node_insert($node) {
+    //dpm($node);
+    // if a newly created soda story has any photos, make gallery images out of them
+    if ($node->type == 'soda_story' && isset($node->field_story_photos['und'])) {
+        foreach ($node->field_story_photos['und'] as $index => $photo) {
+            $gallerynode = new stdClass();
+            $gallerynode->type = 'gallery_image';
+            $gallerynode->title    = 'Node Created Programmatically on ' . date('c');
+            $gallerynode->language = LANGUAGE_NONE;
+            node_object_prepare($gallerynode);
+            $gallerynode->field_gallery_large['und'][0]['fid'] = $photo['fid'];
+            $gallerynode->field_gallery_large['und'][0]['display'] = 1;
+            $gallerynode->status = 0; // don't publish
+            node_save($gallerynode);
+        }
     }
 }
 
