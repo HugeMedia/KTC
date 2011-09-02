@@ -126,7 +126,7 @@ body.page-node-15 #panel-6 { float: right; clear: right; }
 #home-panels .font-13 { font-size: 13px; line-height: 18px; padding-top: 0;  }
 #home-panels .font-26 { font-size: 26px; font-weight: bold; }
 #home-panels .font-20 { font-size: 20px; font-weight: bold; padding-top: 0; }
-#home-panels .font-21 { font-size: 21px; font-weight: bold; padding-top: 0; }
+#home-panels .font-21 { font-size: 21px; font-weight: bold; padding-top: 0; padding-bottom: 0;  }
 #home-panels .font-18 { font-size: 18px; font-weight: bold; padding-top: 0; }
 #home-panels .font-19 { font-size: 19px; font-weight: bold; padding-top: 0; padding-bottom: 0;  }
 #home-panels .font-39 { font-size: 39px; font-weight: bold; }
@@ -143,6 +143,7 @@ body.page-node-15 #panel-6 { float: right; clear: right; }
 #home-panels .margin-right-20 { margin-right: 20px; }
 #home-panels .margin-left-10 { margin-left: 10px; }
 #home-panels .margin-top-20 { margin-top: 20px; }
+#home-panels .margin-top-10 { margin-top: 10px; }
 #home-panels .margin-top-50 { margin-top: 50px; }
 #home-panels .margin-left-20 { margin-left: 20px; }
 #home-panels p a:link, #home-panels p a:visited { color: #187fb1; }
@@ -158,7 +159,7 @@ body.page-node-15 #panel-6 { float: right; clear: right; }
 #consumption-learn-more { padding: 10px 0 0 10px; } 
 #consumption-bubbling {padding: 20px 0 0 10px; } 
 #consumption-health {padding: 30px 0 0 10px;}
-#sugar-learn-more { padding: 20px 0 0 10px; } 
+#sugar-learn-more { padding: 10px 0 0 0px; } 
 #sugar-science{ padding: 20px 0 0 10px; } 
 #sugar-health { padding: 25px 0 0 10px; } 
 #sugar-bitter { padding: 25px 0 0 10px; }
