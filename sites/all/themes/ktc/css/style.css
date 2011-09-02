@@ -120,7 +120,17 @@ body.page-node-15 #panel-3 { float: right; }
 body.page-node-15 #panel-6 { float: right; clear: right; }
 
 /* panels content */
-#home-panels p { font-size: 18px; line-height: 30px; padding: 5px; }
+#home-panels p { font-size: 18px; line-height: 30px; padding: 10px; }
+#home-panels p.no-padding { padding: 0; }
+#home-panels .font-14 { font-size: 15px; line-height: 24px; padding-top: 0; }
+#home-panels .font-26 { font-size: 26px; font-weight: bold; }
+#home-panels .font-39 { font-size: 39px; font-weight: bold; }
+#home-panels .font-17 { font-size:  17px; padding-top: 0; }
+#home-panels .font-27 { font-size:  27px;  }
+#home-panels .orange { color: #e87d39; }
+#home-panels .bold { font-weight: bold; }
+#home-panels .margin-right { margin-right: 10px; }
+#home-panels .margin-right-20 { margin-right: 20px; }
 
 #marketing-brands { padding: 60px 0 0 20px; margin-left: 10px; }
 #availability-graphics { padding: 20px 23px 0 0; }
