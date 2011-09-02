@@ -107,7 +107,7 @@ ul.home-section-menu li.active { background-color: #fff; }
 .panels-title { color: #e87d39; margin-right: 25px; }
 .panels-title-paren { color: #72bad6; }
 #home-panels { width: 891px; margin: auto;  position: relative; }
-.home-section-panel { width: 282px; height: 238px; float: left; margin-right: 22px; margin-bottom: 20px; }
+.home-section-panel { width: 282px; height: 238px; float: left; margin-right: 22px; margin-bottom: 20px; background: #bad6e6;}
 .panel-last { margin-right: 0; }
 .panel-expanded { display: none; width: 570px; height: 480px; background: #bad6e6; padding: 10px;  }
 .panel-shown { width: 570px; height: 480px; background: #bad6e6; padding: 10px;  }
@@ -120,7 +120,9 @@ body.page-node-15 #panel-3 { float: right; }
 body.page-node-15 #panel-6 { float: right; clear: right; }
 
 /* panels content */
-#marketing-brands { padding: 60px 0 0 20px; }
+#home-panels p { font-size: 18px; line-height: 30px; padding: 5px; }
+
+#marketing-brands { padding: 60px 0 0 20px; margin-left: 10px; }
 #availability-graphics { padding: 20px 23px 0 0; }
 #availability-who-owns { position: absolute; bottom: 15px; left: 15px; }
 #portion-text { padding: 20px 0 140px 20px; }
@@ -233,6 +235,7 @@ body.node-type-soda-story-form-page #soda-story-page-footer { clear: right; back
 body.node-type-soda-story-form-page div.field-name-field-story-rules { padding: 20px 0 0 50px; clear: left; }
 body.node-type-soda-story-form-page div.field-name-field-story-rules h3 { text-transform: uppercase; padding: 20px 0 10px 0; }
 body.node-type-soda-story-form-page div.field-name-field-story-rules ul li { list-style: disc; padding: 5px 0; list-style-position: inside; }
+body.node-type-soda-story-form-page #edit-field-terms-conditions div.description { display: none; }
 .text-highlight { color: #e87d39; }
 body.node-type-soda-story-form-page #edit-field-number-views, body.node-type-soda-story-form-page #edit-field-story-desc { display: none; }
 /* soda story lists */
