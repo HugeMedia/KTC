@@ -122,22 +122,29 @@ body.page-node-15 #panel-6 { float: right; clear: right; }
 /* panels content */
 #home-panels p { font-size: 18px; line-height: 30px; padding: 10px; }
 #home-panels p.no-padding { padding: 0; }
-#home-panels .font-14 { font-size: 15px; line-height: 24px; padding-top: 0; }
+#home-panels .font-14 { font-size: 15px; line-height: 24px; padding-top: 0; font-weight: bold; }
+#home-panels .font-13 { font-size: 13px; line-height: 18px; padding-top: 0;  }
 #home-panels .font-26 { font-size: 26px; font-weight: bold; }
 #home-panels .font-39 { font-size: 39px; font-weight: bold; }
-#home-panels .font-17 { font-size:  17px; padding-top: 0; }
+#home-panels .font-33 { font-size: 33px; font-weight: bold; }
+#home-panels .font-17 { font-size:  17px; padding-top: 0; font-weight: bold; }
 #home-panels .font-27 { font-size:  27px;  }
+#home-panels .font-25 { font-size:  25px;  }
+#home-panels strong.font-black { color: #000; }
 #home-panels .orange { color: #e87d39; }
 #home-panels .bold { font-weight: bold; }
 #home-panels .margin-right { margin-right: 10px; }
 #home-panels .margin-right-20 { margin-right: 20px; }
+#home-panels .margin-top-50 { margin-top: 50px; }
+#home-panels .margin-left-20 { margin-left: 20px; }
+#home-panels p a:link, #home-panels p a:visited { color: #187fb1; }
 
 #marketing-brands { padding: 60px 0 0 20px; margin-left: 10px; }
-#availability-graphics { padding: 20px 23px 0 0; }
+#availability-graphics { padding: 10px 23px 0 0; }
 #availability-who-owns { position: absolute; bottom: 15px; left: 15px; }
 #portion-text { padding: 20px 0 140px 20px; }
 #portion-ada { padding-left: 10px; }
-#price-graph { padding: 30px 0 0 15px; }
+#price-graph { padding: 0; margin-right: 30px; }
 #price-ounce { padding: 30px 0 0 40px; }
 #consumption-learn-more { padding: 10px 0 0 10px; } 
 #consumption-bubbling {padding: 20px 0 0 10px; } 
