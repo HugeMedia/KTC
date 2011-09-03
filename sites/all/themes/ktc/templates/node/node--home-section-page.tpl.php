@@ -105,7 +105,11 @@
     </div>
     
     <div id="home-section-bottom">
-      <div id="panels-header"><span class="panels-title">RESOURCES</span><span class="panels-title-paren">(rollover to expand)</span></div>
+      <?php if ($panel1['field_panel_expanded']['#items'][0]['value'] != 1): ?>
+        <div id="panels-header"><span class="panels-title">RESOURCES</span><span class="panels-title-paren">(rollover to expand)</span></div>
+      <?php else: ?>
+      <div id="panels-header">&nbsp;</div>
+      <?php endif; ?>
       <div id="home-panels">
         <?php if (!empty($panel1)): ?>
         <div class="panel-wrapper">
