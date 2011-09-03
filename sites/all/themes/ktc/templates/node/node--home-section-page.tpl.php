@@ -112,13 +112,18 @@
       <?php endif; ?>
       <div id="home-panels">
         <?php if (!empty($panel1)): ?>
+        <?php
+          $large_panel = render($panel1['field_panel_large']);
+          $mini_images = render(ktccustom_get_mini_images());
+          $large_panel = str_replace('[[images]]', $mini_images, $large_panel);
+        ?>
         <div class="panel-wrapper">
           <?php if ($panel1['field_panel_expanded']['#items'][0]['value'] == 1): ?>
             <div class="home-section-panel" id="panel-1"><?php print render($panel1['field_panel_small']); ?></div>
-            <div class="panel-shown panel-open-right" id="panel-1-expanded"><div class="panel-close"></div><?php print render($panel1['field_panel_large']); ?></div>
+            <div class="panel-shown panel-open-right" id="panel-1-expanded"><div class="panel-close"></div><?php print $large_panel; ?></div>
           <?php else: ?>
               <div class="home-section-panel" id="panel-1"><?php print render($panel1['field_panel_small']); ?></div>
-              <div class="panel-expanded panel-open-right" id="panel-1-expanded"><div class="panel-close"></div><?php print render($panel1['field_panel_large']); ?></div>
+              <div class="panel-expanded panel-open-right" id="panel-1-expanded"><div class="panel-close"></div><?php print $large_panel; ?></div>
           <?php endif; ?>
         </div>
         <?php endif; ?>
@@ -148,9 +153,11 @@
       
         <?php if (!empty($panel5)): ?>
         <div class="panel-wrapper">
-          <div class="home-section-panel" id="panel-5"><?php print render($panel5['field_panel_small']); ?></div>
           <?php if (isset($panel5['field_panel_large'])): ?>
+            <div class="home-section-panel" id="panel-5"><?php print render($panel5['field_panel_small']); ?></div>
             <div class="panel-expanded panel-open-right" id="panel-5-expanded"><div class="panel-close"></div><?php print render($panel5['field_panel_large']); ?></div>
+          <?php else: ?>
+            <div class="home-section-panel panel-no-padding" id="panel-5"><?php print render($panel5['field_panel_small']); ?></div>
           <?php endif; ?>
         </div>
         <?php endif; ?>
@@ -158,9 +165,11 @@
         <?php if (!empty($panel6)): ?>
         <?php //dpm($panel6); ?>
         <div class="panel-wrapper">
-          <div class="home-section-panel panel-last" id="panel-6"><?php print render($panel6['field_panel_small']); ?></div>
           <?php if (isset($panel6['field_panel_large'])): ?>
-              <div class="panel-expanded panel-open-left" id="panel-6-expanded"><div class="panel-close"></div><?php print render($panel6['field_panel_large']); ?></div>
+            <div class="home-section-panel panel-last" id="panel-6"><?php print render($panel6['field_panel_small']); ?></div>
+            <div class="panel-expanded panel-open-left" id="panel-6-expanded"><div class="panel-close"></div><?php print render($panel6['field_panel_large']); ?></div>
+          <?php else: ?>
+            <div class="home-section-panel panel-no-padding panel-last" id="panel-6"><?php print render($panel6['field_panel_small']); ?></div>
           <?php endif; ?>
         </div>
         <?php endif; ?>

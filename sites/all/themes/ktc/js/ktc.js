@@ -170,7 +170,7 @@
 		Cufon.replace('#home-top-right div.field-name-body div.field-item p');
 		Cufon.replace('#home-top-left ul.home-section-menu li a');
 		Cufon.replace('#home-section-bottom #panels-header span');
-		Cufon.replace('#home-panels table td');
+		Cufon.replace('#home-panels table td span');
 		
 		// footer
 		Cufon.replace('#footer ul.menu li a', { hover: true });
