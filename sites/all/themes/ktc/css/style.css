@@ -121,7 +121,7 @@ body.page-node-15 #panel-6 { float: right; clear: right; }
 
 /* panels content */
 #home-panels p { font-size: 18px; line-height: 30px; padding: 10px; }
-#home-panels td { /*font-weight: bold;*/ padding: 0 10px;  }
+#home-panels td { /*font-weight: bold;*/ padding: 10px 10px 0 10px;  }
 #home-panels td table td { padding: 0; vertical-align: top; padding: 10px 0; }
 #home-panels td.boldfont { font-weight: bold; }
 #home-panels p.no-padding { padding: 0; }
