@@ -110,7 +110,7 @@ ul.home-section-menu li.active { background-color: #fff; }
 .home-section-panel { width: 262px; height: 218px; float: left; margin-right: 22px; margin-bottom: 20px; background: #bad6e6; padding: 10px; }
 div.panel-wrapper div.panel-no-padding { padding: 0; width: 282px; height: 238px;}
 .panel-last { margin-right: 0; }
-.panel-expanded { display: none; width: 590px; height: 500px; background: #bad6e6; padding: 0px;  }
+.panel-expanded { display: none; width: 570px; height: 480px; background: #bad6e6; padding: 10px;  }
 .panel-shown { width: 570px; height: 480px; background: #bad6e6; padding: 10px;  }
 .panel-open-right { position: absolute; top: 0; left: 0; z-index: 10; }
 .panel-open-left { position: absolute; top: 0; right: 0; z-index: 10; }
@@ -122,7 +122,7 @@ body.page-node-15 #panel-6 { float: right; clear: right; }
 
 /* panels content */
 #home-panels p { font-size: 18px; line-height: 30px; padding: 0px; }
-#home-panels td { /*font-weight: bold;*/ padding: 10px 10px 0 10px; }
+#home-panels td { /*font-weight: bold;*/ padding: 0px 10px 0 0px; }
 #home-panels td table td { padding: 0; vertical-align: top; padding: 10px 0; }
 #home-panels td.boldfont { font-weight: bold; }
 #home-panels p.no-padding { padding: 0; }
