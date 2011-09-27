@@ -53,6 +53,8 @@
   <meta property="og:type" content="article"/>
   <meta property="fb:admins" content="788964277"/>
   <meta property="og:image" content="http://dev.kickthecan.info/KTC_site_lockup.jpg" />
+  <meta property="keywords" content="Sugary Drinks, Soda, Soda Tax, Sugar-Sweetened Beverages, Beverages, CCPHA, Harold Goldstein, Healthy Beverage Campaign, Advocacy, California Center for Public Health Advocacy, Healthy vending machines, Soda policy, Sugar-Sweetened beverage policy, California Soda Campaign, Soda campaign, Sugary Drink campaign, Beverage industry tactics, Soda advertising, Soda industry" />
+  <meta property="description" content="KICK THE CAN.INFO  provides trustworthy and up-to-date information about the negative health effects of soda and other sugary drinks, summarizes sugary drink related policy activity around the country, links to key reports, studies and media coverage, shows a collection of sugary drink related photos and videos, and provides information about beverage industry strategies. "; />
   <?php print $styles; ?>
   <?php print $scripts; ?>
 </head>
