@@ -67,7 +67,8 @@
   <?php print $page_bottom; ?>
   
    <div id="fb-root"></div>
-<script type="text/javascript"> 
+<script type="text/javascript">
+    Cufon.now();
     window.fbAsyncInit = function() {
         FB.init({
             appId: '788964277', // Your Facebook ID
@@ -82,6 +83,7 @@
             '//connect.facebook.net/en_US/all.js';
         document.getElementById('fb-root').appendChild(e);
     }());
+    
 </script>
   
 </body>
