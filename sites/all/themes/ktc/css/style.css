@@ -239,6 +239,10 @@ body.node-type-interior-page h2.title { color: #e87d39; font-size: 40px;  text-t
 #footer-text { color: #e87d39; text-align: center; margin-top: 28px; font-weight: bold; }
 #footer-text span { margin-right: 20px; }
 
+
+/* regular pages */
+body.node-type-page #main #content { padding: 20px 40px; }
+
 /* search results */
 body.page-search #main #content { padding: 40px 60px; }
 fieldset.search-advanced { display: none; }
