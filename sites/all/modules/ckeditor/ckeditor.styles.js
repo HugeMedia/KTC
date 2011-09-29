@@ -26,9 +26,9 @@ CKEDITOR.addStylesSet( 'drupal',
 	{ name : 'Preformatted Text', element : 'pre' },
 	{ name : 'Address'			, element : 'address' },
 	*/
-
-	{ name : 'Blue Title'		, element : 'h3', styles : { 'color' : 'Blue' } },
-	{ name : 'Red Title'		, element : 'h3', styles : { 'color' : 'Red' } },
+	{ name: 'Blue Header'		, element: 'h3', styles : { 'color': 'white', 'background':'#317fb0'}},
+	/*{ name : 'Blue Title'		, element : 'h3', styles : { 'color' : 'Blue' } },
+	{ name : 'Red Title'		, element : 'h3', styles : { 'color' : 'Red' } },*/
 
 	/* Inline Styles */
 
