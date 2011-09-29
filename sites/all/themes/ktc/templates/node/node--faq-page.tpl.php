@@ -80,6 +80,7 @@
 ?>
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
+  <?php print render($content['links']); ?>
   <h1<?php print $title_attributes; ?> class="page-title"><?php print $title; ?></h1>
 
   <div class="content"<?php print $content_attributes; ?>>
@@ -91,7 +92,7 @@
     ?>
   </div>
 
-  <?php print render($content['links']); ?>
+  
 
   <?php print render($content['comments']); ?>
 

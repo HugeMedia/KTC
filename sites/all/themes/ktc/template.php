@@ -140,6 +140,45 @@ function ktc_preprocess_node(&$variables) {
 }
 
 
+function ktc_print_mail_format_link() {
+  $print_mail_link_class  = variable_get('print_mail_link_class', PRINT_MAIL_LINK_CLASS_DEFAULT);
+  $print_mail_show_link = variable_get('print_mail_show_link', PRINT_MAIL_SHOW_LINK_DEFAULT);
+  $print_mail_link_text = filter_xss(variable_get('print_mail_link_text', t('Send to friend')));
+
+  //$img = drupal_get_path('module', 'print') . '/icons/mail_icon.gif';
+  $img = '/sites/all/themes/ktc/images/email-icon.png';
+  $title = t('Send this page by e-mail.');
+  $class = strip_tags($print_mail_link_class);
+  $new_window = FALSE;
+  $format = _print_format_link_aux($print_mail_show_link, $print_mail_link_text, $img);
+
+  return array('text' => $format['text'],
+               'html' => $format['html'],
+               'attributes' => print_fill_attributes($title, $class, $new_window),
+              );
+}
+
+
+function ktc_print_format_link() {
+  $print_html_link_class = variable_get('print_html_link_class', PRINT_HTML_LINK_CLASS_DEFAULT);
+  $print_html_new_window = variable_get('print_html_new_window', PRINT_HTML_NEW_WINDOW_DEFAULT);
+  $print_html_show_link = variable_get('print_html_show_link', PRINT_HTML_SHOW_LINK_DEFAULT);
+  $print_html_link_text = filter_xss(variable_get('print_html_link_text', t('Printer-friendly version')));
+
+  //$img = drupal_get_path('module', 'print') . '/icons/print_icon.gif';
+  $img = '/sites/all/themes/ktc/images/print-icon.png';
+  $title = t('Display a printer-friendly version of this page.');
+  $class = strip_tags($print_html_link_class);
+  $new_window = $print_html_new_window;
+  $format = _print_format_link_aux($print_html_show_link, $print_html_link_text, $img);
+
+  return array('text' => $format['text'],
+               'html' => $format['html'],
+               'attributes' => print_fill_attributes($title, $class, $new_window),
+              );
+}
+
+
 function ktc_preprocess_search_results(&$variables) {
   //$variables['search_results'] = '';
   //if (!empty($variables['module'])) {
