@@ -1,5 +1,7 @@
 (function ($) {
 	
+
+	
         function setOffset(el, newOffset){
 		var $el = $(el);
 
@@ -160,17 +162,22 @@
 		// general replacement
 		Cufon.replace('#site-slogan, h1.title, form.search-form label, #header-top .facts-label, #footer #footer-text span, div.node h2, div.node h1, div.node h3, div.node p, div.node #interior-footnotes ol li');
 		Cufon.replace('ul#superfish-1 li a', { hover: true });
+		
 		//Cufon.replace('h1.title');
 		//Cufon.replace('form.search-form label');
 		//Cufon.replace('#header-top .facts-label');
 		//Cufon.replace('#header-top .ktc-fact');
 		
 		// home pages
+		//Cufon.replace('#home-top-right')
+		
 		Cufon.replace('#home-top-right div.field-name-field-home-header div.field-item p');
 		Cufon.replace('#home-top-right div.field-name-body div.field-item p');
 		Cufon.replace('#home-top-left ul.home-section-menu li a');
 		Cufon.replace('#home-section-bottom #panels-header span');
 		Cufon.replace('#home-panels table td span');
+		
+		Cufon.replace('form#print-mail-form label').replace('form#print-mail-form div.description').replace('form#print-mail-form #edit-fld-title');
 		
 		// footer
 		Cufon.replace('#footer ul.menu li a', { hover: true });
@@ -190,7 +197,7 @@
 		
 		// documents page
 		
-		
+
 		
 		
 		//Cufon.now();
