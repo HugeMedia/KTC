@@ -13,7 +13,8 @@ function ktc_preprocess_page(&$variables) {
         if ($node->type == 'home_section_page' ||
             $node->type == 'interior_page' ||
             $node->type == 'soda_story_form_page' ||
-            $node->type == 'blog_post' ) {
+            $node->type == 'blog_post' ||
+            $node->type == 'faq_page') {
             $variables['show_title'] = FALSE;
         }
     }

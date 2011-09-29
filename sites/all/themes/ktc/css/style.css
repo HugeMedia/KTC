@@ -243,6 +243,14 @@ body.node-type-interior-page h2.title { color: #e87d39; font-size: 40px;  text-t
 /* regular pages */
 body.node-type-page #main #content { padding: 20px 40px; }
 
+/* faq page */
+body.node-type-faq-page #main #content { padding: 20px 40px; }
+body.node-type-faq-page h1 { color: #e87d39; height: 64px; }
+body.node-type-faq-page strong { font-weight: bold; }
+body.node-type-faq-page h1.page-title { background: url(../images/faq-qm.jpg) no-repeat left center; padding-left: 75px; line-height: 54px;  margin: 30px 0 10px 0; }
+body.node-type-faq-page #content h3 { display: inline-block; padding: 10px 10px; font-size: 22px; margin: 20px 0; }
+body.node-type-faq-page p { padding-left: 75px; }
+
 /* search results */
 body.page-search #main #content { padding: 40px 60px; }
 fieldset.search-advanced { display: none; }
