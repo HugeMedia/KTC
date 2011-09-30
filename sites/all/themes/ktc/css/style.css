@@ -49,6 +49,7 @@ ul#superfish-1 li.sf-depth-1 a.active, ul#superfish-1 li.active-trail a { color:
 .sf-menu li:hover ul, .sf-menu li.sfHover ul { top: 28px; left: -45px }
 .sf-menu li#menu-422-1:hover ul, .sf-menu li#menu-422-1.sfHover ul { top: 28px; left: 0px }
 .sf-menu li#menu-586-1:hover ul, .sf-menu li#menu-586-1.sfHover ul { top: 28px; left: -25px }
+.sf-menu li#menu-421-1:hover ul, .sf-menu li#menu-421-1.sfHover ul { top: 28px; left: -25px }
 
 .sf-menu li.sf-depth-1 > ul { width: 159px !important;  background: transparent url(../images/menu-bg-top.png) no-repeat top left; }
 /*.sf-menu li.sfHover > ul { background-position: 0 -8px; }*/
