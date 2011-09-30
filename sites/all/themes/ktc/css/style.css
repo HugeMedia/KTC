@@ -120,6 +120,7 @@ ul.home-section-menu li.active { background-color: #fff; }
 div.panel-wrapper div.panel-no-padding { padding: 0; width: 282px; height: 238px;}
 .panel-last { margin-right: 0; }
 .panel-expanded { display: none; width: 570px; height: 480px; background: #bad6e6; padding: 10px;  }
+.panel-expanded a:link, .panel-expanded a:visited { color: #000; }
 .panel-shown { width: 570px; height: 480px; background: #bad6e6; padding: 10px;  }
 .panel-open-right { position: absolute; top: 0; left: 0; z-index: 10; }
 .panel-open-left { position: absolute; top: 0; right: 0; z-index: 10; }
