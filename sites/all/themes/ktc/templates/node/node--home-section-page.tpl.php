@@ -115,7 +115,9 @@
           <?php
             $large_panel = render($panel1['field_panel_large']);
             $mini_images = render(ktccustom_get_mini_images('block_1', 'Billboards'));
-            $large_panel = str_replace('[[images]]', $mini_images, $large_panel);
+            $mini_images2 = render(ktccustom_get_mini_images('block_4', 'Generic Ads'));
+            $mini_images3 = render(ktccustom_get_mini_images('block_5', 'Vending Machines'));
+            $large_panel = str_replace('[[images]]', $mini_images . $mini_images2 . $mini_images3, $large_panel);
           ?>
         <div class="panel-wrapper">
           <?php if ($panel1['field_panel_expanded']['#items'][0]['value'] == 1): ?>
