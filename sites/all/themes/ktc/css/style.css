@@ -55,6 +55,7 @@ ul#superfish-1 li.sf-depth-1 a.active, ul#superfish-1 li.active-trail a { color:
 /*.sf-menu li.sfHover > ul { background-position: 0 -8px; }*/
 .sf-menu li.sf-depth-1 > ul > li { width: 153px !important; }
 .sf-menu.sf-style-default li:hover { background: transparent; }
+.sf-menu.sf-style-default li.sf-depth-3:hover { background: transparent url(../images/menu-bg.png); }
 .sf-menu.sf-style-default li li { /*background: transparent url(../images/menu-dropdown-mid.png) repeat-y top left;*/ }
 .sf-menu.sf-style-default li li.sf-parent-children-0 > a { background: transparent url(../images/menu-arrow.png) no-repeat 140px 8px; }
 .sf-menu.sf-style-default li li.sf-parent-children-0 > a:hover { background: #458bb8 url(../images/menu-arrow-white.png) no-repeat 140px 8px; }
@@ -66,6 +67,7 @@ ul#superfish-1 li.sf-depth-1 a.active, ul#superfish-1 li.active-trail a { color:
 .sf-menu.sf-style-default li li a { border-top: 1px solid #005394; padding: 4px 3px 5px 9px; border-left: none; background: transparent; }
 .sf-menu.sf-style-default li li li a { border-top: none; }
 .sf-menu.sf-style-default li li a:hover { background-color: #458bb8; color: #fff; }
+.sf-menu.sf-style-default li li a.sf-depth-3:hover { background: transparent; /*url(../images/menu-bg.png); */color: #005394; }
 .sf-menu.sf-style-default li li.first a { border-top: none; }
 .sf-menu.sf-style-default li li.sf-depth-2 { border-left: 3px solid #000; border-right: 3px solid #000; /*background: #fff;*/ background: transparent url(../images/menu-bg.png); }
 .sf-menu.sf-style-default li.sf-depth-1  > ul > li.first { border-top: 3px solid #000; }
