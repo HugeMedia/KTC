@@ -171,6 +171,8 @@ body.page-node-15 #panel-6 { float: right; clear: right; }
 #home-panels .clearleft { clear: left; }
 #home-panels .floatleft { float: left; }
 
+#home-panels ul li, #home-top-right ul li { list-style: circle inside; }
+
 #marketing-brands { padding: 60px 0 0 20px; margin-left: 10px; }
 #availability-graphics { padding: 10px 23px 0 0; }
 #availability-who-owns { position: absolute; bottom: 15px; left: 15px; }

@@ -160,6 +160,7 @@
 		Cufon.replace('#home-section-bottom #panels-header span');
 		Cufon.replace('#home-panels table td span');
 		Cufon.replace('#home-panels table td a');
+                Cufon.replace('#home-panels ul');
 		//Cufon.replace('form#print-mail-form label').replace('form#print-mail-form div.description').replace('form#print-mail-form #edit-fld-title');
 		
 		// footer
