@@ -36,7 +36,7 @@ div.addthis_toolbox { width: 33px; height: 33px; float: right; }
 .sf-menu.sf-style-default a:hover { /*background:  transparent url(../images/menu-highlight.png) no-repeat center 0;*/ color: #e87d39;  }
 .sf-menu.sf-style-default li li a:hover { color: #e87d39; }
 ul#superfish-1, ul#superfish-1 li.sf-depth-1 { height: 28px; background: #317eb0;  }
-ul#superfish-1 li.sf-depth-1 { margin: 0 40px 0 30px; }
+ul#superfish-1 li.sf-depth-1 { margin: 0 30px 0 30px; }
 ul#superfish-1 li.sf-depth-1.first { margin-left: 10px; }
 ul#superfish-1 li.sf-depth-1.last { margin-right: 0; }
 ul#superfish-1 li.sf-depth-1 a { display: block; /*padding: 8px 30px 9px;*/  }
@@ -48,6 +48,8 @@ ul#superfish-1 li.sf-depth-1 a.active, ul#superfish-1 li.active-trail a { color:
 .sf-menu.sf-style-default li li { background: transparent; font-size: 13px; }
 .sf-menu li:hover ul, .sf-menu li.sfHover ul { top: 28px; left: -45px }
 .sf-menu li#menu-422-1:hover ul, .sf-menu li#menu-422-1.sfHover ul { top: 28px; left: 0px }
+.sf-menu li#menu-586-1:hover ul, .sf-menu li#menu-586-1.sfHover ul { top: 28px; left: -25px }
+
 .sf-menu li.sf-depth-1 > ul { width: 159px !important;  background: transparent url(../images/menu-bg-top.png) no-repeat top left; }
 /*.sf-menu li.sfHover > ul { background-position: 0 -8px; }*/
 .sf-menu li.sf-depth-1 > ul > li { width: 153px !important; }
