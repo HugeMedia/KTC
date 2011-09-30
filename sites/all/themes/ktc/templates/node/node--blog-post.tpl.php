@@ -86,7 +86,7 @@
     <div class="blog-date-year blog-date-field"><?php print format_date($created, 'custom', 'Y'); ?></div>
   </div>
   
-  <h1<?php print $title_attributes; ?> id="page-title"><?php print $title; ?></h2>
+  <h1<?php print $title_attributes; ?> id="page-title"><?php print $title; ?></h1>
 
   <div class="content"<?php print $content_attributes; ?>>
     <?php
