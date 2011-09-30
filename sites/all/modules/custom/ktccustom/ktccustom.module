@@ -98,11 +98,12 @@ function ktccustom_get_gallery() {
 }
 
 
-function ktccustom_get_mini_images() {
+function ktccustom_get_mini_images($blocknum, $title) {
     drupal_add_js(drupal_get_path('module', 'ktccustom') . '/js/ktcpanels.js');
-    $billboards = views_embed_view('mini_panel_images', 'block_1');
+    $mini_images = views_embed_view('mini_panel_images', $blocknum);
     $rend = array(
-        'billboards' => $billboards,
+        'mini_images' => $mini_images,
+        'title' => $title,
         '#theme' => 'ktc_mini_images',
     );
     return $rend;

@@ -112,11 +112,11 @@
       <?php endif; ?>
       <div id="home-panels">
         <?php if (!empty($panel1)): ?>
-        <?php
-          $large_panel = render($panel1['field_panel_large']);
-          $mini_images = render(ktccustom_get_mini_images());
-          $large_panel = str_replace('[[images]]', $mini_images, $large_panel);
-        ?>
+          <?php
+            $large_panel = render($panel1['field_panel_large']);
+            $mini_images = render(ktccustom_get_mini_images('block_1', 'Billboards'));
+            $large_panel = str_replace('[[images]]', $mini_images, $large_panel);
+          ?>
         <div class="panel-wrapper">
           <?php if ($panel1['field_panel_expanded']['#items'][0]['value'] == 1): ?>
             <div class="home-section-panel" id="panel-1"><?php print render($panel1['field_panel_small']); ?></div>
@@ -129,9 +129,14 @@
         <?php endif; ?>
       
         <?php if (!empty($panel2)): ?>
+        <?php
+            $large_panel = render($panel2['field_panel_large']);
+            $mini_images = render(ktccustom_get_mini_images('block_3', ''));
+            $large_panel = str_replace('[[images]]', $mini_images, $large_panel);
+          ?>
         <div class="panel-wrapper">
           <div class="home-section-panel" id="panel-2"><?php print render($panel2['field_panel_small']); ?></div>
-          <div class="panel-expanded panel-open-right" id="panel-2-expanded"><div class="panel-close"></div><?php print render($panel2['field_panel_large']); ?></div>
+          <div class="panel-expanded panel-open-right" id="panel-2-expanded"><div class="panel-close"></div><?php print $large_panel; ?></div>
         </div>
         <?php endif; ?>
       

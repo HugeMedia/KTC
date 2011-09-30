@@ -36,6 +36,7 @@
             
             // panel close button
             $('.panel-close').click(function() {
+		$('div.views-field-field-gallery-large-1').hide();
                $('.panel-expanded').hide('slow', function() {
                     //setTimeout(function() { expandIt(null, true) }, 1000);
                }); 

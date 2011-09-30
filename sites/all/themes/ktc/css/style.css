@@ -208,6 +208,7 @@ body.page-node-15 #panel-6 { float: right; clear: right; }
 #panel-mini-images table { background: #bad6e6; }
 #panel-mini-images table td .views-field-field-gallery-large { width: 30px; height: 30px; background: #fff; margin: 0 3px 3px 0; }
 #panel-mini-images table td .views-field-field-gallery-large-1 { display: none;  position: absolute; left: -32px; top: 50px; z-index: 20; }
+#panel-mini-images table.cols-6 td .views-field-field-gallery-large-1 { display: none;  position: absolute; right: 30px; left: 280px; top: 50px; z-index: 20; }
 #panel-mini-images table td .views-field-field-gallery-large-1 img { border: 3px solid #fff; }
 #panel-mini-images table td .views-field-field-gallery-large img { border: none; margin: auto; width: 23px; height: 24px; padding: 3px; }
 #panel-mini-images table td .views-field-field-gallery-large img:hover { cursor: pointer; }
