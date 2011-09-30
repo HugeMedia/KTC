@@ -58,6 +58,7 @@ ul#superfish-1 li.sf-depth-1 a.active, ul#superfish-1 li.active-trail a { color:
 .sf-menu.sf-style-default li li.first { /*background: transparent url(../images/menu-dropdown-top.png) no-repeat top left;*/ margin-top: 8px;  }
 .sf-menu.sf-style-default li li.last { /*background: transparent url(../images/menu-dropdown-bottom.png) no-repeat bottom left; */ border-bottom: 3px solid #000; }
 .sf-menu.sf-style-default li#menu-422-1 li.first { border-bottom: 3px solid #000; }
+.sf-menu.sf-style-default li#menu-425-1 li.first { border-bottom: 3px solid #000; }
 
 .sf-menu.sf-style-default li li a { border-top: 1px solid #005394; padding: 4px 3px 5px 9px; border-left: none; background: transparent; }
 .sf-menu.sf-style-default li li li a { border-top: none; }
