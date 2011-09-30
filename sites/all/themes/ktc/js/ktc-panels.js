@@ -32,7 +32,10 @@
             
             var wrapset = $('.panel-wrapper');
             //console.log(wrapset);
-            expandIt(wrapset);
+            //expandIt(wrapset);
+	    $(wrapset).click(function() {
+		$(this).find('.panel-expanded').show();
+	    });
             
             // panel close button
             $('.panel-close').click(function() {

@@ -47,6 +47,7 @@ ul#superfish-1 li.sf-depth-1 a.active, ul#superfish-1 li.active-trail a { color:
   -webkit-border-bottom-left-radius: 0px;}
 .sf-menu.sf-style-default li li { background: transparent; font-size: 13px; }
 .sf-menu li:hover ul, .sf-menu li.sfHover ul { top: 28px; left: -45px }
+.sf-menu li#menu-422-1:hover ul, .sf-menu li#menu-422-1.sfHover ul { top: 28px; left: 0px }
 .sf-menu li.sf-depth-1 > ul { width: 159px !important;  background: transparent url(../images/menu-bg-top.png) no-repeat top left; }
 /*.sf-menu li.sfHover > ul { background-position: 0 -8px; }*/
 .sf-menu li.sf-depth-1 > ul > li { width: 153px !important; }
@@ -56,6 +57,8 @@ ul#superfish-1 li.sf-depth-1 a.active, ul#superfish-1 li.active-trail a { color:
 .sf-menu.sf-style-default li li.sf-parent-children-0 > a:hover { background: #458bb8 url(../images/menu-arrow-white.png) no-repeat 140px 8px; }
 .sf-menu.sf-style-default li li.first { /*background: transparent url(../images/menu-dropdown-top.png) no-repeat top left;*/ margin-top: 8px;  }
 .sf-menu.sf-style-default li li.last { /*background: transparent url(../images/menu-dropdown-bottom.png) no-repeat bottom left; */ border-bottom: 3px solid #000; }
+.sf-menu.sf-style-default li#menu-422-1 li.first { border-bottom: 3px solid #000; }
+
 .sf-menu.sf-style-default li li a { border-top: 1px solid #005394; padding: 4px 3px 5px 9px; border-left: none; background: transparent; }
 .sf-menu.sf-style-default li li li a { border-top: none; }
 .sf-menu.sf-style-default li li a:hover { background-color: #458bb8; color: #fff; }
@@ -208,7 +211,7 @@ body.page-node-15 #panel-6 { float: right; clear: right; }
 #panel-mini-images table { background: #bad6e6; }
 #panel-mini-images table td .views-field-field-gallery-large { width: 30px; height: 30px; background: #fff; margin: 0 3px 3px 0; }
 #panel-mini-images table td .views-field-field-gallery-large-1 { display: none;  position: absolute; left: -32px; top: 50px; z-index: 20; }
-#panel-mini-images table.cols-6 td .views-field-field-gallery-large-1 { display: none;  position: absolute; right: 30px; left: 280px; top: 50px; z-index: 20; }
+#panel-mini-images table.cols-6 td .views-field-field-gallery-large-1 { display: none;  position: absolute; left: 280px; top: 50px; z-index: 20; }
 #panel-mini-images table td .views-field-field-gallery-large-1 img { border: 3px solid #fff; }
 #panel-mini-images table td .views-field-field-gallery-large img { border: none; margin: auto; width: 23px; height: 24px; padding: 3px; }
 #panel-mini-images table td .views-field-field-gallery-large img:hover { cursor: pointer; }
