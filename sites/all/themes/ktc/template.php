@@ -20,14 +20,15 @@ function ktc_preprocess_page(&$variables) {
     }
     
     $uri = $_GET['q'];
-    //dd($uri);
+    $path = drupal_lookup_path('alias', $uri);
+
     if ($uri == 'image-gallery') {
         drupal_add_js(drupal_get_path('theme', 'ktc') . '/js/colorbox/colorbox/jquery.colorbox.js');
         drupal_add_js(drupal_get_path('theme', 'ktc') . '/js/ktc-gallery.js');
         drupal_add_css(drupal_get_path('theme', 'ktc') . '/js/colorbox/ktc/colorbox.css');
         $variables['show_title'] = FALSE;
     }
-    elseif ($uri == 'blog' || strpos($uri, 'blog') === 0 ) {
+    elseif ($uri == 'blog' || strpos($path, 'blog') === 0 ) {
         drupal_add_js(drupal_get_path('theme', 'ktc') . '/js/ktc-blog.js');
     }
     elseif ($uri == 'soda-stories-page') {
