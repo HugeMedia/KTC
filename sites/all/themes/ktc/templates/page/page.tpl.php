@@ -165,6 +165,7 @@
 		
 		// footer
 		Cufon.replace('#footer ul.menu li a', { hover: true });
+                Cufon.now();
     //Cufon.replace('table a', { hover: true });
     
     //Cufon.replace('#main ul', { hover: true });

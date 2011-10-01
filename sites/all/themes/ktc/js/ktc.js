@@ -182,6 +182,8 @@
 		
 		//Cufon.now();
             
+	    $('body.page-node-15 #home-top-right-inner').jScrollPane();
+	    
 	});
 	
 })(jQuery);

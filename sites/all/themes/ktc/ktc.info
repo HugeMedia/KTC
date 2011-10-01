@@ -4,10 +4,13 @@ engine = phptemplate
 
 stylesheets[all][] = css/reset.css
 stylesheets[all][] = css/style.css
+stylesheets[all][] = js/jScrollPane/style/jquery.jscrollpane.css
 stylesheets[all][] = css/gallery.css
 #stylesheets[all][] = css/style_1/piro1.css
 #stylesheets[all][] = css/style_2/piro2.css
 
+scripts[] = js/jScrollPane/script/jquery.jscrollpane.min.js
+scripts[] = js/jScrollPane/script/jquery.mousewheel.js
 scripts[] = js/jquery-superbox-0.9.1/jquery.superbox.js
 scripts[] = js/cufon-yui.js
 scripts[] = js/swfobject/swfobject.js

@@ -97,10 +97,12 @@
       </div>
     
       <div id="home-top-right">
+        <div id="home-top-right-inner">
         <?php
           print render($content['field_home_header']);
           print render($content['body']);
         ?>
+        </div>
       </div>
     </div>
     
